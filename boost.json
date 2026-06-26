@@ -1,0 +1,14 @@
+{
+    "agents": [
+        "antigravity"
+    ],
+    "cloud": false,
+    "packages": [
+        "livewire/blaze"
+    ],
+    "skills": [
+        "laravel-best-practices",
+        "livewire-development",
+        "blaze-optimize"
+    ]
+}
