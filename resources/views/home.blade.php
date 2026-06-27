@@ -53,20 +53,20 @@
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-0"></div>
                                 <!-- Title Overlay -->
                                 <div class="absolute inset-x-0 bottom-0 p-6 z-10">
-                                    <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-355 mb-2">
-                                        <span>OLEH REDAKSI</span>
-                                        <span>•</span>
-                                        <span>26 JUNI 2026</span>
-                                        <span>•</span>
-                                        <span>5 MIN READ</span>
-                                    </div>
                                     <h1 class="text-xl md:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
                                         Revolusi Transportasi Tangerang: Rute Baru LRT Terkoneksi Jabodebek Resmi Disepakati
                                     </h1>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <p class="text-neutral-600 text-sm leading-relaxed">
+                                <div class="flex items-center gap-3 font-mono text-[10px] text-neutral-500 mb-2">
+                                    <span>OLEH REDAKSI</span>
+                                    <span>•</span>
+                                    <span>26 JUNI 2026</span>
+                                    <span>•</span>
+                                    <span>5 MIN READ</span>
+                                </div>
+                                <p class="text-neutral-600 text-sm leading-relaxed line-clamp-3 h-[68px]">
                                     Pemerintah Kota Tangerang dan Kementerian Perhubungan resmi menandatangani nota kesepahaman (MoU) pembangunan jalur LRT terintegrasi. Proyek strategis nasional ini diharapkan dapat mengurai kepadatan lalu lintas harian lintas batas hingga 40%.
                                 </p>
                             </div>
@@ -85,20 +85,20 @@
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-0"></div>
                                 <!-- Title Overlay -->
                                 <div class="absolute inset-x-0 bottom-0 p-6 z-10">
-                                    <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-355 mb-2">
-                                        <span>OLEH REDAKSI</span>
-                                        <span>•</span>
-                                        <span>25 JUNI 2026</span>
-                                        <span>•</span>
-                                        <span>4 MIN READ</span>
-                                    </div>
                                     <h1 class="text-xl md:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
                                         Revitalisasi Pasar Anyar Tangerang Ditargetkan Rampung Akhir Tahun Ini
                                     </h1>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <p class="text-neutral-600 text-sm leading-relaxed">
+                                <div class="flex items-center gap-3 font-mono text-[10px] text-neutral-500 mb-2">
+                                    <span>OLEH REDAKSI</span>
+                                    <span>•</span>
+                                    <span>25 JUNI 2026</span>
+                                    <span>•</span>
+                                    <span>4 MIN READ</span>
+                                </div>
+                                <p class="text-neutral-600 text-sm leading-relaxed line-clamp-3 h-[68px]">
                                     Progres pengerjaan revitalisasi fisik Pasar Anyar Tangerang telah mencapai 75%. Pemkot memastikan kenyamanan bagi ribuan pedagang lama dengan fasilitas los yang lebih bersih, tertib, dan bebas dari banjir.
                                 </p>
                             </div>
@@ -117,20 +117,20 @@
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-0"></div>
                                 <!-- Title Overlay -->
                                 <div class="absolute inset-x-0 bottom-0 p-6 z-10">
-                                    <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-355 mb-2">
-                                        <span>OLEH REDAKSI</span>
-                                        <span>•</span>
-                                        <span>24 JUNI 2026</span>
-                                        <span>•</span>
-                                        <span>3 MIN READ</span>
-                                    </div>
                                     <h1 class="text-xl md:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
                                         Digitalisasi Pelayanan Publik, Aplikasi Tangerang Live Tembus 1 Juta Unduhan
                                     </h1>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <p class="text-neutral-600 text-sm leading-relaxed">
+                                <div class="flex items-center gap-3 font-mono text-[10px] text-neutral-500 mb-2">
+                                    <span>OLEH REDAKSI</span>
+                                    <span>•</span>
+                                    <span>24 JUNI 2026</span>
+                                    <span>•</span>
+                                    <span>3 MIN READ</span>
+                                </div>
+                                <p class="text-neutral-600 text-sm leading-relaxed line-clamp-3 h-[68px]">
                                     Superapps kebanggaan warga Tangerang mencatat tonggak sejarah baru dengan tembusnya satu juta unduhan di Google Play Store dan App Store, memberikan layanan perizinan, bansos, hingga laporan kedaruratan.
                                 </p>
                             </div>
