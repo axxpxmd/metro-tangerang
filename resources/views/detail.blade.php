@@ -62,16 +62,45 @@
                 </div>
             </div>
 
-            <!-- Featured Image -->
-            <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 aspect-video mb-6">
-                <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Rute LRT Tangerang">
-                <div class="absolute bottom-3 left-3 bg-black/70 text-white font-mono text-[8px] tracking-wide px-2.5 py-1 rounded">
+            <!-- Featured Image Slider -->
+            <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 aspect-video mb-4 group/slider">
+                <!-- Slides Container -->
+                <div class="relative w-full h-full">
+                    <!-- Slide 1 -->
+                    <div class="detail-slide block w-full h-full transition-all duration-500 opacity-100 absolute inset-0" id="detail-slide-1" data-caption="Pertemuan kesepakatan rute pembangunan LRT koridor barat yang menghubungkan wilayah perbatasan Tangerang hingga stasiun integrasi Jakarta." data-source="FOTO: DOKUMEN HUMAS PEMKOT TANGERANG">
+                        <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Rute LRT Tangerang">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="detail-slide hidden w-full h-full transition-all duration-500 opacity-0 absolute inset-0" id="detail-slide-2" data-caption="Peta rencana koridor LRT Tangerang terintegrasi Jabodebek yang akan mulai dibangun pada awal kuartal depan." data-source="FOTO: DOKUMEN KEMENHUB RI">
+                        <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Peta Rute LRT">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="detail-slide hidden w-full h-full transition-all duration-500 opacity-0 absolute inset-0" id="detail-slide-3" data-caption="Uji coba perlintasan rel layang transportasi massal modern di wilayah penyangga satelit Tangerang Raya." data-source="FOTO: DOKUMEN METRO TANGERANG">
+                        <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Uji Coba Perlintasan">
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <button onclick="prevDetailSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 opacity-0 group-hover/slider:opacity-100 transition duration-300 z-20">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+                <button onclick="nextDetailSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 opacity-0 group-hover/slider:opacity-100 transition duration-300 z-20">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+
+                <!-- Photo Credit Badge -->
+                <div class="absolute bottom-3 left-3 bg-black/70 text-white font-mono text-[8px] tracking-wide px-2.5 py-1 rounded z-20" id="detail-photo-source">
                     FOTO: DOKUMEN HUMAS PEMKOT TANGERANG
+                </div>
+
+                <!-- Slide Counter Badge -->
+                <div class="absolute bottom-3 right-3 bg-black/70 text-white font-mono text-[8px] tracking-wide px-2.5 py-1 rounded z-20" id="detail-slide-counter">
+                    1 / 3
                 </div>
             </div>
 
-            <!-- Image Caption -->
-            <p class="text-xs text-slate-500 italic leading-normal mb-8 pb-4 border-b border-slate-100">
+            <!-- Dynamic Image Caption -->
+            <p id="detail-slider-caption" class="text-xs text-slate-500 italic leading-normal mb-8 pb-4 border-b border-slate-100">
                 Pertemuan kesepakatan rute pembangunan LRT koridor barat yang menghubungkan wilayah perbatasan Tangerang hingga stasiun integrasi Jakarta.
             </p>
 
@@ -354,3 +383,45 @@
 
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    let currentDetailSlide = 1;
+    const totalDetailSlides = 3;
+
+    function showDetailSlide(index) {
+        if (index > totalDetailSlides) currentDetailSlide = 1;
+        else if (index < 1) currentDetailSlide = totalDetailSlides;
+        else currentDetailSlide = index;
+
+        // Hide all slides
+        for (let i = 1; i <= totalDetailSlides; i++) {
+            const slide = document.getElementById(`detail-slide-${i}`);
+            if (slide) {
+                if (i === currentDetailSlide) {
+                    slide.classList.remove('hidden');
+                    setTimeout(() => {
+                        slide.classList.remove('opacity-0');
+                        slide.classList.add('opacity-100');
+                    }, 50);
+                    // Update credit badge, counter
+                    document.getElementById('detail-photo-source').textContent = slide.getAttribute('data-source');
+                    document.getElementById('detail-slide-counter').textContent = `${currentDetailSlide} / ${totalDetailSlides}`;
+                } else {
+                    slide.classList.add('opacity-0');
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('hidden');
+                }
+            }
+        }
+    }
+
+    function nextDetailSlide() {
+        showDetailSlide(currentDetailSlide + 1);
+    }
+
+    function prevDetailSlide() {
+        showDetailSlide(currentDetailSlide - 1);
+    }
+</script>
+@endpush
