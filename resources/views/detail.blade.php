@@ -149,21 +149,25 @@
                 <a href="#" class="font-mono text-[9px] font-bold text-sky-800 bg-sky-50 hover:bg-sky-100 border border-sky-100 px-3 py-1 rounded">#PEMKOT TANGERANG</a>
             </div>
 
-            <!-- Share Buttons (Bottom) -->
-            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                <span class="text-xs font-bold text-black uppercase">BAGIKAN ARTIKEL INI:</span>
-                <div class="flex items-center flex-wrap gap-2">
-                    <a href="#" class="font-mono text-[10px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 px-4 py-1.5 rounded flex items-center gap-1.5 transition">
-                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            <!-- Share Buttons (Bottom - Attractive Grid Panel) -->
+            <div class="mt-8 pt-6 border-t border-slate-200">
+                <span class="block font-mono text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">BAGIKAN ARTIKEL INI</span>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <!-- WhatsApp -->
+                    <a href="#" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-emerald-200/60 bg-emerald-50/40 hover:bg-emerald-50 text-emerald-800 transition-all font-sans text-xs font-bold" title="Bagikan ke WhatsApp">
+                        <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i> WhatsApp
                     </a>
-                    <a href="#" class="font-mono text-[10px] font-bold text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200 px-4 py-1.5 rounded flex items-center gap-1.5 transition">
-                        <i class="fa-brands fa-facebook-f text-xs"></i> Facebook
+                    <!-- Facebook -->
+                    <a href="#" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-blue-200/60 bg-blue-50/40 hover:bg-blue-50 text-blue-800 transition-all font-sans text-xs font-bold" title="Bagikan ke Facebook">
+                        <i class="fa-brands fa-facebook-f text-sm text-blue-600"></i> Facebook
                     </a>
-                    <a href="#" class="font-mono text-[10px] font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 border border-slate-300 px-4 py-1.5 rounded flex items-center gap-1.5 transition">
-                        <i class="fa-brands fa-x-twitter"></i> X / Twitter
+                    <!-- X / Twitter -->
+                    <a href="#" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-neutral-300 bg-neutral-50/65 hover:bg-neutral-100 text-neutral-800 transition-all font-sans text-xs font-bold" title="Bagikan ke X">
+                        <i class="fa-brands fa-x-twitter text-sm text-black"></i> X / Twitter
                     </a>
-                    <a href="#" class="font-mono text-[10px] font-bold text-sky-700 bg-sky-50 hover:bg-sky-100 border border-sky-200 px-4 py-1.5 rounded flex items-center gap-1.5 transition">
-                        <i class="fa-brands fa-telegram"></i> Telegram
+                    <!-- Telegram -->
+                    <a href="#" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-sky-200/60 bg-sky-50/40 hover:bg-sky-50 text-sky-800 transition-all font-sans text-xs font-bold" title="Bagikan ke Telegram">
+                        <i class="fa-brands fa-telegram text-base text-sky-500"></i> Telegram
                     </a>
                 </div>
             </div>
@@ -233,7 +237,7 @@
         </article>
 
         <!-- Right Column: Sidebar (4 Columns) -->
-        <aside class="lg:col-span-4 lg:sticky lg:top-20 space-y-8 self-start">
+        <aside class="lg:col-span-4 lg:sticky lg:top-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 self-start">
             
             <!-- Widget 1: Informasi Cuaca -->
             <div class="border border-sky-100 rounded-xl p-6 bg-sky-50/50">
