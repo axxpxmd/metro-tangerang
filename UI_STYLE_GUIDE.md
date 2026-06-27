@@ -1,34 +1,43 @@
 # Panduan Gaya UI (UI Style Guide) - Metro Tangerang
 
-Dokumen ini berisi panduan gaya UI (User Interface) dan desain sistem yang disesuaikan untuk pengembangan website berita **Metro Tangerang** menggunakan **Tailwind CSS**. Desain ini mengadopsi estetika **"Minimalist Editorial & High-Contrast Light Mode"** dengan latar belakang putih bersih, aksen hitam-putih tegas, tanpa menggunakan gradasi maupun shadow.
+Dokumen ini berisi panduan gaya UI (User Interface) dan desain sistem yang disesuaikan untuk pengembangan website berita **Metro Tangerang** menggunakan **Tailwind CSS**. Desain ini mengadopsi estetika **"Minimalist Editorial & High-Contrast Light Mode with Soft Accents"** dengan latar belakang putih bersih, aksen hitam-putih tegas, serta sentuhan palet warna pastel yang lembut untuk meningkatkan harmoni visual tanpa terkesan mencolok.
 
 ---
 
 ## 1. Konsep & Estetika Desain
 
-Desain ini menggunakan konsep **"Print-Inspired Modern Editorial"** (Single Theme - Hanya Latar Belakang Putih).
+Desain ini menggunakan konsep **"Print-Inspired Modern Editorial with Soft Tones"** (Single Theme - Hanya Latar Belakang Putih).
 
 ### Prinsip Utama:
 1.  **Pure White Foundation**: Latar belakang utama menggunakan putih bersih (`#ffffff`) untuk memberikan kesan halaman koran digital yang bersih, lapang, dan profesional.
 2.  **High-Contrast Typography**: Teks berwarna hitam pekat (`#000000`) untuk judul berita utama, memberikan kontras keterbacaan yang sangat tajam dan tegas.
-3.  **No Gradients**: Warna diatur menggunakan warna solid tegas (hitam, putih, dan abu-abu neutral) tanpa efek gradasi warna.
-4.  **No Shadows**: Semua elemen didesain datar (*flat design*) tanpa menggunakan bayangan (*shadowless*). Struktur tata letak dipisahkan menggunakan garis pembatas tipis yang konsisten (`border-neutral-200`).
+3.  **Soft Color Tones**: Menghindari gradasi yang mencolok atau warna neon/ngejreng. Warna sekunder dan aksen menggunakan nada pastel yang lembut (*soft sky blue, indigo, emerald, amber, dan rose*).
+4.  **No Shadows**: Semua elemen didesain datar (*flat design*) tanpa menggunakan bayangan (*shadowless*). Struktur tata letak dipisahkan menggunakan garis pembatas tipis yang konsisten (`border-neutral-200` atau `border-slate-200`).
 5.  **Fine Lines & Grid Borders**: Menggunakan garis pembatas tipis dan tegas untuk menyusun layout berita dan kartu agar terlihat sangat rapi dan tertata dengan baik.
 
 ---
 
 ## 2. Palet Warna (Tailwind CSS Config)
 
-Aplikasi ini menggunakan tema terang tunggal (statis latar belakang putih).
+Aplikasi ini menggunakan tema terang tunggal (statis latar belakang putih) dengan tambahan palet aksen yang halus.
 
 | Nama Elemen | Kode Hex | Tailwind Class | Penggunaan |
 | :--- | :--- | :--- | :--- |
 | **Main Background** | `#ffffff` | `bg-white` | Latar belakang halaman utama & dasar website |
-| **Card / Section BG**| `#f9f9f9` | `bg-neutral-50` | Latar belakang kartu berita & sidebar widget |
+| **Card / Section BG**| `#f8fafc` / `#f0f9ff` | `bg-slate-50` / `bg-sky-50/50` | Latar belakang kartu berita, sidebar, dan widget cuaca/sholat |
 | **Text Primary** | `#000000` | `text-black` | Judul berita, headline, dan teks konten utama |
 | **Text Secondary** | `#525252` | `text-neutral-600` | Deskripsi berita singkat, waktu baca, metadata |
-| **Borders** | `#e5e5e5` | `border-neutral-200` | Garis pembatas grid, separator, border kartu |
-| **Accent Solid** | `#000000` | `bg-black` / `text-white` | Lencana berita utama, tombol aksi utama |
+| **Primary Brand Accent** | `#0c4a6e` | `bg-sky-900` / `text-sky-700` | Logo sekunder, menu hover link, tombol aksi LIVE TV |
+| **Borders** | `#e2e8f0` | `border-neutral-200` / `border-slate-200` | Garis pembatas grid, separator, border kartu |
+| **Breaking News Badge** | `#fef2f2` / `#b91c1c` | `bg-red-50 text-red-700 border-red-200/60` | Penanda berita mendesak (*breaking news ticker*) |
+| **Featured News Badge** | `#f0f9ff` / `#075985` | `bg-sky-50 text-sky-800 border-sky-200/80` | Penanda berita pilihan (*carousel slide badge*) |
+
+### Warna Aksen Kategori (Category Badges/Tags):
+*   **Politik**: `#4f46e5` (`text-indigo-600`) - Mewakili berita kebijakan dan pilkada.
+*   **Ekonomi**: `#059669` (`text-emerald-600`) - Mewakili info bisnis, pasar, dan UMKM.
+*   **Metro**: `#0284c7` (`text-sky-600`) - Mewakili berita perkotaan dan fasilitas publik Tangerang.
+*   **Olahraga**: `#d97706` (`text-amber-600`) - Mewakili Persita dan prestasi atlit lokal.
+*   **Lifestyle**: `#e11d48` (`text-rose-500`) - Mewakili kuliner Pasar Lama, wisata, dan tren.
 
 ---
 

@@ -85,38 +85,38 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <!-- Logo -->
             <a href="/" id="header-logo-link" class="text-xl font-black tracking-tighter text-black flex items-center gap-2">
-                METRO<span class="text-neutral-500">TANGERANG</span>
+                METRO<span class="text-sky-700">TANGERANG</span>
             </a>
             
             <!-- Navigation Menu -->
             <nav id="header-nav-menu" class="hidden md:flex space-x-8 font-mono text-xs tracking-wider uppercase text-neutral-600">
-                <a href="/category/metro" id="nav-item-metro" class="hover:text-black transition-colors duration-200">Metro</a>
-                <a href="/category/politik" id="nav-item-politik" class="hover:text-black transition-colors duration-200">Politik</a>
-                <a href="/category/ekonomi" id="nav-item-ekonomi" class="hover:text-black transition-colors duration-200">Ekonomi</a>
-                <a href="/category/olahraga" id="nav-item-olahraga" class="hover:text-black transition-colors duration-200">Olahraga</a>
-                <a href="/category/lifestyle" id="nav-item-lifestyle" class="hover:text-black transition-colors duration-200">Lifestyle</a>
+                <a href="/category/metro" id="nav-item-metro" class="hover:text-sky-700 transition-colors duration-200">Metro</a>
+                <a href="/category/politik" id="nav-item-politik" class="hover:text-sky-700 transition-colors duration-200">Politik</a>
+                <a href="/category/ekonomi" id="nav-item-ekonomi" class="hover:text-sky-700 transition-colors duration-200">Ekonomi</a>
+                <a href="/category/olahraga" id="nav-item-olahraga" class="hover:text-sky-700 transition-colors duration-200">Olahraga</a>
+                <a href="/category/lifestyle" id="nav-item-lifestyle" class="hover:text-sky-700 transition-colors duration-200">Lifestyle</a>
             </nav>
             
             <!-- Live Action Button -->
             <div class="flex items-center space-x-4">
-                <a href="/live" id="header-btn-live" class="font-mono text-[11px] font-bold bg-black text-white px-4 py-2 rounded-full hover:bg-neutral-800 transition duration-200">
+                <a href="/live" id="header-btn-live" class="font-mono text-[11px] font-bold bg-sky-900 text-white px-4 py-2 rounded-full hover:bg-sky-800 transition duration-200">
                     LIVE TV
                 </a>
             </div>
         </div>
     </header>
-
+ 
     <!-- Main Content Area -->
     <main id="main-content" class="flex-grow">
         @yield('content')
     </main>
-
+ 
     <!-- Footer Area -->
     <footer id="main-footer" class="bg-neutral-50 border-t border-neutral-200 mt-auto py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="text-center md:text-left">
                 <span class="text-sm font-black tracking-tighter text-black">
-                    METRO<span class="text-neutral-500">TANGERANG</span>
+                    METRO<span class="text-sky-700">TANGERANG</span>
                 </span>
                 <p class="text-xs text-neutral-500 mt-1">&copy; {{ date('Y') }} Metro Tangerang. Seluruh hak cipta dilindungi.</p>
             </div>

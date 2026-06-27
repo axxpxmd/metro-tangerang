@@ -4,9 +4,9 @@
 
 @section('content')
 <!-- Breaking News Ticker -->
-<div class="bg-neutral-50 border-b border-neutral-200 py-2.5 overflow-hidden">
+<div class="bg-slate-50 border-b border-slate-200 py-2.5 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-3">
-        <span class="flex-shrink-0 font-mono text-[10px] font-extrabold tracking-widest bg-black text-white px-2 py-0.5 rounded uppercase">
+        <span class="flex-shrink-0 font-mono text-[10px] font-extrabold tracking-widest bg-red-50 text-red-700 border border-red-200/60 px-2 py-0.5 rounded uppercase">
             BREAKING
         </span>
         <div class="relative w-full overflow-hidden h-4 flex items-center">
@@ -45,7 +45,7 @@
                     <div class="carousel-slide block transition-all duration-500 opacity-100" id="slide-1">
                         <a href="#" class="group block relative">
                             <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
-                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-black text-white border border-neutral-850 px-3 py-1 rounded-full uppercase tracking-wider">
+                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                     PILIHAN REDAKSI • 1 / 3
                                 </div>
                                 <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover aspect-video grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 1">
@@ -77,7 +77,7 @@
                     <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-2">
                         <a href="#" class="group block relative">
                             <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
-                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-black text-white border border-neutral-850 px-3 py-1 rounded-full uppercase tracking-wider">
+                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                     PILIHAN REDAKSI • 2 / 3
                                 </div>
                                 <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover aspect-video grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 2">
@@ -109,7 +109,7 @@
                     <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-3">
                         <a href="#" class="group block relative">
                             <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
-                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-black text-white border border-neutral-850 px-3 py-1 rounded-full uppercase tracking-wider">
+                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                     PILIHAN REDAKSI • 3 / 3
                                 </div>
                                 <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover aspect-video grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 3">
@@ -170,10 +170,10 @@
                     <div class="space-y-6">
                         <!-- Popular Item 1 -->
                         <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
-                            <span class="font-serif text-4xl font-extrabold text-black leading-none tracking-tighter">01</span>
+                            <span class="font-serif text-4xl font-extrabold text-sky-850 leading-none tracking-tighter">01</span>
                             <div class="space-y-1">
-                                <span class="font-mono text-[9px] font-bold text-neutral-500 uppercase tracking-widest block">POLITIK</span>
-                                <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors leading-snug">
+                                <span class="font-mono text-[9px] font-bold text-indigo-600 uppercase tracking-widest block">POLITIK</span>
+                                <h3 class="text-sm font-bold text-black group-hover:text-sky-800 transition-colors leading-snug">
                                     Jelang Pilkada Tangerang, Peta Koalisi Partai Mulai Mengerucut
                                 </h3>
                             </div>
@@ -181,10 +181,10 @@
                         
                         <!-- Item 2 -->
                         <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
-                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-black transition-colors leading-none tracking-tighter">02</span>
+                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-sky-850 transition-colors leading-none tracking-tighter">02</span>
                             <div class="space-y-1">
-                                <span class="font-mono text-[9px] font-bold text-neutral-500 uppercase tracking-widest block">EKONOMI</span>
-                                <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors leading-snug">
+                                <span class="font-mono text-[9px] font-bold text-emerald-600 uppercase tracking-widest block">EKONOMI</span>
+                                <h3 class="text-sm font-bold text-black group-hover:text-sky-800 transition-colors leading-snug">
                                     UMKM Kuliner Pasar Lama Alami Lonjakan Omzet 50% Akhir Pekan Ini
                                 </h3>
                             </div>
@@ -192,10 +192,10 @@
 
                         <!-- Item 3 -->
                         <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
-                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-black transition-colors leading-none tracking-tighter">03</span>
+                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-sky-850 transition-colors leading-none tracking-tighter">03</span>
                             <div class="space-y-1">
-                                <span class="font-mono text-[9px] font-bold text-neutral-500 uppercase tracking-widest block">METRO</span>
-                                <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors leading-snug">
+                                <span class="font-mono text-[9px] font-bold text-sky-600 uppercase tracking-widest block">METRO</span>
+                                <h3 class="text-sm font-bold text-black group-hover:text-sky-800 transition-colors leading-snug">
                                     Dinas Lingkungan Hidup Tambah 12 Armada Truk Sampah Baru
                                 </h3>
                             </div>
@@ -203,10 +203,10 @@
 
                         <!-- Item 4 -->
                         <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
-                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-black transition-colors leading-none tracking-tighter">04</span>
+                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-sky-850 transition-colors leading-none tracking-tighter">04</span>
                             <div class="space-y-1">
-                                <span class="font-mono text-[9px] font-bold text-neutral-500 uppercase tracking-widest block">OLAHRAGA</span>
-                                <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors leading-snug">
+                                <span class="font-mono text-[9px] font-bold text-amber-600 uppercase tracking-widest block">OLAHRAGA</span>
+                                <h3 class="text-sm font-bold text-black group-hover:text-sky-800 transition-colors leading-snug">
                                     Persita Tangerang Rekrut Striker Asing Asal Brasil
                                 </h3>
                             </div>
@@ -214,10 +214,10 @@
 
                         <!-- Item 5 -->
                         <a href="#" class="group flex gap-4 items-start last:border-0">
-                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-black transition-colors leading-none tracking-tighter">05</span>
+                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-sky-850 transition-colors leading-none tracking-tighter">05</span>
                             <div class="space-y-1">
-                                <span class="font-mono text-[9px] font-bold text-neutral-500 uppercase tracking-widest block">LIFESTYLE</span>
-                                <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors leading-snug">
+                                <span class="font-mono text-[9px] font-bold text-rose-500 uppercase tracking-widest block">LIFESTYLE</span>
+                                <h3 class="text-sm font-bold text-black group-hover:text-sky-800 transition-colors leading-snug">
                                     Wisata Kuliner Malam Tangerang Jadi Destinasi Favorit Akhir Pekan
                                 </h3>
                             </div>
@@ -239,7 +239,7 @@
     <section class="py-8 border-b border-neutral-200">
         <div class="flex items-center justify-between pb-4 mb-6">
             <h2 class="font-black text-xl tracking-tight text-black uppercase flex items-center gap-2">
-                <span class="w-2.5 h-2.5 bg-black rounded-sm"></span>
+                <span class="w-2.5 h-2.5 bg-sky-700 rounded-sm"></span>
                 Laporan Utama
             </h2>
         </div>
@@ -252,11 +252,11 @@
                 <!-- Content -->
                 <div class="absolute inset-0 p-6 flex flex-col justify-end z-10">
                     <div>
-                        <span class="font-mono text-[9px] font-bold text-white bg-black/60 border border-neutral-700 px-2.5 py-1 rounded-full w-fit uppercase tracking-wider mb-3 inline-block">
+                        <span class="font-mono text-[9px] font-bold text-red-100 bg-red-950/60 border border-red-800/40 px-2.5 py-1 rounded-full w-fit uppercase tracking-wider mb-3 inline-block">
                             INVESTIGASI
                         </span>
                     </div>
-                    <h3 class="text-lg md:text-xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
+                    <h3 class="text-lg md:text-xl font-black tracking-tight text-white leading-tight group-hover:text-sky-200 transition-colors">
                         Menelusuri Jejak Sejarah Pintu Air Sepuluh Sungai Cisadane yang Melegenda
                     </h3>
                     <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-400 mt-3">
@@ -275,11 +275,11 @@
                 <!-- Content -->
                 <div class="absolute inset-0 p-6 flex flex-col justify-end z-10">
                     <div>
-                        <span class="font-mono text-[9px] font-bold text-white bg-black/60 border border-neutral-700 px-2.5 py-1 rounded-full w-fit uppercase tracking-wider mb-3 inline-block">
+                        <span class="font-mono text-[9px] font-bold text-amber-100 bg-amber-950/60 border border-amber-800/40 px-2.5 py-1 rounded-full w-fit uppercase tracking-wider mb-3 inline-block">
                             KULINER
                         </span>
                     </div>
-                    <h3 class="text-lg md:text-xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
+                    <h3 class="text-lg md:text-xl font-black tracking-tight text-white leading-tight group-hover:text-sky-200 transition-colors">
                         Surga Kuliner Malam Pasar Lama Tangerang: Eksplorasi Rasa di Gang Lawas
                     </h3>
                     <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-400 mt-3">
@@ -505,80 +505,79 @@
         <div class="lg:col-span-4 space-y-8">
             
             <!-- Widget 1: Informasi Cuaca -->
-            <div class="border border-neutral-200 rounded-xl p-6 bg-neutral-50">
-                <h3 class="font-mono text-[10px] font-bold tracking-widest text-neutral-500 uppercase mb-4 flex items-center justify-between">
+            <div class="border border-sky-100 rounded-xl p-6 bg-sky-50/50">
+                <h3 class="font-mono text-[10px] font-bold tracking-widest text-sky-800 uppercase mb-4 flex items-center justify-between">
                     <span>INFO CUACA</span>
-                    <span class="text-neutral-800 font-bold">LIVE</span>
+                    <span class="text-sky-700 font-extrabold">LIVE</span>
                 </h3>
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-3xl font-extrabold tracking-tight">31°C</p>
-                        <p class="text-xs text-neutral-500 mt-1 font-mono">Tangerang Raya, Banten</p>
+                        <p class="text-3xl font-extrabold tracking-tight text-slate-800">31°C</p>
+                        <p class="text-xs text-slate-500 mt-1 font-mono">Tangerang Raya, Banten</p>
                     </div>
                     <div class="text-right">
-                        <span class="text-xs font-bold text-neutral-700 block">Hujan Ringan</span>
-                        <span class="font-mono text-[10px] text-neutral-500 block">Kec. Kecepatan Angin: 12 km/jam</span>
+                        <span class="text-xs font-bold text-sky-800 block">Hujan Ringan</span>
+                        <span class="font-mono text-[10px] text-slate-550 block">Kec. Kecepatan Angin: 12 km/jam</span>
                     </div>
                 </div>
             </div>
-
+ 
             <!-- Widget 2: Jadwal Sholat -->
-            <div class="border border-neutral-200 rounded-xl p-6 bg-neutral-50">
-                <h3 class="font-mono text-[10px] font-bold tracking-widest text-neutral-500 uppercase mb-4 flex items-center justify-between">
+            <div class="border border-sky-100 rounded-xl p-6 bg-sky-50/50">
+                <h3 class="font-mono text-[10px] font-bold tracking-widest text-sky-800 uppercase mb-4 flex items-center justify-between">
                     <span>JADWAL SHOLAT TANGERANG</span>
-                    <span class="text-neutral-500 font-mono">26 JUN</span>
+                    <span class="text-sky-700 font-mono font-bold">26 JUN</span>
                 </h3>
                 <div class="grid grid-cols-5 gap-2 text-center text-xs font-mono">
-                    <div class="bg-white border border-neutral-200 p-2 rounded">
-                        <span class="text-[9px] text-neutral-500 block">SUBUH</span>
-                        <span class="font-bold mt-1 block text-black">04:42</span>
+                    <div class="bg-white border border-slate-200 p-2 rounded">
+                        <span class="text-[9px] text-slate-500 block">SUBUH</span>
+                        <span class="font-bold mt-1 block text-slate-800">04:42</span>
                     </div>
-                    <div class="bg-white border border-neutral-200 p-2 rounded">
-                        <span class="text-[9px] text-neutral-500 block">DZUHUR</span>
-                        <span class="font-bold mt-1 block text-black">11:58</span>
+                    <div class="bg-white border border-slate-200 p-2 rounded">
+                        <span class="text-[9px] text-slate-500 block">DZUHUR</span>
+                        <span class="font-bold mt-1 block text-slate-800">11:58</span>
                     </div>
-                    <div class="bg-white border border-neutral-200 p-2 rounded">
-                        <span class="text-[9px] text-neutral-500 block">ASHAR</span>
-                        <span class="font-bold mt-1 block text-black">15:19</span>
+                    <div class="bg-white border border-slate-200 p-2 rounded">
+                        <span class="text-[9px] text-slate-500 block">ASHAR</span>
+                        <span class="font-bold mt-1 block text-slate-800">15:19</span>
                     </div>
-                    <div class="bg-white border-2 border-black p-2 rounded">
-                        <span class="text-[9px] text-black font-bold block">MAGHRIB</span>
-                        <span class="font-bold mt-1 text-black block">17:54</span>
+                    <div class="bg-white border-2 border-sky-600 p-2 rounded">
+                        <span class="text-[9px] text-sky-700 font-bold block">MAGHRIB</span>
+                        <span class="font-bold mt-1 text-sky-700 block">17:54</span>
                     </div>
-                    <div class="bg-white border border-neutral-200 p-2 rounded">
-                        <span class="text-[9px] text-neutral-500 block">ISYA</span>
-                        <span class="font-bold mt-1 block text-black">19:08</span>
+                    <div class="bg-white border border-slate-200 p-2 rounded">
+                        <span class="text-[9px] text-slate-500 block">ISYA</span>
+                        <span class="font-bold mt-1 block text-slate-800">19:08</span>
                     </div>
                 </div>
             </div>
-
+ 
             <!-- Widget 3: Polling Pembaca -->
-            <div class="border border-neutral-200 rounded-xl p-6 bg-neutral-50">
-                <h3 class="font-mono text-[10px] font-bold tracking-widest text-neutral-500 uppercase mb-4">
+            <div class="border border-sky-100 rounded-xl p-6 bg-sky-50/50">
+                <h3 class="font-mono text-[10px] font-bold tracking-widest text-sky-800 uppercase mb-4">
                     POLLING MINGGU INI
                 </h3>
-                <p class="text-xs font-bold text-neutral-700 mb-4 leading-normal">
+                <p class="text-xs font-bold text-slate-700 mb-4 leading-normal">
                     Apakah Anda setuju dengan rencana pembatasan operasional truk besar di jalan protokol Tangerang pada jam sibuk?
                 </p>
                 <form class="space-y-3 font-mono text-[10px]">
-                    <label class="flex items-center gap-3 bg-white hover:bg-neutral-50 p-2.5 rounded cursor-pointer transition border border-neutral-200">
-                        <input type="radio" name="poll" class="accent-black">
-                        <span class="text-neutral-800">Sangat Setuju (68%)</span>
+                    <label class="flex items-center gap-3 bg-white hover:bg-sky-50/55 p-2.5 rounded cursor-pointer transition border border-slate-200">
+                        <input type="radio" name="poll" class="accent-sky-700">
+                        <span class="text-slate-800">Sangat Setuju (68%)</span>
                     </label>
-                    <label class="flex items-center gap-3 bg-white hover:bg-neutral-50 p-2.5 rounded cursor-pointer transition border border-neutral-200">
-                        <input type="radio" name="poll" class="accent-black">
-                        <span class="text-neutral-800">Kurang Setuju (24%)</span>
+                    <label class="flex items-center gap-3 bg-white hover:bg-sky-50/55 p-2.5 rounded cursor-pointer transition border border-slate-200">
+                        <input type="radio" name="poll" class="accent-sky-700">
+                        <span class="text-slate-800">Kurang Setuju (24%)</span>
                     </label>
-                    <label class="flex items-center gap-3 bg-white hover:bg-neutral-50 p-2.5 rounded cursor-pointer transition border border-neutral-200">
-                        <input type="radio" name="poll" class="accent-black">
-                        <span class="text-neutral-800">Tidak Peduli (8%)</span>
+                    <label class="flex items-center gap-3 bg-white hover:bg-sky-50/55 p-2.5 rounded cursor-pointer transition border border-slate-200">
+                        <input type="radio" name="poll" class="accent-sky-700">
+                        <span class="text-slate-800">Tidak Peduli (8%)</span>
                     </label>
-                    <button type="submit" id="btn-vote-submit" class="w-full bg-black text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider hover:bg-neutral-800 transition mt-2">
+                    <button type="submit" id="btn-vote-submit" class="w-full bg-sky-900 text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider hover:bg-sky-850 transition mt-2">
                         Kirim Suara
                     </button>
                 </form>
             </div>
-
         </div>
     </section>
 
