@@ -10,11 +10,20 @@
             BREAKING
         </span>
         <div class="relative w-full overflow-hidden h-4 flex items-center">
+            <!-- Double container for seamless loop -->
             <div class="absolute whitespace-nowrap animate-marquee flex gap-12 font-mono text-xs text-neutral-700">
-                <span>• Rencana Pembangunan LRT Koridor Tangerang-Jakarta Resmi Dimulai Kuartal III 2026</span>
-                <span>• Pemkot Tangerang Luncurkan Program Beasiswa Mahasiswa Berprestasi Tingkat Kecamatan</span>
-                <span>• Prakiraan Cuaca: Tangerang Berpotensi Hujan Ringan di Sore Hari</span>
-                <span>• Persita Tangerang Menang Telak 3-0 dalam Laga Uji Coba Kandang</span>
+                <div class="flex gap-12 flex-shrink-0">
+                    <span>• Rencana Pembangunan LRT Koridor Tangerang-Jakarta Resmi Dimulai Kuartal III 2026</span>
+                    <span>• Pemkot Tangerang Luncurkan Program Beasiswa Mahasiswa Berprestasi Tingkat Kecamatan</span>
+                    <span>• Prakiraan Cuaca: Tangerang Berpotensi Hujan Ringan di Sore Hari</span>
+                    <span>• Persita Tangerang Menang Telak 3-0 dalam Laga Uji Coba Kandang</span>
+                </div>
+                <div class="flex gap-12 flex-shrink-0" aria-hidden="true">
+                    <span>• Rencana Pembangunan LRT Koridor Tangerang-Jakarta Resmi Dimulai Kuartal III 2026</span>
+                    <span>• Pemkot Tangerang Luncurkan Program Beasiswa Mahasiswa Berprestasi Tingkat Kecamatan</span>
+                    <span>• Prakiraan Cuaca: Tangerang Berpotensi Hujan Ringan di Sore Hari</span>
+                    <span>• Persita Tangerang Menang Telak 3-0 dalam Laga Uji Coba Kandang</span>
+                </div>
             </div>
         </div>
     </div>
@@ -22,11 +31,11 @@
 
 <style>
     @keyframes marquee {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
     }
     .animate-marquee {
-        animation: marquee 30s linear infinite;
+        animation: marquee 35s linear infinite;
     }
 </style>
 
@@ -229,7 +238,7 @@
 
     <!-- Ad Space (Ruang Iklan Banner Utama) -->
     <div class="py-8 border-b border-neutral-200">
-        <a href="/iklan" class="relative block w-full overflow-hidden rounded-xl border border-neutral-200 hover:border-sky-500 transition duration-300">
+        <a href="/iklan" class="relative block w-full overflow-hidden border border-neutral-200 hover:border-sky-500 transition duration-300">
             <!-- AD Label Overlay -->
             <div class="absolute top-0 left-0 bg-neutral-200/90 backdrop-blur-sm text-neutral-600 font-mono text-[8px] font-bold px-2 py-0.5 rounded-br border-r border-b border-neutral-300/20 uppercase tracking-widest select-none z-10">
                 AD
