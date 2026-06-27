@@ -502,7 +502,7 @@
         </div>
 
         <!-- Right Column: Sidebar Widgets (4 Columns) -->
-        <div class="lg:col-span-4 space-y-8 lg:self-stretch">
+        <div class="lg:col-span-4 lg:sticky lg:top-10 space-y-8 self-start">
             
             <!-- Widget 1: Informasi Cuaca -->
             <div class="border border-sky-100 rounded-xl p-6 bg-sky-50/50">
@@ -580,7 +580,7 @@
             </div>
 
             <!-- Widget 4: Ruang Iklan Sidebar (Sticky Banner) -->
-            <div class="w-full bg-slate-50 border border-slate-200 rounded-xl aspect-[300/250] flex items-center justify-center text-center font-mono text-xs text-slate-400 lg:sticky lg:top-24">
+            <div class="w-full bg-slate-50 border border-slate-200 rounded-xl aspect-[300/250] flex items-center justify-center text-center font-mono text-xs text-slate-400">
                 RUANG IKLAN BANNER (300 x 250)
             </div>
         </div>
