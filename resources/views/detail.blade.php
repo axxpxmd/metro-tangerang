@@ -47,17 +47,17 @@
 
                 <!-- Share Buttons (Top) -->
                 <div class="flex items-center gap-2">
-                    <a href="#" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-sky-600 hover:border-sky-500 transition" title="Bagikan ke WhatsApp">
-                        <span class="font-mono text-[10px] font-bold">WA</span>
+                    <a href="#" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-emerald-600 hover:bg-emerald-50 hover:border-emerald-400 transition" title="Bagikan ke WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
                     </a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-blue-650 hover:border-blue-500 transition" title="Bagikan ke Facebook">
-                        <span class="font-mono text-[10px] font-bold">FB</span>
+                    <a href="#" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-blue-600 hover:bg-blue-50 hover:border-blue-400 transition" title="Bagikan ke Facebook">
+                        <i class="fa-brands fa-facebook-f text-xs"></i>
                     </a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-black hover:border-black transition" title="Bagikan ke X">
-                        <span class="font-mono text-[10px] font-bold">X</span>
+                    <a href="#" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-black hover:bg-slate-100 hover:border-black transition" title="Bagikan ke X">
+                        <i class="fa-brands fa-x-twitter"></i>
                     </a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-sky-750 hover:border-sky-600 transition" title="Bagikan ke Telegram">
-                        <span class="font-mono text-[10px] font-bold">TG</span>
+                    <a href="#" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-sky-500 hover:bg-sky-50 hover:border-sky-400 transition" title="Bagikan ke Telegram">
+                        <i class="fa-brands fa-telegram"></i>
                     </a>
                 </div>
             </div>
@@ -123,15 +123,18 @@
             <!-- Share Buttons (Bottom) -->
             <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
                 <span class="text-xs font-bold text-black uppercase">BAGIKAN ARTIKEL INI:</span>
-                <div class="flex items-center gap-2">
-                    <a href="#" class="font-mono text-[10px] font-bold text-sky-800 bg-sky-50 hover:bg-sky-100 border border-sky-100 px-4 py-1.5 rounded flex items-center gap-1.5 transition">
-                        WhatsApp
+                <div class="flex items-center flex-wrap gap-2">
+                    <a href="#" class="font-mono text-[10px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 px-4 py-1.5 rounded flex items-center gap-1.5 transition">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
                     </a>
-                    <a href="#" class="font-mono text-[10px] font-bold text-sky-800 bg-sky-50 hover:bg-sky-100 border border-sky-100 px-4 py-1.5 rounded flex items-center gap-1.5 transition">
-                        Facebook
+                    <a href="#" class="font-mono text-[10px] font-bold text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200 px-4 py-1.5 rounded flex items-center gap-1.5 transition">
+                        <i class="fa-brands fa-facebook-f text-xs"></i> Facebook
                     </a>
-                    <a href="#" class="font-mono text-[10px] font-bold text-sky-800 bg-sky-50 hover:bg-sky-100 border border-sky-100 px-4 py-1.5 rounded flex items-center gap-1.5 transition">
-                        X / Twitter
+                    <a href="#" class="font-mono text-[10px] font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 border border-slate-300 px-4 py-1.5 rounded flex items-center gap-1.5 transition">
+                        <i class="fa-brands fa-x-twitter"></i> X / Twitter
+                    </a>
+                    <a href="#" class="font-mono text-[10px] font-bold text-sky-700 bg-sky-50 hover:bg-sky-100 border border-sky-200 px-4 py-1.5 rounded flex items-center gap-1.5 transition">
+                        <i class="fa-brands fa-telegram"></i> Telegram
                     </a>
                 </div>
             </div>
