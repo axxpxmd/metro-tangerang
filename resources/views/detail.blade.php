@@ -251,6 +251,43 @@
                 </div>
             </div>
 
+            <!-- Widget: Berita Terbaru -->
+            <div class="border border-slate-200 rounded-xl p-6 bg-white hover:border-slate-400 transition duration-300">
+                <h3 class="font-mono text-xs font-bold tracking-widest text-black uppercase mb-5 flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 bg-sky-700 rounded-sm"></span>
+                    BERITA TERBARU
+                </h3>
+                
+                <div class="space-y-4">
+                    <!-- Item 1 -->
+                    <a href="{{ route('news.detail') }}" class="group block pb-4 border-b border-slate-100 last:border-0 last:pb-0">
+                        <span class="font-mono text-[9px] font-bold text-sky-650 uppercase tracking-widest block">KOMUNITAS</span>
+                        <h4 class="text-xs font-bold text-black group-hover:text-sky-800 transition-colors leading-snug mt-1">
+                            Festival Seni Cisadane Hadirkan Ratusan Pegiat Budaya Akhir Pekan Ini
+                        </h4>
+                        <span class="font-mono text-[8px] text-slate-400 mt-1 block">1 JAM YANG LALU</span>
+                    </a>
+                    
+                    <!-- Item 2 -->
+                    <a href="{{ route('news.detail') }}" class="group block pb-4 border-b border-slate-100 last:border-0 last:pb-0">
+                        <span class="font-mono text-[9px] font-bold text-indigo-600 uppercase tracking-widest block">POLITIK</span>
+                        <h4 class="text-xs font-bold text-black group-hover:text-sky-800 transition-colors leading-snug mt-1">
+                            KPU Tangerang Umumkan Jadwal dan Tema Debat Calon Wali Kota
+                        </h4>
+                        <span class="font-mono text-[8px] text-slate-400 mt-1 block">2 JAM YANG LALU</span>
+                    </a>
+
+                    <!-- Item 3 -->
+                    <a href="{{ route('news.detail') }}" class="group block">
+                        <span class="font-mono text-[9px] font-bold text-emerald-600 uppercase tracking-widest block">EKONOMI</span>
+                        <h4 class="text-xs font-bold text-black group-hover:text-sky-800 transition-colors leading-snug mt-1">
+                            Festival Kuliner Pasar Baru Dukung Pelaku Ekonomi Kreatif Lokal
+                        </h4>
+                        <span class="font-mono text-[8px] text-slate-400 mt-1 block">3 JAM YANG LALU</span>
+                    </a>
+                </div>
+            </div>
+
             <!-- Widget 3: Ruang Iklan Sidebar (Sticky Banner) -->
             <a href="/iklan" class="group w-full bg-slate-50 border border-slate-200 rounded-xl aspect-[300/250] flex flex-col items-center justify-center p-6 text-center hover:border-sky-500 hover:bg-sky-50/10 transition duration-300">
                 <span class="font-mono text-[9px] font-bold text-sky-700 tracking-widest uppercase mb-2">PASANG IKLAN ANDA</span>
