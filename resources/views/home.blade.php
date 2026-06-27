@@ -502,7 +502,7 @@
         </div>
 
         <!-- Right Column: Sidebar Widgets (4 Columns) -->
-        <div class="lg:col-span-4 space-y-8">
+        <div class="lg:col-span-4 space-y-8 lg:self-stretch">
             
             <!-- Widget 1: Informasi Cuaca -->
             <div class="border border-sky-100 rounded-xl p-6 bg-sky-50/50">
@@ -517,7 +517,7 @@
                     </div>
                     <div class="text-right">
                         <span class="text-xs font-bold text-sky-800 block">Hujan Ringan</span>
-                        <span class="font-mono text-[10px] text-slate-550 block">Kec. Kecepatan Angin: 12 km/jam</span>
+                        <span class="font-mono text-[10px] text-slate-555 block">Kec. Kecepatan Angin: 12 km/jam</span>
                     </div>
                 </div>
             </div>
@@ -573,10 +573,15 @@
                         <input type="radio" name="poll" class="accent-sky-700">
                         <span class="text-slate-800">Tidak Peduli (8%)</span>
                     </label>
-                    <button type="submit" id="btn-vote-submit" class="w-full bg-sky-900 text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider hover:bg-sky-850 transition mt-2">
+                    <button type="submit" id="btn-vote-submit" class="w-full bg-sky-900 text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider hover:bg-sky-855 transition mt-2">
                         Kirim Suara
                     </button>
                 </form>
+            </div>
+
+            <!-- Widget 4: Ruang Iklan Sidebar (Sticky Banner) -->
+            <div class="w-full bg-slate-50 border border-slate-200 rounded-xl aspect-[300/250] flex items-center justify-center text-center font-mono text-xs text-slate-400 lg:sticky lg:top-24">
+                RUANG IKLAN BANNER (300 x 250)
             </div>
         </div>
     </section>
