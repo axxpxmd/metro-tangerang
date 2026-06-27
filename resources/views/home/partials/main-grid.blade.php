@@ -11,95 +11,114 @@
                 KATEGORI UTAMA
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- 1. Kategori: METRO -->
-                <div class="border-t-4 border-t-sky-600 border border-neutral-200 rounded-xl p-5 bg-white hover:border-sky-500/50 hover:shadow-sm transition-all duration-300">
-                    <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
-                        <h3 class="font-bold text-base text-sky-800 uppercase">METRO</h3>
-                        <a href="/category/metro" wire:navigate class="font-mono text-[10px] text-neutral-400 hover:text-sky-700 transition">Lihat Semua &rarr;</a>
-                    </div>
-                    <div class="space-y-4">
-                        <a href="{{ route('news.detail') }}" wire:navigate class="group block">
-                            <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
-                            <h4 class="text-sm font-bold text-black group-hover:text-sky-700 transition-colors mt-0.5">
-                                Normalisasi Sungai Cisadane Masuki Tahap Akhir Sebelum Musim Hujan
-                            </h4>
-                        </a>
-                        <a href="{{ route('news.detail') }}" wire:navigate class="group block">
-                            <span class="font-mono text-[9px] text-neutral-500">25 JUN 2026</span>
-                            <h4 class="text-sm font-bold text-black group-hover:text-sky-700 transition-colors mt-0.5">
-                                Pemkot Tambah 5 Koridor Baru Angkot Si Benteng untuk Konektivitas
-                            </h4>
-                        </a>
+                <div class="border border-slate-200 bg-slate-50/40 hover:bg-sky-50/20 hover:border-sky-300 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group/card">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-200/60 pb-3 mb-4">
+                            <h3 class="font-bold text-sm text-sky-900 uppercase flex items-center gap-2">
+                                <i class="fa-solid fa-city text-sky-600 text-xs"></i>
+                                METRO
+                            </h3>
+                            <a href="/category/metro" wire:navigate class="font-mono text-[9px] font-bold text-slate-400 hover:text-sky-700 transition uppercase tracking-wider">Lihat Semua &rarr;</a>
+                        </div>
+                        <div class="space-y-4">
+                            <a href="{{ route('news.detail') }}" wire:navigate class="group block border-b border-slate-100/60 pb-3 last:border-0 last:pb-0">
+                                <span class="font-mono text-[8px] text-slate-400 block uppercase">26 JUN 2026</span>
+                                <h4 class="text-[13px] font-bold text-slate-900 group-hover:text-sky-700 transition-colors mt-1 leading-snug">
+                                    Normalisasi Sungai Cisadane Masuki Tahap Akhir Sebelum Musim Hujan
+                                </h4>
+                            </a>
+                            <a href="{{ route('news.detail') }}" wire:navigate class="group block border-b border-slate-100/60 pb-3 last:border-0 last:pb-0">
+                                <span class="font-mono text-[8px] text-slate-400 block uppercase">25 JUN 2026</span>
+                                <h4 class="text-[13px] font-bold text-slate-900 group-hover:text-sky-700 transition-colors mt-1 leading-snug">
+                                    Pemkot Tambah 5 Koridor Baru Angkot Si Benteng untuk Konektivitas
+                                </h4>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 2. Kategori: POLITIK -->
-                <div class="border-t-4 border-t-indigo-600 border border-neutral-200 rounded-xl p-5 bg-white hover:border-indigo-500/50 hover:shadow-sm transition-all duration-300">
-                    <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
-                        <h3 class="font-bold text-base text-indigo-800 uppercase">POLITIK</h3>
-                        <a href="/category/politik" wire:navigate class="font-mono text-[10px] text-neutral-400 hover:text-indigo-700 transition">Lihat Semua &rarr;</a>
-                    </div>
-                    <div class="space-y-4">
-                        <a href="{{ route('news.detail') }}" wire:navigate class="group block">
-                            <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
-                            <h4 class="text-sm font-bold text-black group-hover:text-indigo-700 transition-colors mt-0.5">
-                                KPU Tangerang Umumkan Jadwal dan Tema Debat Calon Wali Kota
-                            </h4>
-                        </a>
-                        <a href="{{ route('news.detail') }}" wire:navigate class="group block">
-                            <span class="font-mono text-[9px] text-neutral-500">24 JUN 2026</span>
-                            <h4 class="text-sm font-bold text-black group-hover:text-indigo-700 transition-colors mt-0.5">
-                                Konsolidasi Internal Partai Siapkan Struktur Pemenangan Pilkada
-                            </h4>
-                        </a>
+                <div class="border border-slate-200 bg-slate-50/40 hover:bg-indigo-50/20 hover:border-indigo-300 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group/card">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-200/60 pb-3 mb-4">
+                            <h3 class="font-bold text-sm text-indigo-900 uppercase flex items-center gap-2">
+                                <i class="fa-solid fa-scale-balanced text-indigo-600 text-xs"></i>
+                                POLITIK
+                            </h3>
+                            <a href="/category/politik" wire:navigate class="font-mono text-[9px] font-bold text-slate-400 hover:text-indigo-700 transition uppercase tracking-wider">Lihat Semua &rarr;</a>
+                        </div>
+                        <div class="space-y-4">
+                            <a href="{{ route('news.detail') }}" wire:navigate class="group block border-b border-slate-100/60 pb-3 last:border-0 last:pb-0">
+                                <span class="font-mono text-[8px] text-slate-400 block uppercase">26 JUN 2026</span>
+                                <h4 class="text-[13px] font-bold text-slate-900 group-hover:text-indigo-700 transition-colors mt-1 leading-snug">
+                                    KPU Tangerang Umumkan Jadwal dan Tema Debat Calon Wali Kota
+                                </h4>
+                            </a>
+                            <a href="{{ route('news.detail') }}" wire:navigate class="group block border-b border-slate-100/60 pb-3 last:border-0 last:pb-0">
+                                <span class="font-mono text-[8px] text-slate-400 block uppercase">24 JUN 2026</span>
+                                <h4 class="text-[13px] font-bold text-slate-900 group-hover:text-indigo-700 transition-colors mt-1 leading-snug">
+                                    Konsolidasi Internal Partai Siapkan Struktur Pemenangan Pilkada
+                                </h4>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 3. Kategori: EKONOMI -->
-                <div class="border-t-4 border-t-emerald-600 border border-neutral-200 rounded-xl p-5 bg-white hover:border-emerald-500/50 hover:shadow-sm transition-all duration-300">
-                    <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
-                        <h3 class="font-bold text-base text-emerald-800 uppercase">EKONOMI</h3>
-                        <a href="/category/ekonomi" wire:navigate class="font-mono text-[10px] text-neutral-400 hover:text-emerald-700 transition">Lihat Semua &rarr;</a>
-                    </div>
-                    <div class="space-y-4">
-                        <a href="{{ route('news.detail') }}" wire:navigate class="group block">
-                            <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
-                            <h4 class="text-sm font-bold text-black group-hover:text-emerald-700 transition-colors mt-0.5">
-                                Festival Kuliner Pasar Baru Dukung Pelaku Ekonomi Kreatif Lokal
-                            </h4>
-                        </a>
-                        <a href="{{ route('news.detail') }}" wire:navigate class="group block">
-                            <span class="font-mono text-[9px] text-neutral-500">25 JUN 2026</span>
-                            <h4 class="text-sm font-bold text-black group-hover:text-emerald-700 transition-colors mt-0.5">
-                                Realisasi Investasi Kota Tangerang Semester I Tembus Rp 8 Triliun
-                            </h4>
-                        </a>
+                <div class="border-slate-200/80 bg-slate-50/30 hover:bg-emerald-50/20 hover:border-emerald-300 border rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group/card">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-200/60 pb-3 mb-4">
+                            <h3 class="font-bold text-sm text-emerald-900 uppercase flex items-center gap-2">
+                                <i class="fa-solid fa-coins text-emerald-600 text-xs"></i>
+                                EKONOMI
+                            </h3>
+                            <a href="/category/ekonomi" wire:navigate class="font-mono text-[9px] font-bold text-slate-400 hover:text-emerald-700 transition uppercase tracking-wider">Lihat Semua &rarr;</a>
+                        </div>
+                        <div class="space-y-4">
+                            <a href="{{ route('news.detail') }}" wire:navigate class="group block border-b border-slate-100/60 pb-3 last:border-0 last:pb-0">
+                                <span class="font-mono text-[8px] text-slate-400 block uppercase">26 JUN 2026</span>
+                                <h4 class="text-[13px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors mt-1 leading-snug">
+                                    Festival Kuliner Pasar Baru Dukung Pelaku Ekonomi Kreatif Lokal
+                                </h4>
+                            </a>
+                            <a href="{{ route('news.detail') }}" wire:navigate class="group block border-b border-slate-100/60 pb-3 last:border-0 last:pb-0">
+                                <span class="font-mono text-[8px] text-slate-400 block uppercase">25 JUN 2026</span>
+                                <h4 class="text-[13px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors mt-1 leading-snug">
+                                    Realisasi Investasi Kota Tangerang Semester I Tembus Rp 8 Triliun
+                                </h4>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 4. Kategori: OLAHRAGA -->
-                <div class="border-t-4 border-t-amber-500 border border-neutral-200 rounded-xl p-5 bg-white hover:border-amber-550/50 hover:shadow-sm transition-all duration-300">
-                    <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
-                        <h3 class="font-bold text-base text-amber-800 uppercase">OLAHRAGA</h3>
-                        <a href="/category/olahraga" wire:navigate class="font-mono text-[10px] text-neutral-400 hover:text-amber-700 transition">Lihat Semua &rarr;</a>
-                    </div>
-                    <div class="space-y-4">
-                        <a href="{{ route('news.detail') }}" wire:navigate class="group block">
-                            <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
-                            <h4 class="text-sm font-bold text-black group-hover:text-amber-700 transition-colors mt-0.5">
-                                Persita Tangerang Rekrut Striker Asing Baru Asal Brasil
-                            </h4>
-                        </a>
-                        <a href="{{ route('news.detail') }}" wire:navigate class="group block">
-                            <span class="font-mono text-[9px] text-neutral-500">23 JUN 2026</span>
-                            <h4 class="text-sm font-bold text-black group-hover:text-amber-700 transition-colors mt-0.5">
-                                KONI Kota Tangerang Gelar Seleksi Atlit Muda Cabang Atletik
-                            </h4>
-                        </a>
+                <div class="border-slate-200/80 bg-slate-50/30 hover:bg-amber-50/20 hover:border-amber-300 border rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group/card">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-200/60 pb-3 mb-4">
+                            <h3 class="font-bold text-sm text-amber-900 uppercase flex items-center gap-2">
+                                <i class="fa-solid fa-circle-play text-amber-500 text-xs"></i>
+                                OLAHRAGA
+                            </h3>
+                            <a href="/category/olahraga" wire:navigate class="font-mono text-[9px] font-bold text-slate-400 hover:text-amber-700 transition uppercase tracking-wider">Lihat Semua &rarr;</a>
+                        </div>
+                        <div class="space-y-4">
+                            <a href="{{ route('news.detail') }}" wire:navigate class="group block border-b border-slate-100/60 pb-3 last:border-0 last:pb-0">
+                                <span class="font-mono text-[8px] text-slate-400 block uppercase">26 JUN 2026</span>
+                                <h4 class="text-[13px] font-bold text-slate-900 group-hover:text-amber-700 transition-colors mt-1 leading-snug">
+                                    Persita Tangerang Rekrut Striker Asing Baru Asal Brasil
+                                </h4>
+                            </a>
+                            <a href="{{ route('news.detail') }}" wire:navigate class="group block border-b border-slate-100/60 pb-3 last:border-0 last:pb-0">
+                                <span class="font-mono text-[8px] text-slate-400 block uppercase">23 JUN 2026</span>
+                                <h4 class="text-[13px] font-bold text-slate-900 group-hover:text-amber-700 transition-colors mt-1 leading-snug">
+                                    KONI Kota Tangerang Gelar Seleksi Atlit Muda Cabang Atletik
+                                </h4>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- Button to view all categories -->
