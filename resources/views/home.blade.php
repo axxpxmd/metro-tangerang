@@ -33,221 +33,428 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     
     <!-- Hero / Headline Section -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-neutral-200 pb-12">
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-neutral-200 pb-8">
         
-        <!-- Big Headline Article (8 Columns) -->
-        <article class="lg:col-span-8 group flex flex-col justify-between">
-            <a href="#" class="block overflow-hidden rounded-xl border border-neutral-200 hover:border-neutral-300 bg-white p-4 transition duration-300 relative">
-                <div class="absolute top-6 left-6 z-10 font-mono text-xs font-bold bg-black text-white border border-neutral-800 px-3 py-1 rounded-full uppercase tracking-wider">
-                    METRO UTAMA
-                </div>
-                <div class="aspect-video w-full overflow-hidden rounded-lg">
-                    <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image">
-                </div>
-                <div class="mt-6">
-                    <div class="flex items-center gap-3 font-mono text-[10px] text-neutral-500 mb-3">
-                        <span>OLEH REDAKSI</span>
-                        <span>•</span>
-                        <span>26 JUNI 2026</span>
-                        <span>•</span>
-                        <span>5 MIN READ</span>
-                    </div>
-                    <h1 class="text-3xl md:text-5xl font-black tracking-tighter text-black leading-tight group-hover:text-neutral-700 transition-colors">
-                        Revolusi Transportasi Tangerang: Rute Baru LRT Terkoneksi Jabodebek Resmi Disepakati
-                    </h1>
-                    <p class="mt-4 text-neutral-600 leading-relaxed">
-                        Pemerintah Kota Tangerang dan Kementerian Perhubungan resmi menandatangani nota kesepahaman (MoU) pembangunan jalur LRT terintegrasi. Proyek strategis nasional ini diharapkan dapat mengurai kepadatan lalu lintas harian lintas batas hingga 40%.
-                    </p>
-                </div>
-            </a>
-        </article>
-
-        <!-- Trending Sidebar (4 Columns) -->
-        <aside class="lg:col-span-4 flex flex-col">
-            <div class="border border-neutral-200 rounded-xl p-6 bg-neutral-50 flex-grow">
-                <h2 class="font-mono text-xs font-bold tracking-widest text-neutral-500 uppercase mb-6 flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-black"></span>
-                    TERPOPULER SEPANJANG HARI
-                </h2>
+        <!-- Headline Carousel (8 Columns) -->
+        <div class="lg:col-span-8 flex flex-col justify-between">
+            <div class="relative overflow-hidden rounded-xl border border-neutral-200 bg-white p-4">
                 
-                <div class="space-y-6">
-                    <!-- Item 1 -->
-                    <a href="#" class="group flex gap-4 items-start pb-6 border-b border-neutral-200 last:border-0 last:pb-0">
-                        <span class="font-mono text-xl font-bold text-black leading-none">01</span>
-                        <div>
-                            <span class="font-mono text-[9px] text-neutral-800 uppercase tracking-widest font-bold">Politik</span>
-                            <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-1 line-clamp-2">
-                                Jelang Pilkada Tangerang, Peta Koalisi Partai Mulai Mengerucut
-                            </h3>
-                            <span class="font-mono text-[9px] text-neutral-500 uppercase mt-2 block">1.2k views</span>
-                        </div>
-                    </a>
+                <!-- Slides Container -->
+                <div class="relative">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide block transition-all duration-500 opacity-100" id="slide-1">
+                        <a href="#" class="group block relative">
+                            <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
+                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-black text-white border border-neutral-850 px-3 py-1 rounded-full uppercase tracking-wider">
+                                    PILIHAN REDAKSI • 1 / 3
+                                </div>
+                                <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover aspect-video grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 1">
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center gap-3 font-mono text-[10px] text-neutral-500 mb-3">
+                                    <span>OLEH REDAKSI</span>
+                                    <span>•</span>
+                                    <span>26 JUNI 2026</span>
+                                    <span>•</span>
+                                    <span>5 MIN READ</span>
+                                </div>
+                                <h1 class="text-2xl md:text-3xl font-black tracking-tighter text-black leading-tight group-hover:text-neutral-700 transition-colors">
+                                    Revolusi Transportasi Tangerang: Rute Baru LRT Terkoneksi Jabodebek Resmi Disepakati
+                                </h1>
+                                <p class="mt-3 text-neutral-600 text-sm leading-relaxed">
+                                    Pemerintah Kota Tangerang dan Kementerian Perhubungan resmi menandatangani nota kesepahaman (MoU) pembangunan jalur LRT terintegrasi. Proyek strategis nasional ini diharapkan dapat mengurai kepadatan lalu lintas harian lintas batas hingga 40%.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-2">
+                        <a href="#" class="group block relative">
+                            <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
+                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-black text-white border border-neutral-850 px-3 py-1 rounded-full uppercase tracking-wider">
+                                    PILIHAN REDAKSI • 2 / 3
+                                </div>
+                                <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover aspect-video grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 2">
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center gap-3 font-mono text-[10px] text-neutral-500 mb-3">
+                                    <span>OLEH REDAKSI</span>
+                                    <span>•</span>
+                                    <span>25 JUNI 2026</span>
+                                    <span>•</span>
+                                    <span>4 MIN READ</span>
+                                </div>
+                                <h1 class="text-2xl md:text-3xl font-black tracking-tighter text-black leading-tight group-hover:text-neutral-700 transition-colors">
+                                    Revitalisasi Pasar Anyar Tangerang Ditargetkan Rampung Akhir Tahun Ini
+                                </h1>
+                                <p class="mt-3 text-neutral-600 text-sm leading-relaxed">
+                                    Progres pengerjaan revitalisasi fisik Pasar Anyar Tangerang telah mencapai 75%. Pemkot memastikan kenyamanan bagi ribuan pedagang lama dengan fasilitas los yang lebih bersih, tertib, dan bebas dari banjir.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-3">
+                        <a href="#" class="group block relative">
+                            <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
+                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-black text-white border border-neutral-850 px-3 py-1 rounded-full uppercase tracking-wider">
+                                    PILIHAN REDAKSI • 3 / 3
+                                </div>
+                                <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover aspect-video grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 3">
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center gap-3 font-mono text-[10px] text-neutral-500 mb-3">
+                                    <span>OLEH REDAKSI</span>
+                                    <span>•</span>
+                                    <span>24 JUNI 2026</span>
+                                    <span>•</span>
+                                    <span>3 MIN READ</span>
+                                </div>
+                                <h1 class="text-2xl md:text-3xl font-black tracking-tighter text-black leading-tight group-hover:text-neutral-700 transition-colors">
+                                    Digitalisasi Pelayanan Publik, Aplikasi Tangerang Live Tembus 1 Juta Unduhan
+                                </h1>
+                                <p class="mt-3 text-neutral-600 text-sm leading-relaxed">
+                                    Superapps kebanggaan warga Tangerang mencatat tonggak sejarah baru dengan tembusnya satu juta unduhan di Google Play Store dan App Store, memberikan layanan perizinan, bansos, hingga laporan kedaruratan.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="flex items-center justify-between mt-6 pt-4 border-t border-neutral-200">
+                    <div class="flex gap-2">
+                        <button id="carousel-dot-1" class="w-2 h-2 bg-black rounded-full" onclick="setSlide(1)"></button>
+                        <button id="carousel-dot-2" class="w-2 h-2 bg-neutral-200 rounded-full hover:bg-neutral-400 transition" onclick="setSlide(2)"></button>
+                        <button id="carousel-dot-3" class="w-2 h-2 bg-neutral-200 rounded-full hover:bg-neutral-400 transition" onclick="setSlide(3)"></button>
+                    </div>
+                    <div class="flex gap-4 font-mono text-[11px] font-bold">
+                        <button class="hover:text-neutral-500 flex items-center gap-1" onclick="prevSlide()">
+                            &larr; SEBELUMNYA
+                        </button>
+                        <span class="text-neutral-300">|</span>
+                        <button class="hover:text-neutral-500 flex items-center gap-1" onclick="nextSlide()">
+                            SELANJUTNYA &rarr;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending Sidebar / Terpopuler (4 Columns) -->
+        <aside class="lg:col-span-4 flex flex-col justify-between">
+            <div class="border border-neutral-200 rounded-xl p-6 bg-neutral-50 flex-grow flex flex-col justify-between space-y-6">
+                <div>
+                    <h2 class="font-mono text-xs font-bold tracking-widest text-neutral-500 uppercase mb-4 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+                        BERITA TERPOPULER
+                    </h2>
                     
-                    <!-- Item 2 -->
-                    <a href="#" class="group flex gap-4 items-start pb-6 border-b border-neutral-200 last:border-0 last:pb-0">
-                        <span class="font-mono text-xl font-bold text-neutral-400 leading-none">02</span>
-                        <div>
-                            <span class="font-mono text-[9px] text-neutral-800 uppercase tracking-widest font-bold">Ekonomi</span>
-                            <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-1 line-clamp-2">
-                                UMKM Kuliner Pasar Lama Alami Lonjakan Omzet 50% Akhir Pekan Ini
-                            </h3>
-                            <span class="font-mono text-[9px] text-neutral-500 uppercase mt-2 block">940 views</span>
-                        </div>
-                    </a>
+                    <div class="space-y-4">
+                        <!-- Popular Item 1 (With Thumbnail to consume space beautifully) -->
+                        <a href="#" class="group flex gap-4 items-start pb-4 border-b border-neutral-200">
+                            <span class="font-mono text-lg font-bold text-black leading-none">01</span>
+                            <div class="flex gap-3 items-center">
+                                <div class="w-14 h-10 overflow-hidden rounded border border-neutral-200 flex-shrink-0">
+                                    <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0" alt="Popular Mini Thumb">
+                                </div>
+                                <div>
+                                    <span class="font-mono text-[8px] text-neutral-500 uppercase tracking-widest font-bold">Politik</span>
+                                    <h3 class="text-xs font-bold text-black group-hover:text-neutral-700 transition-colors line-clamp-2">
+                                        Jelang Pilkada Tangerang, Peta Koalisi Partai Mulai Mengerucut
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <!-- Item 2 -->
+                        <a href="#" class="group flex gap-4 items-start pb-4 border-b border-neutral-200">
+                            <span class="font-mono text-lg font-bold text-neutral-400 leading-none">02</span>
+                            <div>
+                                <span class="font-mono text-[8px] text-neutral-500 uppercase tracking-widest font-bold">Ekonomi</span>
+                                <h3 class="text-xs font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5 line-clamp-2">
+                                    UMKM Kuliner Pasar Lama Alami Lonjakan Omzet 50% Akhir Pekan Ini
+                                </h3>
+                            </div>
+                        </a>
 
-                    <!-- Item 3 -->
-                    <a href="#" class="group flex gap-4 items-start pb-6 border-b border-neutral-200 last:border-0 last:pb-0">
-                        <span class="font-mono text-xl font-bold text-neutral-400 leading-none">03</span>
-                        <div>
-                            <span class="font-mono text-[9px] text-neutral-800 uppercase tracking-widest font-bold">Metro</span>
-                            <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-1 line-clamp-2">
-                                Dinas Lingkungan Hidup Tambah 12 Armada Truk Sampah Baru
-                            </h3>
-                            <span class="font-mono text-[9px] text-neutral-500 uppercase mt-2 block">810 views</span>
-                        </div>
-                    </a>
+                        <!-- Item 3 -->
+                        <a href="#" class="group flex gap-4 items-start pb-4 border-b border-neutral-200">
+                            <span class="font-mono text-lg font-bold text-neutral-400 leading-none">03</span>
+                            <div>
+                                <span class="font-mono text-[8px] text-neutral-500 uppercase tracking-widest font-bold">Metro</span>
+                                <h3 class="text-xs font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5 line-clamp-2">
+                                    Dinas Lingkungan Hidup Tambah 12 Armada Truk Sampah Baru
+                                </h3>
+                            </div>
+                        </a>
 
-                    <!-- Item 4 -->
-                    <a href="#" class="group flex gap-4 items-start pb-6 border-b border-neutral-200 last:border-0 last:pb-0">
-                        <span class="font-mono text-xl font-bold text-neutral-400 leading-none">04</span>
-                        <div>
-                            <span class="font-mono text-[9px] text-neutral-800 uppercase tracking-widest font-bold">Olahraga</span>
-                            <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-1 line-clamp-2">
-                                Persita Tangerang Rekrut Striker Asing Asal Brasil
-                            </h3>
-                            <span class="font-mono text-[9px] text-neutral-500 uppercase mt-2 block">720 views</span>
+                        <!-- Item 4 -->
+                        <a href="#" class="group flex gap-4 items-start pb-4 border-b border-neutral-200">
+                            <span class="font-mono text-lg font-bold text-neutral-400 leading-none">04</span>
+                            <div>
+                                <span class="font-mono text-[8px] text-neutral-500 uppercase tracking-widest font-bold">Olahraga</span>
+                                <h3 class="text-xs font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5 line-clamp-2">
+                                    Persita Tangerang Rekrut Striker Asing Asal Brasil
+                                </h3>
+                            </div>
+                        </a>
+
+                        <!-- Item 5 -->
+                        <a href="#" class="group flex gap-4 items-start">
+                            <span class="font-mono text-lg font-bold text-neutral-400 leading-none">05</span>
+                            <div>
+                                <span class="font-mono text-[8px] text-neutral-500 uppercase tracking-widest font-bold">Lifestyle</span>
+                                <h3 class="text-xs font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5 line-clamp-2">
+                                    Wisata Kuliner Malam Tangerang Jadi Destinasi Favorit Akhir Pekan
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Lensa Tangerang (Mini visual gallery to occupy empty space and make layout attractive) -->
+                <div class="border-t border-neutral-200 pt-5">
+                    <h3 class="font-mono text-[10px] font-bold tracking-widest text-neutral-500 uppercase mb-3">
+                        LENSA METRO TANGERANG
+                    </h3>
+                    <div class="grid grid-cols-4 gap-2">
+                        <div class="aspect-square rounded overflow-hidden border border-neutral-200 relative group cursor-pointer">
+                            <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-300" alt="Lensa image 1">
                         </div>
-                    </a>
+                        <div class="aspect-square rounded overflow-hidden border border-neutral-200 relative group cursor-pointer">
+                            <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-300" alt="Lensa image 2">
+                        </div>
+                        <div class="aspect-square rounded overflow-hidden border border-neutral-200 relative group cursor-pointer">
+                            <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-300" alt="Lensa image 3">
+                        </div>
+                        <div class="aspect-square rounded overflow-hidden border border-neutral-200 relative group cursor-pointer">
+                            <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-300" alt="Lensa image 4">
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
     </section>
 
-    <!-- News Categories Sections -->
+    <!-- Ad Space (Ruang Iklan Banner Utama) -->
+    <div class="py-8 border-b border-neutral-200">
+        <div class="w-full bg-neutral-50 border border-neutral-200 py-6 px-4 rounded-xl text-center font-mono text-xs text-neutral-400">
+            RUANG IKLAN BANNER UTAMA (728 x 90)
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
     <section class="py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- Left Section: Main News Feed (8 Columns) -->
+        <!-- Left Column: Main News Feed & Categories (8 Columns) -->
         <div class="lg:col-span-8 space-y-12">
             
-            <!-- Section: Metro Terbaru -->
+            <!-- Section 1: Berita Terbaru (Latest News) -->
             <div>
                 <div class="flex items-center justify-between border-b border-neutral-200 pb-4 mb-6">
                     <h2 class="font-black text-xl tracking-tight text-black uppercase flex items-center gap-2">
                         <span class="w-2.5 h-2.5 bg-black rounded-sm"></span>
-                        Metro Terkini
+                        Berita Terbaru
                     </h2>
-                    <a href="/category/metro" class="font-mono text-xs text-neutral-500 hover:text-black transition">Lihat Semua &rarr;</a>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Card 1 -->
-                    <article class="group relative flex flex-col bg-white rounded-xl overflow-hidden border border-neutral-200 hover:border-neutral-400 transition-all duration-300">
-                        <div class="aspect-video overflow-hidden">
-                            <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="News Image">
+                <div class="space-y-6">
+                    <!-- Item 1 -->
+                    <article class="group flex flex-col md:flex-row gap-6 border-b border-neutral-200 pb-6 last:border-0 last:pb-0">
+                        <div class="w-full md:w-1/3 aspect-video md:aspect-auto md:h-32 overflow-hidden rounded-lg border border-neutral-200">
+                            <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="News Image">
                         </div>
-                        <div class="p-5 flex flex-col flex-1">
-                            <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-500 mb-2">
-                                <span class="text-black font-bold uppercase">METRO</span>
-                                <span>•</span>
-                                <span>26 JUN 2026</span>
+                        <div class="flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-500 mb-2">
+                                    <span class="text-black font-bold uppercase">METRO</span>
+                                    <span>•</span>
+                                    <span>BEBERAPA MENIT YANG LALU</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-black group-hover:text-neutral-700 transition-colors line-clamp-2">
+                                    Penerapan Parkir Non-Tunai Mulai Diberlakukan di Kawasan Bisnis Karawaci
+                                </h3>
+                                <p class="mt-1.5 text-xs text-neutral-600 line-clamp-2">
+                                    Dinas Perhubungan Kota Tangerang meluncurkan sistem pembayaran parkir berbasis QRIS untuk meningkatkan transparansi PAD daerah.
+                                </p>
                             </div>
-                            <h3 class="text-base font-bold text-black group-hover:text-neutral-700 transition-colors line-clamp-2">
-                                Normalisasi Sungai Cisadane Masuki Tahap Akhir Sebelum Musim Hujan
-                            </h3>
-                            <p class="mt-2 text-xs text-neutral-600 line-clamp-2">
-                                Balai Besar Wilayah Sungai Cisadane mempercepat pengerukan lumpur di titik rawan luapan.
-                            </p>
-                            <div class="mt-4 pt-4 border-t border-neutral-200 flex justify-between items-center text-[10px] text-neutral-500 font-mono">
-                                <span class="group-hover:text-black transition">Baca Selengkapnya</span>
-                                <span>4 MIN BACA</span>
-                            </div>
+                            <span class="font-mono text-[10px] text-neutral-400 mt-2 block">Estimasi Baca: 3 min</span>
                         </div>
                     </article>
-                    
-                    <!-- Card 2 -->
-                    <article class="group relative flex flex-col bg-white rounded-xl overflow-hidden border border-neutral-200 hover:border-neutral-400 transition-all duration-300">
-                        <div class="aspect-video overflow-hidden">
-                            <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="News Image">
+
+                    <!-- Item 2 -->
+                    <article class="group flex flex-col md:flex-row gap-6 border-b border-neutral-200 pb-6 last:border-0 last:pb-0">
+                        <div class="w-full md:w-1/3 aspect-video md:aspect-auto md:h-32 overflow-hidden rounded-lg border border-neutral-200">
+                            <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="News Image">
                         </div>
-                        <div class="p-5 flex flex-col flex-1">
-                            <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-500 mb-2">
-                                <span class="text-black font-bold uppercase">METRO</span>
-                                <span>•</span>
-                                <span>25 JUN 2026</span>
+                        <div class="flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-500 mb-2">
+                                    <span class="text-black font-bold uppercase">KOMUNITAS</span>
+                                    <span>•</span>
+                                    <span>1 JAM YANG LALU</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-black group-hover:text-neutral-700 transition-colors line-clamp-2">
+                                    Festival Seni Cisadane Hadirkan Ratusan Pegiat Budaya Akhir Pekan Ini
+                                </h3>
+                                <p class="mt-1.5 text-xs text-neutral-600 line-clamp-2">
+                                    Komunitas seni se-Tangerang Raya berkumpul menampilkan berbagai kesenian tradisional di bantaran Sungai Cisadane.
+                                </p>
                             </div>
-                            <h3 class="text-base font-bold text-black group-hover:text-neutral-700 transition-colors line-clamp-2">
-                                Pemkot Tambah 5 Koridor Baru Angkot Si Benteng untuk Konektivitas
-                            </h3>
-                            <p class="mt-2 text-xs text-neutral-600 line-clamp-2">
-                                Penambahan koridor baru ini bertujuan mempermudah masyarakat mengakses simpul transportasi umum.
-                            </p>
-                            <div class="mt-4 pt-4 border-t border-neutral-200 flex justify-between items-center text-[10px] text-neutral-500 font-mono">
-                                <span class="group-hover:text-black transition">Baca Selengkapnya</span>
-                                <span>3 MIN BACA</span>
-                            </div>
+                            <span class="font-mono text-[10px] text-neutral-400 mt-2 block">Estimasi Baca: 4 min</span>
                         </div>
                     </article>
                 </div>
             </div>
 
-            <!-- Section: Politik & Ekonomi -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Politik -->
-                <div>
-                    <div class="border-b border-neutral-200 pb-4 mb-6">
-                        <h2 class="font-black text-lg tracking-tight text-black uppercase flex items-center gap-2">
-                            <span class="w-2 h-2 bg-black rounded-sm"></span>
-                            Politik
-                        </h2>
-                    </div>
-                    <div class="space-y-4">
-                        <a href="#" class="group block pb-4 border-b border-neutral-200 last:border-0 last:pb-0">
-                            <span class="font-mono text-[9px] text-neutral-800 uppercase font-bold">Debat Pilkada</span>
-                            <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-1">
-                                KPU Tangerang Umumkan Jadwal dan Tema Debat Calon Wali Kota
-                            </h3>
-                            <span class="font-mono text-[9px] text-neutral-500 uppercase mt-1.5 block">25 Juni 2026</span>
-                        </a>
-                        <a href="#" class="group block pb-4 border-b border-neutral-200 last:border-0 last:pb-0">
-                            <span class="font-mono text-[9px] text-neutral-800 uppercase font-bold">Partai Politik</span>
-                            <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-1">
-                                Konsolidasi Internal, PDI Perjuangan Siapkan Struktur Pemenangan Tingkat RT
-                            </h3>
-                            <span class="font-mono text-[9px] text-neutral-500 uppercase mt-1.5 block">24 Juni 2026</span>
-                        </a>
-                    </div>
-                </div>
+            <!-- Section 2: Kategori Utama -->
+            <div class="border-t border-neutral-200 pt-12 space-y-12">
+                <h2 class="font-mono text-xs font-bold tracking-widest text-neutral-500 uppercase flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+                    KATEGORI UTAMA
+                </h2>
 
-                <!-- Ekonomi -->
-                <div>
-                    <div class="border-b border-neutral-200 pb-4 mb-6">
-                        <h2 class="font-black text-lg tracking-tight text-black uppercase flex items-center gap-2">
-                            <span class="w-2 h-2 bg-black rounded-sm"></span>
-                            Ekonomi
-                        </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- 1. Kategori: METRO -->
+                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                        <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
+                            <h3 class="font-bold text-base text-black uppercase">METRO</h3>
+                            <a href="/category/metro" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    Normalisasi Sungai Cisadane Masuki Tahap Akhir Sebelum Musim Hujan
+                                </h4>
+                            </div>
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">25 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    Pemkot Tambah 5 Koridor Baru Angkot Si Benteng untuk Konektivitas
+                                </h4>
+                            </div>
+                        </div>
                     </div>
-                    <div class="space-y-4">
-                        <a href="#" class="group block pb-4 border-b border-neutral-200 last:border-0 last:pb-0">
-                            <span class="font-mono text-[9px] text-neutral-800 uppercase font-bold">UMKM</span>
-                            <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-1">
-                                Festival Kuliner Pasar Baru Dukung Ratusan Pelaku Ekonomi Kreatif Lokal
-                            </h3>
-                            <span class="font-mono text-[9px] text-neutral-500 uppercase mt-1.5 block">26 Juni 2026</span>
-                        </a>
-                        <a href="#" class="group block pb-4 border-b border-neutral-200 last:border-0 last:pb-0">
-                            <span class="font-mono text-[9px] text-neutral-800 uppercase font-bold">Investasi</span>
-                            <h3 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-1">
-                                Realisasi Investasi Kota Tangerang Semester I Tembus Rp 8 Triliun
-                            </h3>
-                            <span class="font-mono text-[9px] text-neutral-500 uppercase mt-1.5 block">24 Juni 2026</span>
-                        </a>
+
+                    <!-- 2. Kategori: POLITIK -->
+                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                        <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
+                            <h3 class="font-bold text-base text-black uppercase">POLITIK</h3>
+                            <a href="/category/politik" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    KPU Tangerang Umumkan Jadwal dan Tema Debat Calon Wali Kota
+                                </h4>
+                            </div>
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">24 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    Konsolidasi Internal Partai Siapkan Struktur Pemenangan Pilkada
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Kategori: EKONOMI -->
+                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                        <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
+                            <h3 class="font-bold text-base text-black uppercase">EKONOMI</h3>
+                            <a href="/category/ekonomi" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    Festival Kuliner Pasar Baru Dukung Pelaku Ekonomi Kreatif Lokal
+                                </h4>
+                            </div>
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">25 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    Realisasi Investasi Kota Tangerang Semester I Tembus Rp 8 Triliun
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Kategori: OLAHRAGA -->
+                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                        <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
+                            <h3 class="font-bold text-base text-black uppercase">OLAHRAGA</h3>
+                            <a href="/category/olahraga" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    Persita Tangerang Rekrut Striker Asing Baru Asal Brasil
+                                </h4>
+                            </div>
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">23 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    KONI Kota Tangerang Gelar Seleksi Atlit Muda Cabang Atletik
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Kategori: KOMUNITAS -->
+                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                        <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
+                            <h3 class="font-bold text-base text-black uppercase">KOMUNITAS</h3>
+                            <a href="/category/komunitas" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    Gerakan Bersih Cisadane Oleh Relawan Lingkungan Hidup
+                                </h4>
+                            </div>
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">22 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    Komunitas Fotografi Tangerang Adakan Pameran Karya Visual Jalanan
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Kategori: LIFESTYLE -->
+                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                        <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
+                            <h3 class="font-bold text-base text-black uppercase">LIFESTYLE</h3>
+                            <a href="/category/lifestyle" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    Tren Cafe Minimalis Bernuansa Industrial di Kota Tangerang
+                                </h4>
+                            </div>
+                            <div class="group">
+                                <span class="font-mono text-[9px] text-neutral-500">21 JUN 2026</span>
+                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                    Rute Sepeda Santai Akhir Pekan Terbaik di Wilayah BSD dan Karawaci
+                                </h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- Right Section: Sidebar Widgets (4 Columns) -->
+        <!-- Right Column: Sidebar Widgets (4 Columns) -->
         <div class="lg:col-span-4 space-y-8">
             
             <!-- Widget 1: Informasi Cuaca -->
@@ -329,4 +536,56 @@
     </section>
 
 </div>
+
+<script>
+    let currentSlide = 1;
+    const totalSlides = 3;
+
+    function setSlide(slideIndex) {
+        // Hide all slides
+        for (let i = 1; i <= totalSlides; i++) {
+            const slide = document.getElementById(`slide-${i}`);
+            const dot = document.getElementById(`carousel-dot-${i}`);
+            if (slide) {
+                if (i === slideIndex) {
+                    slide.classList.remove('hidden');
+                    // Fade in transition effect
+                    setTimeout(() => {
+                        slide.classList.remove('opacity-0');
+                        slide.classList.add('opacity-100');
+                    }, 50);
+                } else {
+                    slide.classList.add('hidden');
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0');
+                }
+            }
+            if (dot) {
+                if (i === slideIndex) {
+                    dot.classList.remove('bg-neutral-200');
+                    dot.classList.add('bg-black');
+                } else {
+                    dot.classList.remove('bg-black');
+                    dot.classList.add('bg-neutral-200');
+                }
+            }
+        }
+        currentSlide = slideIndex;
+    }
+
+    function nextSlide() {
+        let next = currentSlide + 1;
+        if (next > totalSlides) next = 1;
+        setSlide(next);
+    }
+
+    function prevSlide() {
+        let prev = currentSlide - 1;
+        if (prev < 1) prev = totalSlides;
+        setSlide(prev);
+    }
+
+    // Auto transition every 8 seconds
+    setInterval(nextSlide, 8000);
+</script>
 @endsection
