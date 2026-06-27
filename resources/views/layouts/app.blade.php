@@ -156,7 +156,7 @@
                 <div>
                     <h3 class="font-mono text-[10px] font-bold tracking-widest text-slate-300 uppercase mb-4">REDAKSI & HUKUM</h3>
                     <ul class="space-y-2 text-xs text-slate-450 font-medium">
-                        <li><a href="/tentang" class="hover:text-sky-400 transition">Tentang Kami</a></li>
+                        <li><a href="{{ route('about') }}" class="hover:text-sky-400 transition">Tentang Kami</a></li>
                         <li><a href="/redaksi" class="hover:text-sky-400 transition">Info Redaksi</a></li>
                         <li><a href="/kontak" class="hover:text-sky-400 transition">Kontak Kami</a></li>
                         <li><a href="/pedoman" class="hover:text-sky-400 transition">Pedoman Siber</a></li>
