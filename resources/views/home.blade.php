@@ -170,7 +170,7 @@
                     <div class="space-y-6">
                         <!-- Popular Item 1 -->
                         <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
-                            <span class="font-serif text-4xl font-extrabold text-sky-850 leading-none tracking-tighter">01</span>
+                            <span class="font-mono text-3xl font-black text-sky-800 leading-none tracking-tighter">01</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-indigo-600 uppercase tracking-widest block">POLITIK</span>
                                 <h3 class="text-sm font-bold text-black group-hover:text-sky-800 transition-colors leading-snug">
@@ -181,7 +181,7 @@
                         
                         <!-- Item 2 -->
                         <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
-                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-sky-850 transition-colors leading-none tracking-tighter">02</span>
+                            <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">02</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-emerald-600 uppercase tracking-widest block">EKONOMI</span>
                                 <h3 class="text-sm font-bold text-black group-hover:text-sky-800 transition-colors leading-snug">
@@ -192,7 +192,7 @@
 
                         <!-- Item 3 -->
                         <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
-                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-sky-850 transition-colors leading-none tracking-tighter">03</span>
+                            <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">03</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-sky-600 uppercase tracking-widest block">METRO</span>
                                 <h3 class="text-sm font-bold text-black group-hover:text-sky-800 transition-colors leading-snug">
@@ -203,7 +203,7 @@
 
                         <!-- Item 4 -->
                         <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
-                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-sky-850 transition-colors leading-none tracking-tighter">04</span>
+                            <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">04</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-amber-600 uppercase tracking-widest block">OLAHRAGA</span>
                                 <h3 class="text-sm font-bold text-black group-hover:text-sky-800 transition-colors leading-snug">
@@ -214,7 +214,7 @@
 
                         <!-- Item 5 -->
                         <a href="#" class="group flex gap-4 items-start last:border-0">
-                            <span class="font-serif text-4xl font-light text-neutral-300 group-hover:text-sky-850 transition-colors leading-none tracking-tighter">05</span>
+                            <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">05</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-rose-500 uppercase tracking-widest block">LIFESTYLE</span>
                                 <h3 class="text-sm font-bold text-black group-hover:text-sky-800 transition-colors leading-snug">
