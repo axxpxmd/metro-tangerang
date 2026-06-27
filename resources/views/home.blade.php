@@ -44,16 +44,16 @@
                     <!-- Slide 1 -->
                     <div class="carousel-slide block transition-all duration-500 opacity-100" id="slide-1">
                         <a href="{{ route('news.detail') }}" class="group block relative">
-                            <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
-                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
+                            <div class="relative overflow-hidden aspect-[4/3] sm:aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
+                                <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                     PILIHAN REDAKSI • 1 / 3
                                 </div>
-                                <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover aspect-video grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 1">
+                                <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 1">
                                 <!-- Gradient Overlay -->
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-0"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent z-0"></div>
                                 <!-- Title Overlay -->
-                                <div class="absolute inset-x-0 bottom-0 p-6 z-10">
-                                    <h1 class="text-xl md:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
+                                <div class="absolute inset-x-0 bottom-0 p-4 sm:p-6 z-10">
+                                    <h1 class="text-sm sm:text-lg md:text-xl lg:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
                                         Revolusi Transportasi Tangerang: Rute Baru LRT Terkoneksi Jabodebek Resmi Disepakati
                                     </h1>
                                 </div>
@@ -76,16 +76,16 @@
                     <!-- Slide 2 -->
                     <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-2">
                         <a href="{{ route('news.detail') }}" class="group block relative">
-                            <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
-                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
+                            <div class="relative overflow-hidden aspect-[4/3] sm:aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
+                                <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                     PILIHAN REDAKSI • 2 / 3
                                 </div>
-                                <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover aspect-video grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 2">
+                                <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 2">
                                 <!-- Gradient Overlay -->
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-0"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent z-0"></div>
                                 <!-- Title Overlay -->
-                                <div class="absolute inset-x-0 bottom-0 p-6 z-10">
-                                    <h1 class="text-xl md:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
+                                <div class="absolute inset-x-0 bottom-0 p-4 sm:p-6 z-10">
+                                    <h1 class="text-sm sm:text-lg md:text-xl lg:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
                                         Revitalisasi Pasar Anyar Tangerang Ditargetkan Rampung Akhir Tahun Ini
                                     </h1>
                                 </div>
@@ -108,16 +108,16 @@
                     <!-- Slide 3 -->
                     <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-3">
                         <a href="{{ route('news.detail') }}" class="group block relative">
-                            <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
-                                <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
+                            <div class="relative overflow-hidden aspect-[4/3] sm:aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
+                                <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                     PILIHAN REDAKSI • 3 / 3
                                 </div>
-                                <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover aspect-video grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 3">
+                                <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-700" alt="Headline Image 3">
                                 <!-- Gradient Overlay -->
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-0"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent z-0"></div>
                                 <!-- Title Overlay -->
-                                <div class="absolute inset-x-0 bottom-0 p-6 z-10">
-                                    <h1 class="text-xl md:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
+                                <div class="absolute inset-x-0 bottom-0 p-4 sm:p-6 z-10">
+                                    <h1 class="text-sm sm:text-lg md:text-xl lg:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
                                         Digitalisasi Pelayanan Publik, Aplikasi Tangerang Live Tembus 1 Juta Unduhan
                                     </h1>
                                 </div>
@@ -167,9 +167,9 @@
                         BERITA TERPOPULER
                     </h2>
                     
-                    <div class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
                         <!-- Popular Item 1 -->
-                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
+                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
                             <span class="font-mono text-3xl font-black text-sky-800 leading-none tracking-tighter">01</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-indigo-600 uppercase tracking-widest block">POLITIK</span>
@@ -180,7 +180,7 @@
                         </a>
                         
                         <!-- Item 2 -->
-                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
+                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
                             <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">02</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-emerald-600 uppercase tracking-widest block">EKONOMI</span>
@@ -191,7 +191,7 @@
                         </a>
 
                         <!-- Item 3 -->
-                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
+                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
                             <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">03</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-sky-600 uppercase tracking-widest block">METRO</span>
@@ -202,7 +202,7 @@
                         </a>
 
                         <!-- Item 4 -->
-                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
+                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
                             <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">04</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-amber-600 uppercase tracking-widest block">OLAHRAGA</span>
@@ -213,7 +213,7 @@
                         </a>
 
                         <!-- Item 5 -->
-                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start last:border-0">
+                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start last:border-0 md:col-span-2 lg:col-span-1">
                             <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">05</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-rose-500 uppercase tracking-widest block">LIFESTYLE</span>
@@ -247,21 +247,21 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Card 1 -->
-            <a href="{{ route('news.detail') }}" class="group relative block overflow-hidden rounded-xl aspect-[16/10] bg-neutral-900 border border-neutral-200">
+            <a href="{{ route('news.detail') }}" class="group relative block overflow-hidden rounded-xl aspect-[4/3] sm:aspect-[16/10] bg-neutral-900 border border-neutral-200">
                 <img src="{{ asset('images/foto-dummy.jpg') }}" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700 opacity-80" alt="Investigasi Cisadane">
                 <!-- Overlay Gradient -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent"></div>
                 <!-- Content -->
-                <div class="absolute inset-0 p-6 flex flex-col justify-end z-10">
+                <div class="absolute inset-0 p-4 sm:p-6 flex flex-col justify-end z-10">
                     <div>
-                        <span class="font-mono text-[9px] font-bold text-red-100 bg-red-950/60 border border-red-800/40 px-2.5 py-1 rounded-full w-fit uppercase tracking-wider mb-3 inline-block">
+                        <span class="font-mono text-[9px] font-bold text-red-100 bg-red-950/60 border border-red-800/40 px-2.5 py-1 rounded-full w-fit uppercase tracking-wider mb-2.5 inline-block">
                             INVESTIGASI
                         </span>
                     </div>
-                    <h3 class="text-lg md:text-xl font-black tracking-tight text-white leading-tight group-hover:text-sky-200 transition-colors">
+                    <h3 class="text-base sm:text-lg md:text-xl font-black tracking-tight text-white leading-tight group-hover:text-sky-200 transition-colors">
                         Menelusuri Jejak Sejarah Pintu Air Sepuluh Sungai Cisadane yang Melegenda
                     </h3>
-                    <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-400 mt-3">
+                    <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-400 mt-2.5">
                         <span>OLEH REDAKSI</span>
                         <span>•</span>
                         <span>27 JUNI 2026</span>
@@ -270,21 +270,21 @@
             </a>
             
             <!-- Card 2 -->
-            <a href="{{ route('news.detail') }}" class="group relative block overflow-hidden rounded-xl aspect-[16/10] bg-neutral-900 border border-neutral-200">
+            <a href="{{ route('news.detail') }}" class="group relative block overflow-hidden rounded-xl aspect-[4/3] sm:aspect-[16/10] bg-neutral-900 border border-neutral-200">
                 <img src="{{ asset('images/foto-dummy.jpg') }}" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700 opacity-80" alt="Kuliner Pasar Lama">
                 <!-- Overlay Gradient -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent"></div>
                 <!-- Content -->
-                <div class="absolute inset-0 p-6 flex flex-col justify-end z-10">
+                <div class="absolute inset-0 p-4 sm:p-6 flex flex-col justify-end z-10">
                     <div>
-                        <span class="font-mono text-[9px] font-bold text-amber-100 bg-amber-950/60 border border-amber-800/40 px-2.5 py-1 rounded-full w-fit uppercase tracking-wider mb-3 inline-block">
+                        <span class="font-mono text-[9px] font-bold text-amber-100 bg-amber-950/60 border border-amber-800/40 px-2.5 py-1 rounded-full w-fit uppercase tracking-wider mb-2.5 inline-block">
                             KULINER
                         </span>
                     </div>
-                    <h3 class="text-lg md:text-xl font-black tracking-tight text-white leading-tight group-hover:text-sky-200 transition-colors">
+                    <h3 class="text-base sm:text-lg md:text-xl font-black tracking-tight text-white leading-tight group-hover:text-sky-200 transition-colors">
                         Surga Kuliner Malam Pasar Lama Tangerang: Eksplorasi Rasa di Gang Lawas
                     </h3>
-                    <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-400 mt-3">
+                    <div class="flex items-center gap-3 font-mono text-[9px] text-neutral-400 mt-2.5">
                         <span>OLEH REDAKSI</span>
                         <span>•</span>
                         <span>27 JUNI 2026</span>
@@ -504,7 +504,7 @@
         </div>
 
         <!-- Right Column: Sidebar Widgets (4 Columns) -->
-        <div class="lg:col-span-4 lg:sticky lg:top-10 space-y-8 self-start">
+        <div class="lg:col-span-4 lg:sticky lg:top-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 self-start">
             
             <!-- Widget 1: Informasi Cuaca -->
             <div class="border border-sky-100 rounded-xl p-6 bg-sky-50/50">
