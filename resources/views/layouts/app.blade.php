@@ -87,7 +87,7 @@
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <!-- Logo -->
-            <a href="/" id="header-logo-link" class="text-xl font-black tracking-tighter text-black flex items-center gap-2">
+            <a href="{{ route('home') }}" id="header-logo-link" class="text-xl font-black tracking-tighter text-black flex items-center gap-2">
                 METRO<span class="text-sky-700">TANGERANG</span>
             </a>
             
