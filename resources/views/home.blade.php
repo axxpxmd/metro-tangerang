@@ -43,7 +43,7 @@
                 <div class="relative">
                     <!-- Slide 1 -->
                     <div class="carousel-slide block transition-all duration-500 opacity-100" id="slide-1">
-                        <a href="#" class="group block relative">
+                        <a href="{{ route('news.detail') }}" class="group block relative">
                             <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
                                 <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                     PILIHAN REDAKSI • 1 / 3
@@ -75,7 +75,7 @@
 
                     <!-- Slide 2 -->
                     <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-2">
-                        <a href="#" class="group block relative">
+                        <a href="{{ route('news.detail') }}" class="group block relative">
                             <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
                                 <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                     PILIHAN REDAKSI • 2 / 3
@@ -107,7 +107,7 @@
 
                     <!-- Slide 3 -->
                     <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-3">
-                        <a href="#" class="group block relative">
+                        <a href="{{ route('news.detail') }}" class="group block relative">
                             <div class="relative overflow-hidden aspect-video rounded-lg bg-neutral-100 border border-neutral-200">
                                 <div class="absolute top-4 left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                     PILIHAN REDAKSI • 3 / 3
@@ -169,7 +169,7 @@
                     
                     <div class="space-y-6">
                         <!-- Popular Item 1 -->
-                        <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
+                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
                             <span class="font-mono text-3xl font-black text-sky-800 leading-none tracking-tighter">01</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-indigo-600 uppercase tracking-widest block">POLITIK</span>
@@ -180,7 +180,7 @@
                         </a>
                         
                         <!-- Item 2 -->
-                        <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
+                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
                             <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">02</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-emerald-600 uppercase tracking-widest block">EKONOMI</span>
@@ -191,7 +191,7 @@
                         </a>
 
                         <!-- Item 3 -->
-                        <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
+                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
                             <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">03</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-sky-600 uppercase tracking-widest block">METRO</span>
@@ -202,7 +202,7 @@
                         </a>
 
                         <!-- Item 4 -->
-                        <a href="#" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
+                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 last:border-0 last:pb-0">
                             <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">04</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-amber-600 uppercase tracking-widest block">OLAHRAGA</span>
@@ -213,7 +213,7 @@
                         </a>
 
                         <!-- Item 5 -->
-                        <a href="#" class="group flex gap-4 items-start last:border-0">
+                        <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start last:border-0">
                             <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">05</span>
                             <div class="space-y-1">
                                 <span class="font-mono text-[9px] font-bold text-rose-500 uppercase tracking-widest block">LIFESTYLE</span>
@@ -222,7 +222,6 @@
                                 </h3>
                             </div>
                         </a>
-                    </div>
                 </div>
             </div>
         </aside>
@@ -248,7 +247,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Card 1 -->
-            <a href="#" class="group relative block overflow-hidden rounded-xl aspect-[16/10] bg-neutral-900 border border-neutral-200">
+            <a href="{{ route('news.detail') }}" class="group relative block overflow-hidden rounded-xl aspect-[16/10] bg-neutral-900 border border-neutral-200">
                 <img src="{{ asset('images/foto-dummy.jpg') }}" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700 opacity-80" alt="Investigasi Cisadane">
                 <!-- Overlay Gradient -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
@@ -271,7 +270,7 @@
             </a>
             
             <!-- Card 2 -->
-            <a href="#" class="group relative block overflow-hidden rounded-xl aspect-[16/10] bg-neutral-900 border border-neutral-200">
+            <a href="{{ route('news.detail') }}" class="group relative block overflow-hidden rounded-xl aspect-[16/10] bg-neutral-900 border border-neutral-200">
                 <img src="{{ asset('images/foto-dummy.jpg') }}" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700 opacity-80" alt="Kuliner Pasar Lama">
                 <!-- Overlay Gradient -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
@@ -324,8 +323,8 @@
                                     <span>•</span>
                                     <span>BEBERAPA MENIT YANG LALU</span>
                                 </div>
-                                <h3 class="text-lg font-bold text-black group-hover:text-neutral-700 transition-colors line-clamp-2">
-                                    Penerapan Parkir Non-Tunai Mulai Diberlakukan di Kawasan Bisnis Karawaci
+                                <h3 class="text-lg font-bold text-black group-hover:text-sky-800 transition-colors line-clamp-2">
+                                    <a href="{{ route('news.detail') }}">Penerapan Parkir Non-Tunai Mulai Diberlakukan di Kawasan Bisnis Karawaci</a>
                                 </h3>
                                 <p class="mt-1.5 text-xs text-neutral-600 line-clamp-2">
                                     Dinas Perhubungan Kota Tangerang meluncurkan sistem pembayaran parkir berbasis QRIS untuk meningkatkan transparansi PAD daerah.
@@ -347,8 +346,8 @@
                                     <span>•</span>
                                     <span>1 JAM YANG LALU</span>
                                 </div>
-                                <h3 class="text-lg font-bold text-black group-hover:text-neutral-700 transition-colors line-clamp-2">
-                                    Festival Seni Cisadane Hadirkan Ratusan Pegiat Budaya Akhir Pekan Ini
+                                <h3 class="text-lg font-bold text-black group-hover:text-sky-800 transition-colors line-clamp-2">
+                                    <a href="{{ route('news.detail') }}">Festival Seni Cisadane Hadirkan Ratusan Pegiat Budaya Akhir Pekan Ini</a>
                                 </h3>
                                 <p class="mt-1.5 text-xs text-neutral-600 line-clamp-2">
                                     Komunitas seni se-Tangerang Raya berkumpul menampilkan berbagai kesenian tradisional di bantaran Sungai Cisadane.
