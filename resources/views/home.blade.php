@@ -53,7 +53,7 @@
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent z-0"></div>
                                 <!-- Title Overlay -->
                                 <div class="absolute inset-x-0 bottom-0 p-4 sm:p-6 z-10">
-                                    <h1 class="text-sm sm:text-lg md:text-xl lg:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
+                                    <h1 class="text-lg sm:text-lg md:text-xl lg:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
                                         Revolusi Transportasi Tangerang: Rute Baru LRT Terkoneksi Jabodebek Resmi Disepakati
                                     </h1>
                                 </div>
@@ -85,7 +85,7 @@
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent z-0"></div>
                                 <!-- Title Overlay -->
                                 <div class="absolute inset-x-0 bottom-0 p-4 sm:p-6 z-10">
-                                    <h1 class="text-sm sm:text-lg md:text-xl lg:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
+                                    <h1 class="text-lg sm:text-lg md:text-xl lg:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
                                         Revitalisasi Pasar Anyar Tangerang Ditargetkan Rampung Akhir Tahun Ini
                                     </h1>
                                 </div>
@@ -117,7 +117,7 @@
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent z-0"></div>
                                 <!-- Title Overlay -->
                                 <div class="absolute inset-x-0 bottom-0 p-4 sm:p-6 z-10">
-                                    <h1 class="text-sm sm:text-lg md:text-xl lg:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
+                                    <h1 class="text-lg sm:text-lg md:text-xl lg:text-2xl font-black tracking-tight text-white leading-tight group-hover:text-neutral-200 transition-colors">
                                         Digitalisasi Pelayanan Publik, Aplikasi Tangerang Live Tembus 1 Juta Unduhan
                                     </h1>
                                 </div>
