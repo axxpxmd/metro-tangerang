@@ -104,7 +104,7 @@
 
             <!-- Button to view all categories -->
             <div class="pt-0">
-                <a href="{{ route('news.search') }}" wire:navigate class="flex items-center justify-center gap-2 w-full py-3.5 border border-slate-200 bg-slate-100 hover:bg-slate-200 text-slate-800 hover:text-sky-700 rounded-xl font-mono text-[11px] font-bold uppercase tracking-wider transition shadow-sm hover:shadow-md duration-300">
+                <a href="{{ route('categories') }}" wire:navigate class="flex items-center justify-center gap-2 w-full py-3.5 border border-slate-200 bg-slate-100 hover:bg-slate-200 text-slate-800 hover:text-sky-700 rounded-xl font-mono text-[11px] font-bold uppercase tracking-wider transition shadow-sm hover:shadow-md duration-300">
                     <i class="fa-solid fa-list-ul"></i> Lihat Semua Kategori
                 </a>
             </div>
