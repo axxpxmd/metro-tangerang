@@ -17,14 +17,46 @@
 
     <!-- Main Search Box on Page -->
     <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 mb-8">
-        <form id="search-page-form" method="GET" action="/search" class="flex gap-3">
-            <div class="relative flex-grow">
-                <input type="text" id="search-page-input" name="q" placeholder="Ketik kata kunci (contoh: Cisadane, Parkir, Kuliner)..." class="w-full bg-white border border-slate-200 rounded-lg pl-10 pr-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-sky-500 text-slate-800 placeholder-slate-450">
-                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+        <form id="search-page-form" method="GET" action="/search" class="space-y-4">
+            <!-- Row 1: Search Input & Button -->
+            <div class="flex gap-3">
+                <div class="relative flex-grow">
+                    <input type="text" id="search-page-input" name="q" placeholder="Ketik kata kunci (contoh: Cisadane, Parkir, Kuliner)..." class="w-full bg-white border border-slate-200 rounded-lg pl-10 pr-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-sky-500 text-slate-800 placeholder-slate-450">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+                </div>
+                <button type="submit" class="bg-sky-900 text-white font-mono text-xs font-bold px-6 py-3 rounded-lg hover:bg-sky-800 transition uppercase tracking-wider">
+                    CARI
+                </button>
             </div>
-            <button type="submit" class="bg-sky-900 text-white font-mono text-xs font-bold px-6 py-3 rounded-lg hover:bg-sky-800 transition uppercase tracking-wider">
-                CARI
-            </button>
+
+            <!-- Row 2: Filters -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-3 border-t border-slate-200/60">
+                <!-- Category Filter -->
+                <div>
+                    <label for="filter-category" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1.5">KATEGORI</label>
+                    <select id="filter-category" name="category" class="w-full bg-white border border-slate-200 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-sky-500 text-slate-700">
+                        <option value="">Semua Kategori</option>
+                        <option value="METRO">Metro</option>
+                        <option value="POLITIK">Politik</option>
+                        <option value="EKONOMI">Ekonomi</option>
+                        <option value="OLAHRAGA">Olahraga</option>
+                        <option value="LIFESTYLE">Lifestyle</option>
+                        <option value="KOMUNITAS">Komunitas</option>
+                    </select>
+                </div>
+
+                <!-- Date From Filter -->
+                <div>
+                    <label for="filter-date-from" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1.5">TANGGAL DARI</label>
+                    <input type="date" id="filter-date-from" name="date_from" class="w-full bg-white border border-slate-200 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-sky-500 text-slate-700">
+                </div>
+
+                <!-- Date To Filter -->
+                <div>
+                    <label for="filter-date-to" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1.5">TANGGAL SAMPAI</label>
+                    <input type="date" id="filter-date-to" name="date_to" class="w-full bg-white border border-slate-200 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-sky-500 text-slate-700">
+                </div>
+            </div>
         </form>
     </div>
 
@@ -58,13 +90,14 @@
 
 @push('scripts')
 <script>
-    // List of mock articles to search through
+    // List of mock articles to search through (with ISO date values)
     const articles = [
         {
             title: "Penerapan Parkir Non-Tunai Mulai Diberlakukan di Kawasan Bisnis Karawaci",
             description: "Dinas Perhubungan Kota Tangerang meluncurkan sistem pembayaran parkir berbasis QRIS untuk meningkatkan transparansi PAD daerah.",
             category: "METRO",
             time: "BEBERAPA MENIT YANG LALU",
+            dateStr: "2026-06-27",
             readTime: "3 min read",
             link: "{{ route('news.detail') }}"
         },
@@ -73,6 +106,7 @@
             description: "Komunitas seni se-Tangerang Raya berkumpul menampilkan berbagai kesenian tradisional di bantaran Sungai Cisadane.",
             category: "KOMUNITAS",
             time: "1 JAM YANG LALU",
+            dateStr: "2026-06-27",
             readTime: "4 min read",
             link: "{{ route('news.detail') }}"
         },
@@ -81,6 +115,7 @@
             description: "Pemerintah Kota Tangerang mempercepat pengerjaan normalisasi sungai dan penguatan tanggul guna mengantisipasi banjir tahunan.",
             category: "METRO",
             time: "25 JUN 2026",
+            dateStr: "2026-06-25",
             readTime: "5 min read",
             link: "{{ route('news.detail') }}"
         },
@@ -89,6 +124,7 @@
             description: "Layanan angkutan perkotaan Si Benteng diperluas rutenya menjangkau area permukiman padat dan perbatasan stasiun.",
             category: "METRO",
             time: "24 JUN 2026",
+            dateStr: "2026-06-24",
             readTime: "3 min read",
             link: "{{ route('news.detail') }}"
         },
@@ -97,6 +133,7 @@
             description: "Partai-partai politik mulai membangun konsolidasi strategis guna menentukan bakal calon kepala daerah kota Tangerang.",
             category: "POLITIK",
             time: "26 JUN 2026",
+            dateStr: "2026-06-26",
             readTime: "4 min read",
             link: "{{ route('news.detail') }}"
         },
@@ -105,6 +142,7 @@
             description: "Kunjungan wisatawan kuliner lokal mendongkrak omzet pedagang makanan khas di sepanjang rute ikonik Pasar Lama Tangerang.",
             category: "EKONOMI",
             time: "25 JUN 2026",
+            dateStr: "2026-06-25",
             readTime: "3 min read",
             link: "{{ route('news.detail') }}"
         },
@@ -113,6 +151,7 @@
             description: "Penambahan unit truk pengangkut sampah dilakukan untuk menjamin kebersihan lingkungan pemukiman perkotaan di Tangerang.",
             category: "METRO",
             time: "23 JUN 2026",
+            dateStr: "2026-06-23",
             readTime: "3 min read",
             link: "{{ route('news.detail') }}"
         },
@@ -121,6 +160,7 @@
             description: "Langkah transfer krusial diambil manajemen Pendekar Cisadane guna memperkuat ketajaman lini serang musim liga kali ini.",
             category: "OLAHRAGA",
             time: "26 JUN 2026",
+            dateStr: "2026-06-26",
             readTime: "5 min read",
             link: "{{ route('news.detail') }}"
         },
@@ -129,6 +169,7 @@
             description: "Menelusuri aneka ragam jajanan malam hits Kota Tangerang yang menyita perhatian pemburu kuliner dari luar daerah.",
             category: "LIFESTYLE",
             time: "22 JUN 2026",
+            dateStr: "2026-06-22",
             readTime: "4 min read",
             link: "{{ route('news.detail') }}"
         },
@@ -137,6 +178,7 @@
             description: "Review beberapa cafe berkonsep industrial minimalis paling estetik di Tangerang yang ramai dikunjungi kalangan muda.",
             category: "LIFESTYLE",
             time: "26 JUN 2026",
+            dateStr: "2026-06-26",
             readTime: "3 min read",
             link: "{{ route('news.detail') }}"
         },
@@ -145,26 +187,52 @@
             description: "Rekomendasi jalur bersepeda yang teduh dan aman bagi keluarga untuk mengisi pagi hari akhir pekan di wilayah satelit.",
             category: "LIFESTYLE",
             time: "21 JUN 2026",
+            dateStr: "2026-06-21",
             readTime: "4 min read",
             link: "{{ route('news.detail') }}"
         }
     ];
 
-    // Read query parameter
+    // Read query parameters
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get('q') || '';
+    const categoryFilter = urlParams.get('category') || '';
+    const dateFromFilter = urlParams.get('date_from') || '';
+    const dateToFilter = urlParams.get('date_to') || '';
     
-    // Fill query in input and header displays
+    // Fill query values in input fields
     document.getElementById('search-page-input').value = query;
+    document.getElementById('filter-category').value = categoryFilter;
+    document.getElementById('filter-date-from').value = dateFromFilter;
+    document.getElementById('filter-date-to').value = dateToFilter;
+    
     document.getElementById('query-display').innerText = query || 'Semua Berita';
 
-    // Perform filter
+    // Perform filters
     const filteredArticles = articles.filter(art => {
-        if (!query) return true; // Show all if empty
-        const q = query.toLowerCase();
-        return art.title.toLowerCase().includes(q) || 
-               art.description.toLowerCase().includes(q) ||
-               art.category.toLowerCase().includes(q);
+        // Keyword Search
+        if (query) {
+            const q = query.toLowerCase();
+            const matchesKeyword = art.title.toLowerCase().includes(q) || 
+                                   art.description.toLowerCase().includes(q) ||
+                                   art.category.toLowerCase().includes(q);
+            if (!matchesKeyword) return false;
+        }
+
+        // Category Filter
+        if (categoryFilter && art.category !== categoryFilter) {
+            return false;
+        }
+
+        // Date Range Filter (compare YYYY-MM-DD strings directly or convert to Date object)
+        if (dateFromFilter) {
+            if (art.dateStr < dateFromFilter) return false;
+        }
+        if (dateToFilter) {
+            if (art.dateStr > dateToFilter) return false;
+        }
+
+        return true;
     });
 
     // Update count
@@ -196,7 +264,7 @@
                         <h3 class="text-base font-bold text-black group-hover:text-sky-850 transition-colors leading-snug">
                             <a href="${art.link}">${highlightText(art.title, query)}</a>
                         </h3>
-                        <p class="mt-1.5 text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                        <p class="mt-1.5 text-xs text-slate-650 line-clamp-2 leading-relaxed">
                             ${highlightText(art.description, query)}
                         </p>
                     </div>
@@ -209,6 +277,9 @@
     // Helper function to fill input and trigger search
     function fillAndSearch(text) {
         document.getElementById('search-page-input').value = text;
+        document.getElementById('filter-category').value = '';
+        document.getElementById('filter-date-from').value = '';
+        document.getElementById('filter-date-to').value = '';
         document.getElementById('search-page-form').submit();
     }
 
