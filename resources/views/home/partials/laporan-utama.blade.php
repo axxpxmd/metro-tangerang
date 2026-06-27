@@ -8,7 +8,7 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Card 1 -->
-        <a href="{{ route('news.detail') }}" class="group relative block overflow-hidden rounded-xl aspect-[4/3] sm:aspect-[16/10] bg-neutral-900 border border-neutral-200">
+        <a href="{{ route('news.detail') }}" wire:navigate class="group relative block overflow-hidden rounded-xl aspect-[4/3] sm:aspect-[16/10] bg-neutral-900 border border-neutral-200">
             <img src="{{ asset('images/foto-dummy.jpg') }}" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700 opacity-80" alt="Investigasi Cisadane">
             <!-- Overlay Gradient -->
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent"></div>
@@ -31,7 +31,7 @@
         </a>
         
         <!-- Card 2 -->
-        <a href="{{ route('news.detail') }}" class="group relative block overflow-hidden rounded-xl aspect-[4/3] sm:aspect-[16/10] bg-neutral-900 border border-neutral-200">
+        <a href="{{ route('news.detail') }}" wire:navigate class="group relative block overflow-hidden rounded-xl aspect-[4/3] sm:aspect-[16/10] bg-neutral-900 border border-neutral-200">
             <img src="{{ asset('images/foto-dummy.jpg') }}" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700 opacity-80" alt="Kuliner Pasar Lama">
             <!-- Overlay Gradient -->
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent"></div>

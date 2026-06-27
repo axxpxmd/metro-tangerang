@@ -20,11 +20,11 @@
             <div>
                 <h3 class="font-mono text-[10px] font-bold tracking-widest text-slate-300 uppercase mb-4">KATEGORI</h3>
                 <ul class="space-y-2 text-xs text-slate-400 font-medium">
-                    <li><a href="/category/metro" class="hover:text-sky-400 transition">Metro Tangerang</a></li>
-                    <li><a href="/category/politik" class="hover:text-sky-400 transition">Politik & Pilkada</a></li>
-                    <li><a href="/category/ekonomi" class="hover:text-sky-400 transition">Ekonomi & Bisnis</a></li>
-                    <li><a href="/category/olahraga" class="hover:text-sky-400 transition">Olahraga</a></li>
-                    <li><a href="/category/lifestyle" class="hover:text-sky-400 transition">Lifestyle & Kuliner</a></li>
+                    <li><a href="/category/metro" wire:navigate class="hover:text-sky-400 transition">Metro Tangerang</a></li>
+                    <li><a href="/category/politik" wire:navigate class="hover:text-sky-400 transition">Politik & Pilkada</a></li>
+                    <li><a href="/category/ekonomi" wire:navigate class="hover:text-sky-400 transition">Ekonomi & Bisnis</a></li>
+                    <li><a href="/category/olahraga" wire:navigate class="hover:text-sky-400 transition">Olahraga</a></li>
+                    <li><a href="/category/lifestyle" wire:navigate class="hover:text-sky-400 transition">Lifestyle & Kuliner</a></li>
                 </ul>
             </div>
 
@@ -32,11 +32,11 @@
             <div>
                 <h3 class="font-mono text-[10px] font-bold tracking-widest text-slate-300 uppercase mb-4">REDAKSI & HUKUM</h3>
                 <ul class="space-y-2 text-xs text-slate-400 font-medium">
-                    <li><a href="{{ route('about') }}" class="hover:text-sky-400 transition">Tentang Kami</a></li>
-                    <li><a href="{{ route('redaksi') }}" class="hover:text-sky-400 transition">Info Redaksi</a></li>
-                    <li><a href="{{ route('contact') }}" class="hover:text-sky-400 transition">Kontak Kami</a></li>
-                    <li><a href="{{ route('pedoman') }}" class="hover:text-sky-400 transition">Pedoman Siber</a></li>
-                    <li><a href="{{ route('news.search') }}" class="hover:text-sky-400 transition">Cari Berita</a></li>
+                    <li><a href="{{ route('about') }}" wire:navigate class="hover:text-sky-400 transition">Tentang Kami</a></li>
+                    <li><a href="{{ route('redaksi') }}" wire:navigate class="hover:text-sky-400 transition">Info Redaksi</a></li>
+                    <li><a href="{{ route('contact') }}" wire:navigate class="hover:text-sky-400 transition">Kontak Kami</a></li>
+                    <li><a href="{{ route('pedoman') }}" wire:navigate class="hover:text-sky-400 transition">Pedoman Siber</a></li>
+                    <li><a href="{{ route('news.search') }}" wire:navigate class="hover:text-sky-400 transition">Cari Berita</a></li>
                 </ul>
             </div>
 

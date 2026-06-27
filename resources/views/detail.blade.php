@@ -7,9 +7,9 @@
     
     <!-- Breadcrumbs -->
     <nav class="font-mono text-[10px] text-slate-500 uppercase tracking-wider mb-6 flex items-center gap-2">
-        <a href="{{ route('home') }}" class="hover:text-sky-755 transition">Beranda</a>
+        <a href="{{ route('home') }}" wire:navigate class="hover:text-sky-755 transition">Beranda</a>
         <span>/</span>
-        <a href="/category/metro" class="hover:text-sky-755 transition text-sky-700 font-bold">Metro</a>
+        <a href="/category/metro" wire:navigate class="hover:text-sky-755 transition text-sky-700 font-bold">Metro</a>
         <span>/</span>
         <span class="text-slate-400">Detail Berita</span>
     </nav>
@@ -22,7 +22,7 @@
             
             <!-- Category Badge -->
             <div class="mb-4">
-                <a href="/category/metro" class="font-mono text-[10px] font-bold text-sky-800 bg-sky-50 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
+                <a href="/category/metro" wire:navigate class="font-mono text-[10px] font-bold text-sky-800 bg-sky-50 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                     METRO TANGERANG
                 </a>
             </div>
@@ -296,7 +296,7 @@
                 
                 <div class="space-y-4">
                     <!-- Item 1 -->
-                    <a href="{{ route('news.detail') }}" class="group block pb-4 border-b border-slate-100 last:border-0 last:pb-0">
+                    <a href="{{ route('news.detail') }}" wire:navigate class="group block pb-4 border-b border-slate-100 last:border-0 last:pb-0">
                         <span class="font-mono text-[9px] font-bold text-sky-650 uppercase tracking-widest block">KOMUNITAS</span>
                         <h4 class="text-xs font-bold text-black group-hover:text-sky-800 transition-colors leading-snug mt-1">
                             Festival Seni Cisadane Hadirkan Ratusan Pegiat Budaya Akhir Pekan Ini
@@ -305,7 +305,7 @@
                     </a>
                     
                     <!-- Item 2 -->
-                    <a href="{{ route('news.detail') }}" class="group block pb-4 border-b border-slate-100 last:border-0 last:pb-0">
+                    <a href="{{ route('news.detail') }}" wire:navigate class="group block pb-4 border-b border-slate-100 last:border-0 last:pb-0">
                         <span class="font-mono text-[9px] font-bold text-indigo-600 uppercase tracking-widest block">POLITIK</span>
                         <h4 class="text-xs font-bold text-black group-hover:text-sky-800 transition-colors leading-snug mt-1">
                             KPU Tangerang Umumkan Jadwal dan Tema Debat Calon Wali Kota
@@ -314,7 +314,7 @@
                     </a>
 
                     <!-- Item 3 -->
-                    <a href="{{ route('news.detail') }}" class="group block">
+                    <a href="{{ route('news.detail') }}" wire:navigate class="group block">
                         <span class="font-mono text-[9px] font-bold text-emerald-600 uppercase tracking-widest block">EKONOMI</span>
                         <h4 class="text-xs font-bold text-black group-hover:text-sky-800 transition-colors leading-snug mt-1">
                             Festival Kuliner Pasar Baru Dukung Pelaku Ekonomi Kreatif Lokal
@@ -325,7 +325,7 @@
             </div>
 
             <!-- Widget 3: Ruang Iklan Sidebar (Sticky Banner) -->
-            <a href="/iklan" class="relative block w-full overflow-hidden rounded-xl border border-slate-200 hover:border-sky-500 transition duration-300">
+            <a href="/iklan" wire:navigate class="relative block w-full overflow-hidden rounded-xl border border-slate-200 hover:border-sky-500 transition duration-300">
                 <!-- AD Label Overlay -->
                 <div class="absolute top-0 left-0 bg-neutral-200/90 backdrop-blur-sm text-neutral-600 font-mono text-[8px] font-bold px-2 py-0.5 rounded-br border-r border-b border-neutral-300/20 uppercase tracking-widest select-none z-10">
                     AD
@@ -344,36 +344,36 @@
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Article 1 -->
-            <a href="#" class="group block bg-white border border-slate-200 hover:border-slate-400 rounded-xl p-4 transition duration-300">
+            <a href="{{ route('news.detail') }}" wire:navigate class="group block bg-white border border-slate-200 hover:border-slate-400 rounded-xl p-4 transition duration-300">
                 <div class="relative overflow-hidden aspect-video rounded-lg bg-slate-100 border border-slate-200 mb-4">
                     <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-102 transition duration-500" alt="News">
                 </div>
                 <span class="font-mono text-[8px] font-bold text-sky-600 uppercase tracking-widest block mb-2">METRO</span>
-                <h4 class="text-sm font-bold text-black group-hover:text-sky-850 transition line-clamp-2 leading-snug">
+                <h4 class="text-sm font-bold text-black group-hover:text-sky-855 transition line-clamp-2 leading-snug">
                     Normalisasi Sungai Cisadane Masuki Tahap Akhir Sebelum Musim Hujan
                 </h4>
                 <span class="font-mono text-[8px] text-slate-400 mt-2 block">25 JUN 2026</span>
             </a>
 
             <!-- Article 2 -->
-            <a href="#" class="group block bg-white border border-slate-200 hover:border-slate-400 rounded-xl p-4 transition duration-300">
+            <a href="{{ route('news.detail') }}" wire:navigate class="group block bg-white border border-slate-200 hover:border-slate-400 rounded-xl p-4 transition duration-300">
                 <div class="relative overflow-hidden aspect-video rounded-lg bg-slate-100 border border-slate-200 mb-4">
                     <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-102 transition duration-500" alt="News">
                 </div>
                 <span class="font-mono text-[8px] font-bold text-sky-600 uppercase tracking-widest block mb-2">METRO</span>
-                <h4 class="text-sm font-bold text-black group-hover:text-sky-850 transition line-clamp-2 leading-snug">
+                <h4 class="text-sm font-bold text-black group-hover:text-sky-855 transition line-clamp-2 leading-snug">
                     Pemkot Tambah 5 Koridor Baru Angkot Si Benteng untuk Konektivitas
                 </h4>
                 <span class="font-mono text-[8px] text-slate-400 mt-2 block">24 JUN 2026</span>
             </a>
 
             <!-- Article 3 -->
-            <a href="#" class="group block bg-white border border-slate-200 hover:border-slate-400 rounded-xl p-4 transition duration-300">
+            <a href="{{ route('news.detail') }}" wire:navigate class="group block bg-white border border-slate-200 hover:border-slate-400 rounded-xl p-4 transition duration-300">
                 <div class="relative overflow-hidden aspect-video rounded-lg bg-slate-100 border border-slate-200 mb-4">
                     <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-102 transition duration-500" alt="News">
                 </div>
                 <span class="font-mono text-[8px] font-bold text-sky-600 uppercase tracking-widest block mb-2">METRO</span>
-                <h4 class="text-sm font-bold text-black group-hover:text-sky-850 transition line-clamp-2 leading-snug">
+                <h4 class="text-sm font-bold text-black group-hover:text-sky-855 transition line-clamp-2 leading-snug">
                     Penerapan Parkir Non-Tunai Mulai Diberlakukan di Kawasan Bisnis Karawaci
                 </h4>
                 <span class="font-mono text-[8px] text-slate-400 mt-2 block">23 JUN 2026</span>
@@ -400,10 +400,11 @@
 
 @push('scripts')
 <script>
+(function() {
     let currentDetailSlide = 1;
     const totalDetailSlides = 3;
 
-    function showDetailSlide(index) {
+    window.showDetailSlide = function(index) {
         if (index > totalDetailSlides) currentDetailSlide = 1;
         else if (index < 1) currentDetailSlide = totalDetailSlides;
         else currentDetailSlide = index;
@@ -430,15 +431,15 @@
         }
     }
 
-    function nextDetailSlide() {
-        showDetailSlide(currentDetailSlide + 1);
+    window.nextDetailSlide = function() {
+        window.showDetailSlide(currentDetailSlide + 1);
     }
 
-    function prevDetailSlide() {
-        showDetailSlide(currentDetailSlide - 1);
+    window.prevDetailSlide = function() {
+        window.showDetailSlide(currentDetailSlide - 1);
     }
 
-    function openLightbox(slideElement) {
+    window.openLightbox = function(slideElement) {
         const img = slideElement.querySelector('img');
         const lightbox = document.getElementById('image-lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
@@ -465,7 +466,7 @@
         }
     }
 
-    function closeLightbox() {
+    window.closeLightbox = function() {
         const lightbox = document.getElementById('image-lightbox');
         if (lightbox) {
             lightbox.classList.add('opacity-0');
@@ -478,5 +479,6 @@
             document.body.classList.remove('overflow-hidden');
         }
     }
+})();
 </script>
 @endpush

@@ -261,8 +261,8 @@
                             <span>•</span>
                             <span>${art.time}</span>
                         </div>
-                        <h3 class="text-base font-bold text-black group-hover:text-sky-850 transition-colors leading-snug">
-                            <a href="${art.link}">${highlightText(art.title, query)}</a>
+                        <h3 class="text-base font-bold text-black group-hover:text-sky-855 transition-colors leading-snug">
+                            <a href="${art.link}" wire:navigate>${highlightText(art.title, query)}</a>
                         </h3>
                         <p class="mt-1.5 text-xs text-slate-650 line-clamp-2 leading-relaxed">
                             ${highlightText(art.description, query)}

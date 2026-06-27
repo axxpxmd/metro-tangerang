@@ -9,7 +9,7 @@
             <div class="relative">
                 <!-- Slide 1 -->
                 <div class="carousel-slide block transition-all duration-500 opacity-100" id="slide-1">
-                    <a href="{{ route('news.detail') }}" class="group block relative">
+                    <a href="{{ route('news.detail') }}" wire:navigate class="group block relative">
                         <div class="relative overflow-hidden -mx-4 -mt-4 sm:mx-0 sm:mt-0 rounded-t-xl rounded-b-none sm:rounded-lg border-b sm:border border-neutral-200 aspect-[4/3] sm:aspect-video bg-neutral-100">
                             <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                 PILHAN REDAKSI • 1 / 3
@@ -41,7 +41,7 @@
 
                 <!-- Slide 2 -->
                 <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-2">
-                    <a href="{{ route('news.detail') }}" class="group block relative">
+                    <a href="{{ route('news.detail') }}" wire:navigate class="group block relative">
                         <div class="relative overflow-hidden -mx-4 -mt-4 sm:mx-0 sm:mt-0 rounded-t-xl rounded-b-none sm:rounded-lg border-b sm:border border-neutral-200 aspect-[4/3] sm:aspect-video bg-neutral-100">
                             <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                 PILIHAN REDAKSI • 2 / 3
@@ -73,7 +73,7 @@
 
                 <!-- Slide 3 -->
                 <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-3">
-                    <a href="{{ route('news.detail') }}" class="group block relative">
+                    <a href="{{ route('news.detail') }}" wire:navigate class="group block relative">
                         <div class="relative overflow-hidden -mx-4 -mt-4 sm:mx-0 sm:mt-0 rounded-t-xl rounded-b-none sm:rounded-lg border-b sm:border border-neutral-200 aspect-[4/3] sm:aspect-video bg-neutral-100">
                             <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                 PILIHAN REDAKSI • 3 / 3
@@ -135,7 +135,7 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
                     <!-- Popular Item 1 -->
-                    <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
+                    <a href="{{ route('news.detail') }}" wire:navigate class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
                         <span class="font-mono text-3xl font-black text-sky-800 leading-none tracking-tighter">01</span>
                         <div class="space-y-1">
                             <span class="font-mono text-[9px] font-bold text-indigo-600 uppercase tracking-widest block">POLITIK</span>
@@ -146,7 +146,7 @@
                     </a>
                     
                     <!-- Item 2 -->
-                    <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
+                    <a href="{{ route('news.detail') }}" wire:navigate class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
                         <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">02</span>
                         <div class="space-y-1">
                             <span class="font-mono text-[9px] font-bold text-emerald-600 uppercase tracking-widest block">EKONOMI</span>
@@ -157,7 +157,7 @@
                     </a>
 
                     <!-- Item 3 -->
-                    <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
+                    <a href="{{ route('news.detail') }}" wire:navigate class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
                         <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">03</span>
                         <div class="space-y-1">
                             <span class="font-mono text-[9px] font-bold text-sky-600 uppercase tracking-widest block">METRO</span>
@@ -168,7 +168,7 @@
                     </a>
 
                     <!-- Item 4 -->
-                    <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
+                    <a href="{{ route('news.detail') }}" wire:navigate class="group flex gap-4 items-start pb-5 border-b border-neutral-100 md:pb-0 md:border-b-0 lg:pb-5 lg:border-b last:border-0 last:pb-0">
                         <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">04</span>
                         <div class="space-y-1">
                             <span class="font-mono text-[9px] font-bold text-amber-600 uppercase tracking-widest block">OLAHRAGA</span>
@@ -179,7 +179,7 @@
                     </a>
 
                     <!-- Item 5 -->
-                    <a href="{{ route('news.detail') }}" class="group flex gap-4 items-start last:border-0 md:col-span-2 lg:col-span-1">
+                    <a href="{{ route('news.detail') }}" wire:navigate class="group flex gap-4 items-start last:border-0 md:col-span-2 lg:col-span-1">
                         <span class="font-mono text-3xl font-bold text-slate-300 group-hover:text-sky-800 transition-colors leading-none tracking-tighter">05</span>
                         <div class="space-y-1">
                             <span class="font-mono text-[9px] font-bold text-rose-500 uppercase tracking-widest block">LIFESTYLE</span>

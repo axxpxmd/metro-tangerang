@@ -2,17 +2,17 @@
 <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <!-- Logo -->
-        <a href="{{ route('home') }}" id="header-logo-link" class="text-xl font-black tracking-tighter text-black flex items-center gap-2">
+        <a href="{{ route('home') }}" wire:navigate id="header-logo-link" class="text-xl font-black tracking-tighter text-black flex items-center gap-2">
             METRO<span class="text-sky-700">TANGERANG</span>
         </a>
         
         <!-- Navigation Menu -->
         <nav id="header-nav-menu" class="hidden md:flex space-x-8 font-mono text-xs tracking-wider uppercase text-neutral-600">
-            <a href="/category/metro" id="nav-item-metro" class="hover:text-sky-700 transition-colors duration-200">Metro</a>
-            <a href="/category/politik" id="nav-item-politik" class="hover:text-sky-700 transition-colors duration-200">Politik</a>
-            <a href="/category/ekonomi" id="nav-item-ekonomi" class="hover:text-sky-700 transition-colors duration-200">Ekonomi</a>
-            <a href="/category/olahraga" id="nav-item-olahraga" class="hover:text-sky-700 transition-colors duration-200">Olahraga</a>
-            <a href="/category/lifestyle" id="nav-item-lifestyle" class="hover:text-sky-700 transition-colors duration-200">Lifestyle</a>
+            <a href="/category/metro" wire:navigate id="nav-item-metro" class="hover:text-sky-700 transition-colors duration-200">Metro</a>
+            <a href="/category/politik" wire:navigate id="nav-item-politik" class="hover:text-sky-700 transition-colors duration-200">Politik</a>
+            <a href="/category/ekonomi" wire:navigate id="nav-item-ekonomi" class="hover:text-sky-700 transition-colors duration-200">Ekonomi</a>
+            <a href="/category/olahraga" wire:navigate id="nav-item-olahraga" class="hover:text-sky-700 transition-colors duration-200">Olahraga</a>
+            <a href="/category/lifestyle" wire:navigate id="nav-item-lifestyle" class="hover:text-sky-700 transition-colors duration-200">Lifestyle</a>
         </nav>
         
         <!-- Live Action Button & Search -->
@@ -25,7 +25,7 @@
                 </button>
             </form>
 
-            <a href="/login" id="header-btn-live" class="font-mono text-[11px] font-bold bg-sky-900 text-white px-4 py-2 rounded-full hover:bg-sky-800 transition duration-200 flex items-center gap-1.5">
+            <a href="/login" wire:navigate id="header-btn-live" class="font-mono text-[11px] font-bold bg-sky-900 text-white px-4 py-2 rounded-full hover:bg-sky-800 transition duration-200 flex items-center gap-1.5">
                 <i class="fa-solid fa-user text-[9px]"></i> Login
             </a>
 
@@ -50,11 +50,11 @@
 
             <!-- Navigation links -->
             <div class="flex flex-col space-y-2 font-mono text-[11px] font-bold tracking-wider uppercase text-neutral-600">
-                <a href="/category/metro" class="py-2 border-b border-slate-100 hover:text-sky-700 transition">Metro</a>
-                <a href="/category/politik" class="py-2 border-b border-slate-100 hover:text-sky-700 transition">Politik</a>
-                <a href="/category/ekonomi" class="py-2 border-b border-slate-100 hover:text-sky-700 transition">Ekonomi</a>
-                <a href="/category/olahraga" class="py-2 border-b border-slate-100 hover:text-sky-700 transition">Olahraga</a>
-                <a href="/category/lifestyle" class="py-2 hover:text-sky-700 transition">Lifestyle</a>
+                <a href="/category/metro" wire:navigate class="py-2 border-b border-slate-100 hover:text-sky-700 transition">Metro</a>
+                <a href="/category/politik" wire:navigate class="py-2 border-b border-slate-100 hover:text-sky-700 transition">Politik</a>
+                <a href="/category/ekonomi" wire:navigate class="py-2 border-b border-slate-100 hover:text-sky-700 transition">Ekonomi</a>
+                <a href="/category/olahraga" wire:navigate class="py-2 border-b border-slate-100 hover:text-sky-700 transition">Olahraga</a>
+                <a href="/category/lifestyle" wire:navigate class="py-2 hover:text-sky-700 transition">Lifestyle</a>
             </div>
         </div>
     </div>

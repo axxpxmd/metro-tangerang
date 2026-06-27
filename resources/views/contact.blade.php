@@ -7,7 +7,7 @@
     
     <!-- Breadcrumbs -->
     <nav class="font-mono text-[10px] text-slate-500 uppercase tracking-wider mb-6 flex items-center gap-2">
-        <a href="{{ route('home') }}" class="hover:text-sky-755 transition">Beranda</a>
+        <a href="{{ route('home') }}" wire:navigate class="hover:text-sky-755 transition">Beranda</a>
         <span>/</span>
         <span class="text-slate-400">Kontak Kami</span>
     </nav>

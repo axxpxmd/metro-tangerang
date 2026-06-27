@@ -81,6 +81,7 @@
     </style>
 
     @stack('styles')
+    @livewireStyles
 </head>
 <body class="h-full antialiased selection:bg-neutral-200 selection:text-black flex flex-col">
     <!-- Navigation Header -->
@@ -95,6 +96,7 @@
     @include('layouts.partials.footer')
 
     @stack('scripts')
+    @livewireScripts
 
     <script>
         function toggleMobileMenu() {
@@ -113,6 +115,28 @@
                 }
             }
         }
+
+        // Intercept search form submissions for SPA page transitions
+        document.addEventListener('submit', function (e) {
+            const form = e.target;
+            const action = form.getAttribute('action') || '';
+            if (form.method.toLowerCase() === 'get' && (form.action.includes('/search') || action.includes('/search') || action === 'search')) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const params = new URLSearchParams();
+                for (const [key, val] of formData.entries()) {
+                    if (val !== '') {
+                        params.append(key, val);
+                    }
+                }
+                const targetUrl = form.action.split('?')[0] + '?' + params.toString();
+                if (window.Livewire) {
+                    Livewire.navigate(targetUrl);
+                } else {
+                    window.location.href = targetUrl;
+                }
+            }
+        });
     </script>
 </body>
 </html>

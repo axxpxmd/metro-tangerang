@@ -22,10 +22,11 @@
 </div>
 
 <script>
+(function() {
     let currentSlide = 1;
     const totalSlides = 3;
 
-    function setSlide(slideIndex) {
+    window.setSlide = function(slideIndex) {
         // Hide all slides
         for (let i = 1; i <= totalSlides; i++) {
             const slide = document.getElementById(`slide-${i}`);
@@ -57,19 +58,30 @@
         currentSlide = slideIndex;
     }
 
-    function nextSlide() {
+    window.nextSlide = function() {
+        if (!document.getElementById('slide-1')) {
+            if (window.carouselInterval) {
+                clearInterval(window.carouselInterval);
+                window.carouselInterval = null;
+            }
+            return;
+        }
         let next = currentSlide + 1;
         if (next > totalSlides) next = 1;
-        setSlide(next);
+        window.setSlide(next);
     }
 
-    function prevSlide() {
+    window.prevSlide = function() {
         let prev = currentSlide - 1;
         if (prev < 1) prev = totalSlides;
-        setSlide(prev);
+        window.setSlide(prev);
     }
 
     // Auto transition every 8 seconds
-    setInterval(nextSlide, 8000);
+    if (window.carouselInterval) {
+        clearInterval(window.carouselInterval);
+    }
+    window.carouselInterval = setInterval(window.nextSlide, 8000);
+})();
 </script>
 @endsection
