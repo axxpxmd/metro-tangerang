@@ -369,134 +369,134 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- 1. Kategori: METRO -->
-                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                    <div class="border-t-4 border-t-sky-600 border border-neutral-200 rounded-xl p-5 bg-white hover:border-sky-500/50 hover:shadow-sm transition-all duration-300">
                         <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
-                            <h3 class="font-bold text-base text-black uppercase">METRO</h3>
-                            <a href="/category/metro" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                            <h3 class="font-bold text-base text-sky-800 uppercase">METRO</h3>
+                            <a href="/category/metro" class="font-mono text-[10px] text-neutral-400 hover:text-sky-700 transition">Lihat Semua &rarr;</a>
                         </div>
                         <div class="space-y-4">
-                            <div class="group">
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-sky-700 transition-colors mt-0.5">
                                     Normalisasi Sungai Cisadane Masuki Tahap Akhir Sebelum Musim Hujan
                                 </h4>
-                            </div>
-                            <div class="group">
+                            </a>
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">25 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-sky-700 transition-colors mt-0.5">
                                     Pemkot Tambah 5 Koridor Baru Angkot Si Benteng untuk Konektivitas
                                 </h4>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
                     <!-- 2. Kategori: POLITIK -->
-                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                    <div class="border-t-4 border-t-indigo-600 border border-neutral-200 rounded-xl p-5 bg-white hover:border-indigo-500/50 hover:shadow-sm transition-all duration-300">
                         <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
-                            <h3 class="font-bold text-base text-black uppercase">POLITIK</h3>
-                            <a href="/category/politik" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                            <h3 class="font-bold text-base text-indigo-800 uppercase">POLITIK</h3>
+                            <a href="/category/politik" class="font-mono text-[10px] text-neutral-400 hover:text-indigo-700 transition">Lihat Semua &rarr;</a>
                         </div>
                         <div class="space-y-4">
-                            <div class="group">
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-indigo-700 transition-colors mt-0.5">
                                     KPU Tangerang Umumkan Jadwal dan Tema Debat Calon Wali Kota
                                 </h4>
-                            </div>
-                            <div class="group">
+                            </a>
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">24 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-indigo-700 transition-colors mt-0.5">
                                     Konsolidasi Internal Partai Siapkan Struktur Pemenangan Pilkada
                                 </h4>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
                     <!-- 3. Kategori: EKONOMI -->
-                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                    <div class="border-t-4 border-t-emerald-600 border border-neutral-200 rounded-xl p-5 bg-white hover:border-emerald-500/50 hover:shadow-sm transition-all duration-300">
                         <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
-                            <h3 class="font-bold text-base text-black uppercase">EKONOMI</h3>
-                            <a href="/category/ekonomi" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                            <h3 class="font-bold text-base text-emerald-800 uppercase">EKONOMI</h3>
+                            <a href="/category/ekonomi" class="font-mono text-[10px] text-neutral-400 hover:text-emerald-700 transition">Lihat Semua &rarr;</a>
                         </div>
                         <div class="space-y-4">
-                            <div class="group">
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-emerald-700 transition-colors mt-0.5">
                                     Festival Kuliner Pasar Baru Dukung Pelaku Ekonomi Kreatif Lokal
                                 </h4>
-                            </div>
-                            <div class="group">
+                            </a>
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">25 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-emerald-700 transition-colors mt-0.5">
                                     Realisasi Investasi Kota Tangerang Semester I Tembus Rp 8 Triliun
                                 </h4>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
                     <!-- 4. Kategori: OLAHRAGA -->
-                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                    <div class="border-t-4 border-t-amber-500 border border-neutral-200 rounded-xl p-5 bg-white hover:border-amber-550/50 hover:shadow-sm transition-all duration-300">
                         <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
-                            <h3 class="font-bold text-base text-black uppercase">OLAHRAGA</h3>
-                            <a href="/category/olahraga" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                            <h3 class="font-bold text-base text-amber-800 uppercase">OLAHRAGA</h3>
+                            <a href="/category/olahraga" class="font-mono text-[10px] text-neutral-400 hover:text-amber-700 transition">Lihat Semua &rarr;</a>
                         </div>
                         <div class="space-y-4">
-                            <div class="group">
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-amber-700 transition-colors mt-0.5">
                                     Persita Tangerang Rekrut Striker Asing Baru Asal Brasil
                                 </h4>
-                            </div>
-                            <div class="group">
+                            </a>
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">23 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-amber-700 transition-colors mt-0.5">
                                     KONI Kota Tangerang Gelar Seleksi Atlit Muda Cabang Atletik
                                 </h4>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
                     <!-- 5. Kategori: KOMUNITAS -->
-                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                    <div class="border-t-4 border-t-purple-600 border border-neutral-200 rounded-xl p-5 bg-white hover:border-purple-500/50 hover:shadow-sm transition-all duration-300">
                         <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
-                            <h3 class="font-bold text-base text-black uppercase">KOMUNITAS</h3>
-                            <a href="/category/komunitas" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                            <h3 class="font-bold text-base text-purple-800 uppercase">KOMUNITAS</h3>
+                            <a href="/category/komunitas" class="font-mono text-[10px] text-neutral-400 hover:text-purple-700 transition">Lihat Semua &rarr;</a>
                         </div>
                         <div class="space-y-4">
-                            <div class="group">
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-purple-700 transition-colors mt-0.5">
                                     Gerakan Bersih Cisadane Oleh Relawan Lingkungan Hidup
                                 </h4>
-                            </div>
-                            <div class="group">
+                            </a>
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">22 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-purple-700 transition-colors mt-0.5">
                                     Komunitas Fotografi Tangerang Adakan Pameran Karya Visual Jalanan
                                 </h4>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
                     <!-- 6. Kategori: LIFESTYLE -->
-                    <div class="border border-neutral-200 rounded-xl p-5 bg-white">
+                    <div class="border-t-4 border-t-rose-500 border border-neutral-200 rounded-xl p-5 bg-white hover:border-rose-500/50 hover:shadow-sm transition-all duration-300">
                         <div class="flex items-center justify-between border-b border-neutral-200 pb-3 mb-4">
-                            <h3 class="font-bold text-base text-black uppercase">LIFESTYLE</h3>
-                            <a href="/category/lifestyle" class="font-mono text-[10px] text-neutral-400 hover:text-black">Lihat Semua &rarr;</a>
+                            <h3 class="font-bold text-base text-rose-600 uppercase">LIFESTYLE</h3>
+                            <a href="/category/lifestyle" class="font-mono text-[10px] text-neutral-400 hover:text-rose-600 transition">Lihat Semua &rarr;</a>
                         </div>
                         <div class="space-y-4">
-                            <div class="group">
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">26 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-rose-600 transition-colors mt-0.5">
                                     Tren Cafe Minimalis Bernuansa Industrial di Kota Tangerang
                                 </h4>
-                            </div>
-                            <div class="group">
+                            </a>
+                            <a href="{{ route('news.detail') }}" class="group block">
                                 <span class="font-mono text-[9px] text-neutral-500">21 JUN 2026</span>
-                                <h4 class="text-sm font-bold text-black group-hover:text-neutral-700 transition-colors mt-0.5">
+                                <h4 class="text-sm font-bold text-black group-hover:text-rose-600 transition-colors mt-0.5">
                                     Rute Sepeda Santai Akhir Pekan Terbaik di Wilayah BSD dan Karawaci
                                 </h4>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
