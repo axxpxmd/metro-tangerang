@@ -187,7 +187,7 @@
                         <li><a href="{{ route('about') }}" class="hover:text-sky-400 transition">Tentang Kami</a></li>
                         <li><a href="{{ route('redaksi') }}" class="hover:text-sky-400 transition">Info Redaksi</a></li>
                         <li><a href="{{ route('contact') }}" class="hover:text-sky-400 transition">Kontak Kami</a></li>
-                        <li><a href="/pedoman" class="hover:text-sky-400 transition">Pedoman Siber</a></li>
+                        <li><a href="{{ route('pedoman') }}" class="hover:text-sky-400 transition">Pedoman Siber</a></li>
                         <li><a href="{{ route('news.search') }}" class="hover:text-sky-400 transition">Cari Berita</a></li>
                     </ul>
                 </div>

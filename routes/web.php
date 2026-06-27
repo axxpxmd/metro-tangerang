@@ -8,4 +8,4 @@ Route::view('/search', 'search')->name('news.search');
 Route::view('/tentang', 'about')->name('about');
 Route::view('/redaksi', 'redaksi')->name('redaksi');
 Route::view('/kontak', 'contact')->name('contact');
-
+Route::view('/pedoman', 'pedoman')->name('pedoman');
