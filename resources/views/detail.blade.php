@@ -325,16 +325,12 @@
             </div>
 
             <!-- Widget 3: Ruang Iklan Sidebar (Sticky Banner) -->
-            <a href="/iklan" class="group w-full bg-slate-50 border border-slate-200 rounded-xl aspect-[300/250] flex flex-col items-center justify-center p-6 text-center hover:border-sky-500 hover:bg-sky-50/10 transition duration-300">
-                <span class="font-mono text-[9px] font-bold text-sky-700 tracking-widest uppercase mb-2">PASANG IKLAN ANDA</span>
-                <h4 class="text-xs font-bold text-slate-800 leading-snug mb-3">
-                    Jangkau Ribuan Pembaca Aktif Tangerang Raya Setiap Hari
-                </h4>
-                <p class="font-mono text-[9px] text-slate-500 leading-normal">
-                    Dimensi: 300 x 250 px<br>
-                    Email: ads@metrotangerang.com<br>
-                    WhatsApp: 0812-3456-7890
-                </p>
+            <a href="/iklan" class="relative block w-full overflow-hidden rounded-xl border border-slate-200 hover:border-sky-500 transition duration-300">
+                <!-- AD Label Overlay -->
+                <div class="absolute top-0 left-0 bg-neutral-200/90 backdrop-blur-sm text-neutral-600 font-mono text-[8px] font-bold px-2 py-0.5 rounded-br border-r border-b border-neutral-300/20 uppercase tracking-widest select-none z-10">
+                    AD
+                </div>
+                <img src="{{ asset('images/iklan2.webp') }}" class="w-full h-auto block" alt="Iklan Sidebar">
             </a>
 
         </aside>
