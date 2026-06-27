@@ -230,9 +230,12 @@
 
     <!-- Ad Space (Ruang Iklan Banner Utama) -->
     <div class="py-8 border-b border-neutral-200">
-        <div class="w-full bg-neutral-50 border border-neutral-200 py-6 px-4 rounded-xl text-center font-mono text-xs text-neutral-400">
-            RUANG IKLAN BANNER UTAMA (728 x 90)
-        </div>
+        <a href="/iklan" class="group block w-full bg-slate-50 border border-slate-200 py-6 px-4 rounded-xl text-center hover:border-sky-500 hover:bg-sky-50/10 transition duration-300">
+            <span class="block font-mono text-[9px] font-bold text-sky-700 tracking-widest uppercase mb-1">PROMOSIKAN BISNIS ANDA DI SINI</span>
+            <p class="text-xs font-bold text-slate-800 group-hover:text-sky-900 transition-colors">
+                Ruang Iklan Strategis (728 x 90) • Hubungi Redaksi: ads@metrotangerang.com / +62 812-3456-7890
+            </p>
+        </a>
     </div>
 
     <!-- Section: Laporan Utama (Modern Overlay Cards) -->
@@ -580,9 +583,17 @@
             </div>
 
             <!-- Widget 4: Ruang Iklan Sidebar (Sticky Banner) -->
-            <div class="w-full bg-slate-50 border border-slate-200 rounded-xl aspect-[300/250] flex items-center justify-center text-center font-mono text-xs text-slate-400">
-                RUANG IKLAN BANNER (300 x 250)
-            </div>
+            <a href="/iklan" class="group w-full bg-slate-50 border border-slate-200 rounded-xl aspect-[300/250] flex flex-col items-center justify-center p-6 text-center hover:border-sky-500 hover:bg-sky-50/10 transition duration-300">
+                <span class="font-mono text-[9px] font-bold text-sky-700 tracking-widest uppercase mb-2">PASANG IKLAN ANDA</span>
+                <h4 class="text-xs font-bold text-slate-800 leading-snug mb-3">
+                    Jangkau Ribuan Pembaca Aktif Tangerang Raya Setiap Hari
+                </h4>
+                <p class="font-mono text-[9px] text-slate-500 leading-normal">
+                    Dimensi: 300 x 250 px<br>
+                    Email: ads@metrotangerang.com<br>
+                    WhatsApp: 0812-3456-7890
+                </p>
+            </a>
         </div>
     </section>
 
