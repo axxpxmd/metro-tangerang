@@ -62,20 +62,20 @@
                 </div>
             </div>
 
-            <!-- Featured Image Slider -->
-            <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 aspect-video mb-4 group/slider">
+            <!-- Featured Image Slider (Full width mobile edge-to-edge & Zoom Click Preview) -->
+            <div class="relative overflow-hidden -mx-6 md:mx-0 rounded-none md:rounded-xl border-t border-b md:border border-slate-200 bg-slate-50 aspect-video mb-4 group/slider">
                 <!-- Slides Container -->
                 <div class="relative w-full h-full">
                     <!-- Slide 1 -->
-                    <div class="detail-slide block w-full h-full transition-all duration-500 opacity-100 absolute inset-0" id="detail-slide-1" data-caption="Pertemuan kesepakatan rute pembangunan LRT koridor barat yang menghubungkan wilayah perbatasan Tangerang hingga stasiun integrasi Jakarta." data-source="FOTO: DOKUMEN HUMAS PEMKOT TANGERANG">
+                    <div class="detail-slide block w-full h-full transition-all duration-500 opacity-100 absolute inset-0 cursor-zoom-in" id="detail-slide-1" onclick="openLightbox(this)" data-source="FOTO: DOKUMEN HUMAS PEMKOT TANGERANG">
                         <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Rute LRT Tangerang">
                     </div>
                     <!-- Slide 2 -->
-                    <div class="detail-slide hidden w-full h-full transition-all duration-500 opacity-0 absolute inset-0" id="detail-slide-2" data-caption="Peta rencana koridor LRT Tangerang terintegrasi Jabodebek yang akan mulai dibangun pada awal kuartal depan." data-source="FOTO: DOKUMEN KEMENHUB RI">
+                    <div class="detail-slide hidden w-full h-full transition-all duration-500 opacity-0 absolute inset-0 cursor-zoom-in" id="detail-slide-2" onclick="openLightbox(this)" data-source="FOTO: DOKUMEN KEMENHUB RI">
                         <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Peta Rute LRT">
                     </div>
                     <!-- Slide 3 -->
-                    <div class="detail-slide hidden w-full h-full transition-all duration-500 opacity-0 absolute inset-0" id="detail-slide-3" data-caption="Uji coba perlintasan rel layang transportasi massal modern di wilayah penyangga satelit Tangerang Raya." data-source="FOTO: DOKUMEN METRO TANGERANG">
+                    <div class="detail-slide hidden w-full h-full transition-all duration-500 opacity-0 absolute inset-0 cursor-zoom-in" id="detail-slide-3" onclick="openLightbox(this)" data-source="FOTO: DOKUMEN METRO TANGERANG">
                         <img src="{{ asset('images/foto-dummy.jpg') }}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Uji Coba Perlintasan">
                     </div>
                 </div>
@@ -385,6 +385,20 @@
         </div>
     </section>
 
+    <!-- Lightbox Modal -->
+    <div id="image-lightbox" class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md flex flex-col justify-center items-center p-4 transition-all duration-300 opacity-0" onclick="closeLightbox()">
+        <!-- Close Button -->
+        <button class="absolute top-6 right-6 text-white text-3xl font-light hover:text-slate-300 transition duration-200 z-[110]" onclick="closeLightbox()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- Lightbox Content -->
+        <div class="relative max-w-5xl max-h-[85vh] flex flex-col items-center p-2 z-[105]" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" class="max-w-full max-h-[75vh] rounded-lg object-contain shadow-2xl border border-white/10" alt="Preview">
+            <p id="lightbox-caption" class="text-slate-300 text-xs sm:text-sm mt-4 text-center max-w-2xl font-sans italic leading-relaxed"></p>
+            <span id="lightbox-credit" class="font-mono text-[9px] text-slate-500 mt-2 uppercase tracking-wider block"></span>
+        </div>
+    </div>
+
 </div>
 @endsection
 
@@ -426,6 +440,47 @@
 
     function prevDetailSlide() {
         showDetailSlide(currentDetailSlide - 1);
+    }
+
+    function openLightbox(slideElement) {
+        const img = slideElement.querySelector('img');
+        const lightbox = document.getElementById('image-lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxCredit = document.getElementById('lightbox-credit');
+
+        if (img && lightbox) {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            
+            // Show single caption under the lightbox image
+            lightboxCaption.textContent = document.getElementById('detail-slider-caption').textContent;
+            lightboxCredit.textContent = slideElement.getAttribute('data-source');
+
+            lightbox.classList.remove('hidden');
+            // Trigger opacity animation
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightbox.classList.add('opacity-100');
+            }, 50);
+            
+            // Prevent body scroll when lightbox is open
+            document.body.classList.add('overflow-hidden');
+        }
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('image-lightbox');
+        if (lightbox) {
+            lightbox.classList.add('opacity-0');
+            lightbox.classList.remove('opacity-100');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+            }, 300);
+            
+            // Re-enable body scroll
+            document.body.classList.remove('overflow-hidden');
+        }
     }
 </script>
 @endpush
