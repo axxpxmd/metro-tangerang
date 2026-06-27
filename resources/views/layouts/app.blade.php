@@ -100,8 +100,16 @@
                 <a href="/category/lifestyle" id="nav-item-lifestyle" class="hover:text-sky-700 transition-colors duration-200">Lifestyle</a>
             </nav>
             
-            <!-- Live Action Button -->
+            <!-- Live Action Button & Search -->
             <div class="flex items-center space-x-4">
+                <!-- Search Form -->
+                <form action="{{ route('news.search') }}" method="GET" class="hidden sm:flex items-center relative">
+                    <input type="text" name="q" placeholder="Cari berita..." class="w-36 bg-slate-50 border border-slate-200 rounded-full px-4 py-1.5 text-[11px] focus:outline-none focus:ring-1 focus:ring-sky-500 focus:w-48 focus:bg-white transition-all placeholder-slate-400 text-slate-805">
+                    <button type="submit" class="absolute right-3.5 text-slate-400 hover:text-sky-700 text-[10px]">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+
                 <a href="/live" id="header-btn-live" class="font-mono text-[11px] font-bold bg-sky-900 text-white px-4 py-2 rounded-full hover:bg-sky-800 transition duration-200">
                     LIVE TV
                 </a>
