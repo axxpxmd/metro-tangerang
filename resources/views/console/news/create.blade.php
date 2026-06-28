@@ -127,36 +127,7 @@
                     </div>
                 </div>
 
-                {{-- Custom Interactive Tag Widget --}}
-                <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6 space-y-4">
-                    <div class="flex items-center gap-2">
-                        <span class="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-500 flex items-center justify-center text-sm">
-                            <i class="fa-solid fa-tag"></i>
-                        </span>
-                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Tag Artikel</h3>
-                    </div>
 
-                    <div class="relative space-y-3">
-                        <label class="block font-mono text-[9px] font-bold text-slate-500 dark:text-console-400 uppercase tracking-widest">Cari atau Tambah Tag</label>
-                        
-                        <div class="relative">
-                            <input type="text" id="tag-input" 
-                                class="w-full bg-slate-50 dark:bg-console-800 border border-slate-200 dark:border-console-700 rounded-xl p-3 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-                                placeholder="Ketik nama tag...">
-                            
-                            {{-- Autocomplete Dropdown List --}}
-                            <div id="tag-suggestions" class="tag-suggestions-list hidden"></div>
-                        </div>
-
-                        <p class="text-[10px] text-slate-400 flex items-center gap-1.5">
-                            <i class="fa-solid fa-circle-info"></i>
-                            Ketik nama tag dan tekan Enter, atau pilih dari daftar
-                        </p>
-
-                        {{-- Selected Tags Container --}}
-                        <div id="selected-tags-container" class="flex flex-wrap gap-2 pt-1"></div>
-                    </div>
-                </div>
 
                 {{-- TinyMCE Content --}}
                 <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6">
@@ -283,6 +254,37 @@
                             <i class="fa-regular fa-floppy-disk"></i>
                             Simpan sebagai Draft
                         </button>
+                    </div>
+                </div>
+
+                {{-- Custom Interactive Tag Widget --}}
+                <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-5 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-tag"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Tag Artikel</h3>
+                    </div>
+
+                    <div class="relative space-y-3">
+                        <label class="block font-mono text-[9px] font-bold text-slate-500 dark:text-console-400 uppercase tracking-widest">Cari atau Tambah Tag</label>
+                        
+                        <div class="relative">
+                            <input type="text" id="tag-input" 
+                                class="w-full bg-slate-50 dark:bg-console-800 border border-slate-200 dark:border-console-700 rounded-xl p-3 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                                placeholder="Ketik nama tag...">
+                            
+                            {{-- Autocomplete Dropdown List --}}
+                            <div id="tag-suggestions" class="tag-suggestions-list hidden"></div>
+                        </div>
+
+                        <p class="text-[10px] text-slate-400 flex items-center gap-1.5">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Ketik nama tag dan tekan Enter, atau pilih dari daftar
+                        </p>
+
+                        {{-- Selected Tags Container --}}
+                        <div id="selected-tags-container" class="flex flex-wrap gap-2 pt-1"></div>
                     </div>
                 </div>
 
