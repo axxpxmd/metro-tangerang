@@ -26,12 +26,20 @@ class ConsoleAuthController extends Controller
      */
     public function login(Request $request)
     {
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
+        $input = $request->validate([
+            'email' => ['required', 'string'],
             'password' => ['required', 'string'],
         ]);
 
         $remember = $request->boolean('remember');
+
+        // Determine if logging in using email or name (username)
+        $field = filter_var($input['email'], FILTER_VALIDATE_EMAIL) ? 'email' : 'name';
+
+        $credentials = [
+            $field => $input['email'],
+            'password' => $input['password'],
+        ];
 
         if (Auth::attempt($credentials, $remember)) {
             $request->session()->regenerate();

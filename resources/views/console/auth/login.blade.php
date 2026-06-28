@@ -33,7 +33,7 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: radial-gradient(circle at top right, #1e1b4b, #0f172a, #020617);
+            background: radial-gradient(circle at top right, #f8fafc, #f1f5f9, #e2e8f0);
         }
     </style>
 </head>
@@ -42,31 +42,31 @@
     <div class="w-full max-w-md">
         <!-- Logo & Brand Header -->
         <div class="text-center mb-8">
-            <span class="inline-block font-mono text-[10px] font-bold text-sky-400 bg-sky-500/10 border border-sky-500/20 px-3 py-1 rounded-full uppercase tracking-widest mb-3">
+            <span class="inline-block font-mono text-[10px] font-bold text-sky-700 bg-sky-50 border border-sky-200 px-3 py-1 rounded-full uppercase tracking-widest mb-3">
                 METRO TANGERANG CMS
             </span>
-            <h1 class="text-2xl font-extrabold text-white tracking-tight">Masuk ke Console</h1>
-            <p class="text-xs text-slate-400 mt-2">Gunakan akun admin Anda untuk mengelola portal berita</p>
+            <h1 class="text-2xl font-extrabold text-slate-900 tracking-tight">Masuk ke Console</h1>
+            <p class="text-xs text-slate-500 mt-2">Gunakan akun admin Anda untuk mengelola portal berita</p>
         </div>
 
-        <!-- Glassmorphism Card -->
-        <div class="bg-slate-900/60 backdrop-blur-xl border border-slate-800 rounded-2xl p-8 shadow-2xl">
+        <!-- Card Container -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-xl">
             <form action="{{ route('console.login') }}" method="POST" class="space-y-5">
                 @csrf
 
-                <!-- Email Input -->
+                <!-- Email / Username Input -->
                 <div>
-                    <label for="email" class="block font-mono text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2">EMAIL ADDRESS</label>
+                    <label for="email" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">USERNAME ATAU EMAIL</label>
                     <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500 text-xs">
-                            <i class="fa-solid fa-envelope"></i>
+                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 text-xs">
+                            <i class="fa-solid fa-user"></i>
                         </div>
-                        <input type="email" name="email" id="email" value="{{ old('email') }}" required autofocus
-                            class="w-full bg-slate-950/50 border border-slate-800 rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-sky-500/50 focus:ring-1 focus:ring-sky-500/50 transition @error('email') border-rose-500/50 focus:ring-rose-500/50 @enderror"
-                            placeholder="nama@domain.com">
+                        <input type="text" name="email" id="email" value="{{ old('email') }}" required autofocus
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pl-10 pr-4 text-xs text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition @error('email') border-rose-500 focus:ring-rose-500 @enderror"
+                            placeholder="Username atau Email">
                     </div>
                     @error('email')
-                        <p class="text-rose-400 text-[10px] mt-1.5 font-mono uppercase tracking-wide flex items-center gap-1">
+                        <p class="text-rose-600 text-[10px] mt-1.5 font-mono uppercase tracking-wide flex items-center gap-1">
                             <i class="fa-solid fa-triangle-exclamation"></i>
                             {{ $message }}
                         </p>
@@ -76,21 +76,21 @@
                 <!-- Password Input -->
                 <div>
                     <div class="flex justify-between items-center mb-2">
-                        <label for="password" class="block font-mono text-[9px] font-bold text-slate-400 uppercase tracking-widest">PASSWORD</label>
+                        <label for="password" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest">PASSWORD</label>
                     </div>
                     <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500 text-xs">
+                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 text-xs">
                             <i class="fa-solid fa-lock"></i>
                         </div>
                         <input type="password" name="password" id="password" required
-                            class="w-full bg-slate-950/50 border border-slate-800 rounded-xl py-3 pl-10 pr-10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-sky-500/50 focus:ring-1 focus:ring-sky-500/50 transition @error('password') border-rose-500/50 focus:ring-rose-500/50 @enderror"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pl-10 pr-10 text-xs text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition @error('password') border-rose-500 focus:ring-rose-500 @enderror"
                             placeholder="••••••••">
-                        <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-500 hover:text-white transition text-xs">
+                        <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-900 transition text-xs">
                             <i id="password-eye-icon" class="fa-solid fa-eye"></i>
                         </button>
                     </div>
                     @error('password')
-                        <p class="text-rose-400 text-[10px] mt-1.5 font-mono uppercase tracking-wide flex items-center gap-1">
+                        <p class="text-rose-600 text-[10px] mt-1.5 font-mono uppercase tracking-wide flex items-center gap-1">
                             <i class="fa-solid fa-triangle-exclamation"></i>
                             {{ $message }}
                         </p>
@@ -99,12 +99,12 @@
 
                 <!-- Remember Me -->
                 <div class="flex items-center">
-                    <input type="checkbox" name="remember" id="remember" class="w-3.5 h-3.5 bg-slate-950 border-slate-800 rounded text-sky-500 focus:ring-sky-500/50 focus:ring-offset-slate-900 focus:outline-none">
-                    <label for="remember" class="ml-2 text-[11px] text-slate-400 select-none">Ingat saya di perangkat ini</label>
+                    <input type="checkbox" name="remember" id="remember" class="w-3.5 h-3.5 border-slate-300 rounded text-sky-600 focus:ring-sky-550 focus:outline-none">
+                    <label for="remember" class="ml-2 text-[11px] text-slate-600 select-none">Ingat saya di perangkat ini</label>
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="w-full bg-sky-600 hover:bg-sky-500 text-white font-semibold text-xs py-3.5 px-4 rounded-xl transition-all shadow-lg shadow-sky-600/20 active:scale-[0.98]">
+                <button type="submit" class="w-full bg-sky-600 hover:bg-sky-500 text-white font-semibold text-xs py-3.5 px-4 rounded-xl transition-all shadow-md active:scale-[0.98]">
                     Masuk Ke Dashboard
                 </button>
             </form>
@@ -112,7 +112,7 @@
 
         <!-- Back to Website -->
         <div class="text-center mt-6">
-            <a href="{{ route('home') }}" class="text-xs text-slate-400 hover:text-white transition flex items-center justify-center gap-1.5">
+            <a href="{{ route('home') }}" class="text-xs text-slate-500 hover:text-slate-800 transition flex items-center justify-center gap-1.5">
                 <i class="fa-solid fa-arrow-left text-[10px]"></i>
                 Kembali ke Beranda
             </a>
