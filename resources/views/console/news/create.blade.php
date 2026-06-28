@@ -79,7 +79,7 @@
                             Ringkasan / Excerpt
                             <span class="text-slate-400 normal-case font-normal ml-1">(maks. 500 karakter)</span>
                         </label>
-                        <textarea name="summary" id="summary" rows="3"
+                        <textarea name="summary" id="summary" rows="4"
                             class="w-full bg-slate-50 dark:bg-console-800 border border-slate-200 dark:border-console-700 rounded-lg p-2.5 text-xs text-slate-900 dark:text-white focus:bg-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 @error('summary') border-rose-500 @enderror"
                             placeholder="Ringkasan singkat artikel untuk ditampilkan di halaman listing...">{{ old('summary') }}</textarea>
                         @error('summary')

@@ -9,26 +9,65 @@
     </div>
 
     <!-- Navigation Links -->
-    <nav class="flex-1 px-4 py-6 space-y-1">
-        <a href="{{ route('console.dashboard') }}" class="nav-link-item flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.dashboard') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}" title="Dashboard">
-            <i class="fa-solid fa-chart-line w-4 text-center shrink-0"></i>
-            <span class="nav-text">Dashboard</span>
-        </a>
-        
-        <a href="{{ route('console.news.index') }}" class="nav-link-item flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.news.*') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}" title="Kelola Berita">
-            <i class="fa-solid fa-newspaper w-4 text-center shrink-0"></i>
-            <span class="nav-text">Kelola Berita</span>
-        </a>
+    <nav class="flex-1 px-4 py-5 overflow-y-auto space-y-5">
 
-        <a href="{{ route('console.contacts.index') }}" class="nav-link-item flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.contacts.*') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}" title="Pesan Kontak">
-            <i class="fa-solid fa-envelope w-4 text-center shrink-0"></i>
-            <span class="nav-text">Pesan Kontak</span>
-        </a>
+        {{-- Group: Utama --}}
+        <div>
+            <p class="nav-text font-mono text-[9px] font-bold text-white/30 uppercase tracking-[.18em] px-3 mb-1.5 sidebar-expanded-only">Utama</p>
+            <div class="space-y-0.5">
+                <a href="{{ route('console.dashboard') }}"
+                    class="nav-link-item flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all
+                        {{ request()->routeIs('console.dashboard') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}"
+                    title="Dashboard">
+                    <i class="fa-solid fa-chart-line w-4 text-center shrink-0"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </div>
+        </div>
 
-        <a href="{{ route('console.users.index') }}" class="nav-link-item flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.users.*') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}" title="Kelola Pengguna">
-            <i class="fa-solid fa-users w-4 text-center shrink-0"></i>
-            <span class="nav-text">Kelola Pengguna</span>
-        </a>
+        {{-- Divider --}}
+        <div class="border-t border-white/10 dark:border-console-800 sidebar-expanded-only"></div>
+        <div class="hidden sidebar-minimized:block border-t border-white/10 mx-1"></div>
+
+        {{-- Group: Konten --}}
+        <div>
+            <p class="nav-text font-mono text-[9px] font-bold text-white/30 uppercase tracking-[.18em] px-3 mb-1.5 sidebar-expanded-only">Konten</p>
+            <div class="space-y-0.5">
+                <a href="{{ route('console.news.index') }}"
+                    class="nav-link-item flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all
+                        {{ request()->routeIs('console.news.*') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}"
+                    title="Kelola Berita">
+                    <i class="fa-solid fa-newspaper w-4 text-center shrink-0"></i>
+                    <span class="nav-text">Kelola Berita</span>
+                </a>
+            </div>
+        </div>
+
+        {{-- Divider --}}
+        <div class="border-t border-white/10 dark:border-console-800 sidebar-expanded-only"></div>
+
+        {{-- Group: Manajemen --}}
+        <div>
+            <p class="nav-text font-mono text-[9px] font-bold text-white/30 uppercase tracking-[.18em] px-3 mb-1.5 sidebar-expanded-only">Manajemen</p>
+            <div class="space-y-0.5">
+                <a href="{{ route('console.contacts.index') }}"
+                    class="nav-link-item flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all
+                        {{ request()->routeIs('console.contacts.*') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}"
+                    title="Pesan Kontak">
+                    <i class="fa-solid fa-envelope w-4 text-center shrink-0"></i>
+                    <span class="nav-text">Pesan Kontak</span>
+                </a>
+
+                <a href="{{ route('console.users.index') }}"
+                    class="nav-link-item flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all
+                        {{ request()->routeIs('console.users.*') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}"
+                    title="Kelola Pengguna">
+                    <i class="fa-solid fa-users w-4 text-center shrink-0"></i>
+                    <span class="nav-text">Kelola Pengguna</span>
+                </a>
+            </div>
+        </div>
+
     </nav>
 
     <!-- User profile footer -->

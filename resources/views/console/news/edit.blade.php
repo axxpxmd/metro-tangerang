@@ -72,7 +72,7 @@
                     {{-- Summary --}}
                     <div>
                         <label for="summary" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">Ringkasan / Excerpt</label>
-                        <textarea name="summary" id="summary" rows="3"
+                        <textarea name="summary" id="summary" rows="4"
                             class="w-full bg-slate-50 dark:bg-console-800 border border-slate-200 dark:border-console-700 rounded-lg p-2.5 text-xs text-slate-900 dark:text-white focus:bg-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                             placeholder="Ringkasan singkat artikel...">{{ old('summary', $news->summary) }}</textarea>
                     </div>
