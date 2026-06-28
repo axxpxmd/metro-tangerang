@@ -109,6 +109,7 @@
         }
     </style>
     @stack('styles')
+    @stack('head')
 </head>
 <body class="h-full antialiased flex bg-[#F5F5F5] text-slate-800 dark:bg-console-950 dark:text-slate-100">
 
@@ -171,6 +172,10 @@
                     <a href="{{ route('console.contacts.index') }}" class="flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.contacts.*') ? 'bg-white/15 text-white' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}">
                         <i class="fa-solid fa-envelope w-4 text-center"></i>
                         Pesan Kontak
+                    </a>
+                    <a href="{{ route('console.news.index') }}" class="flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.news.*') ? 'bg-white/15 text-white' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}">
+                        <i class="fa-solid fa-newspaper w-4 text-center"></i>
+                        Kelola Berita
                     </a>
                     <a href="{{ route('console.users.index') }}" class="flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.users.*') ? 'bg-white/15 text-white' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}">
                         <i class="fa-solid fa-users w-4 text-center"></i>

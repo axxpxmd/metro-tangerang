@@ -15,9 +15,9 @@
             <span class="nav-text">Dashboard</span>
         </a>
         
-        <a href="#" class="nav-link-item flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg text-blue-200 dark:text-console-500 cursor-not-allowed" title="Berita (N/A)">
+        <a href="{{ route('console.news.index') }}" class="nav-link-item flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.news.*') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}" title="Kelola Berita">
             <i class="fa-solid fa-newspaper w-4 text-center shrink-0"></i>
-            <span class="nav-text">Berita <span class="text-[9px] bg-white/10 dark:bg-console-800 text-blue-200 dark:text-console-400 px-1.5 py-0.5 rounded">N/A</span></span>
+            <span class="nav-text">Kelola Berita</span>
         </a>
 
         <a href="{{ route('console.contacts.index') }}" class="nav-link-item flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.contacts.*') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}" title="Pesan Kontak">

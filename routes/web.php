@@ -19,6 +19,7 @@ use App\Http\Controllers\Console\ConsoleAuthController;
 use App\Http\Controllers\Console\ConsoleDashboardController;
 use App\Http\Controllers\Console\ConsoleContactController;
 use App\Http\Controllers\Console\ConsoleUserController;
+use App\Http\Controllers\Console\ConsoleNewsController;
 
 Route::prefix('console')->name('console.')->group(function () {
     // Guest only routes
@@ -33,6 +34,7 @@ Route::prefix('console')->name('console.')->group(function () {
         Route::post('/logout', [ConsoleAuthController::class, 'logout'])->name('logout');
         Route::resource('/contacts', ConsoleContactController::class)->only(['index', 'show', 'destroy']);
         Route::resource('/users', ConsoleUserController::class);
+        Route::resource('/news', ConsoleNewsController::class)->except(['show']);
     });
 });
 
