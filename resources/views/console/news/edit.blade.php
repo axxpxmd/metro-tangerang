@@ -71,10 +71,12 @@
 
                 {{-- Basic Info --}}
                 <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6 space-y-5">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                        <span class="w-1.5 h-3 bg-blue-600 rounded-sm"></span>
-                        Informasi Artikel
-                    </h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/40 text-blue-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Informasi Artikel</h3>
+                    </div>
 
                     {{-- Title --}}
                     <div>
@@ -118,11 +120,13 @@
                 </div>
 
                 {{-- TinyMCE Content --}}
-                <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2 mb-4">
-                        <span class="w-1.5 h-3 bg-emerald-600 rounded-sm"></span>
-                        Isi / Konten Artikel *
-                    </h3>
+                <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Isi / Konten Artikel *</h3>
+                    </div>
                     <textarea name="content" id="content" class="@error('content') border-rose-500 @enderror">{!! old('content', $news->content) !!}</textarea>
                     @error('content')
                         <p class="text-rose-600 text-[10px] mt-2 font-mono uppercase">{{ $message }}</p>
@@ -130,11 +134,13 @@
                 </div>
 
                 {{-- Gallery Images --}}
-                <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2 mb-4">
-                        <span class="w-1.5 h-3 bg-purple-600 rounded-sm"></span>
-                        Galeri Foto
-                    </h3>
+                <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-950/40 text-purple-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-images"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Galeri Foto</h3>
+                    </div>
 
                     {{-- Existing gallery --}}
                     @if($news->images->count())
@@ -171,10 +177,12 @@
 
                 {{-- SEO --}}
                 <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6 space-y-4">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                        <span class="w-1.5 h-3 bg-amber-500 rounded-sm"></span>
-                        Meta SEO
-                    </h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 text-indigo-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-globe"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Meta SEO</h3>
+                    </div>
                     <div>
                         <label for="meta_title" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">Meta Title</label>
                         <input type="text" name="meta_title" id="meta_title" value="{{ old('meta_title', $news->meta_title) }}"
@@ -194,10 +202,12 @@
 
                 {{-- Publish settings --}}
                 <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-5 space-y-4">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                        <span class="w-1.5 h-3 bg-sky-500 rounded-sm"></span>
-                        Pengaturan Publikasi
-                    </h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-950/40 text-sky-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-sliders"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Pengaturan Publikasi</h3>
+                    </div>
 
                     {{-- Status --}}
                     <div>
@@ -310,10 +320,12 @@
 
                 {{-- Cover Image --}}
                 <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-5 space-y-3">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                        <span class="w-1.5 h-3 bg-rose-500 rounded-sm"></span>
-                        Foto Cover
-                    </h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-rose-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-image"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Foto Cover</h3>
+                    </div>
 
                     {{-- Current cover --}}
                     @if($news->image_source)
@@ -346,10 +358,12 @@
 
                 {{-- Flags --}}
                 <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-5 space-y-3">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                        <span class="w-1.5 h-3 bg-orange-500 rounded-sm"></span>
-                        Flag Artikel
-                    </h3>
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="w-8 h-8 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-orange-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-flag"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Flag Artikel</h3>
+                    </div>
 
                     @php
                         $flags = [

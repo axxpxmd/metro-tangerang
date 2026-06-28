@@ -70,10 +70,12 @@
 
                 {{-- Basic Info --}}
                 <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6 space-y-5">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                        <span class="w-1.5 h-3 bg-blue-600 rounded-sm"></span>
-                        Informasi Artikel
-                    </h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/40 text-blue-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Informasi Artikel</h3>
+                    </div>
 
                     {{-- Title --}}
                     <div>
@@ -127,14 +129,14 @@
                     </div>
                 </div>
 
-
-
                 {{-- TinyMCE Content --}}
-                <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2 mb-4">
-                        <span class="w-1.5 h-3 bg-emerald-600 rounded-sm"></span>
-                        Isi / Konten Artikel *
-                    </h3>
+                <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Isi / Konten Artikel *</h3>
+                    </div>
                     <textarea name="content" id="content" class="@error('content') border-rose-500 @enderror">{{ old('content') }}</textarea>
                     @error('content')
                         <p class="text-rose-600 text-[10px] mt-2 font-mono uppercase">{{ $message }}</p>
@@ -142,12 +144,13 @@
                 </div>
 
                 {{-- Gallery Images --}}
-                <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2 mb-4">
-                        <span class="w-1.5 h-3 bg-purple-600 rounded-sm"></span>
-                        Galeri Foto
-                        <span class="text-slate-400 dark:text-console-500 font-normal normal-case text-[10px] ml-1">(opsional, multiple)</span>
-                    </h3>
+                <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-950/40 text-purple-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-images"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Galeri Foto <span class="text-slate-400 dark:text-console-500 font-normal normal-case text-[10px] ml-1">(opsional, multiple)</span></h3>
+                    </div>
 
                     <div class="border-2 border-dashed border-slate-200 dark:border-console-700 rounded-xl p-6 text-center" id="gallery-dropzone">
                         <div class="flex flex-col items-center gap-2 text-slate-400 dark:text-console-500 mb-4">
@@ -166,11 +169,12 @@
 
                 {{-- SEO --}}
                 <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6 space-y-4">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                        <span class="w-1.5 h-3 bg-amber-500 rounded-sm"></span>
-                        Meta SEO
-                        <span class="text-slate-400 dark:text-console-500 font-normal normal-case text-[10px] ml-1">(opsional)</span>
-                    </h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 text-indigo-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-globe"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Meta SEO <span class="text-slate-400 dark:text-console-500 font-normal normal-case text-[10px] ml-1">(opsional)</span></h3>
+                    </div>
                     <div>
                         <label for="meta_title" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">Meta Title</label>
                         <input type="text" name="meta_title" id="meta_title" value="{{ old('meta_title') }}"
@@ -191,10 +195,12 @@
 
                 {{-- Publish settings --}}
                 <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-5 space-y-4">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                        <span class="w-1.5 h-3 bg-sky-500 rounded-sm"></span>
-                        Pengaturan Publikasi
-                    </h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-950/40 text-sky-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-sliders"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Pengaturan Publikasi</h3>
+                    </div>
 
                     {{-- Status --}}
                     <div>
@@ -290,10 +296,12 @@
 
                 {{-- Cover Image --}}
                 <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-5 space-y-4">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                        <span class="w-1.5 h-3 bg-rose-500 rounded-sm"></span>
-                        Foto Cover
-                    </h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-rose-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-image"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Foto Cover</h3>
+                    </div>
 
                     <div class="border-2 border-dashed border-slate-200 dark:border-console-700 rounded-xl p-4 text-center cursor-pointer hover:border-sky-400 transition" onclick="document.getElementById('cover_image').click()">
                         <img id="cover-preview" src="" alt="" class="w-full rounded-lg object-cover mb-3 hidden" style="max-height:160px">
@@ -312,10 +320,12 @@
 
                 {{-- Flags --}}
                 <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-5 space-y-3">
-                    <h3 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                        <span class="w-1.5 h-3 bg-orange-500 rounded-sm"></span>
-                        Flag Artikel
-                    </h3>
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="w-8 h-8 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-orange-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-flag"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Flag Artikel</h3>
+                    </div>
 
                     @php
                         $flags = [
@@ -517,10 +527,7 @@
                 reader.onload = e => {
                     const div = document.createElement('div');
                     div.className = 'relative group';
-                    div.innerHTML = `<img src="${e.target.result}" class="w-full h-24 object-cover rounded-lg border border-slate-200">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 rounded-lg transition flex items-center justify-center">
-                            <i class="fa-solid fa-image text-white text-xs"></i>
-                        </div>`;
+                    div.innerHTML = `<img src="${e.target.result}" class="w-full h-24 object-cover rounded-lg border border-slate-200">`;
                     container.appendChild(div);
                 };
                 reader.readAsDataURL(file);
