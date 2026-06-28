@@ -81,10 +81,10 @@
                 </div>
 
                 <!-- Navigation Controls -->
-                <button onclick="prevDetailSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 opacity-0 group-hover/slider:opacity-100 transition duration-300 z-20">
+                <button onclick="prevDetailSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition duration-300 z-20">
                     <i class="fa-solid fa-chevron-left text-xs"></i>
                 </button>
-                <button onclick="nextDetailSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 opacity-0 group-hover/slider:opacity-100 transition duration-300 z-20">
+                <button onclick="nextDetailSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition duration-300 z-20">
                     <i class="fa-solid fa-chevron-right text-xs"></i>
                 </button>
 
