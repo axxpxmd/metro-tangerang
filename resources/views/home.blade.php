@@ -6,6 +6,9 @@
 <!-- Breaking News Ticker -->
 @include('home.partials.breaking-news')
 
+<!-- Trending Hashtags -->
+@include('home.partials.trending-tags')
+
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     
     <!-- Hero / Headline Section -->
