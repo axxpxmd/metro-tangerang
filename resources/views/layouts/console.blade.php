@@ -6,6 +6,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'Console - Metro Tangerang')</title>
+
+    <!-- Sidebar initialization -->
+    <script>
+        if (localStorage.getItem('sidebar-minimized') === 'true') {
+            document.documentElement.classList.add('sidebar-minimized');
+        }
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,6 +75,38 @@
             background: #e2e8f0;
             border-radius: 3px;
         }
+
+        /* Collapsible Sidebar Styles */
+        .sidebar-minimized .sidebar-expanded-only {
+            display: none !important;
+        }
+        .sidebar-minimized aside {
+            width: 72px !important;
+        }
+        .sidebar-minimized .nav-text {
+            display: none !important;
+        }
+        .sidebar-minimized .profile-info {
+            display: none !important;
+        }
+        .sidebar-minimized .aside-logo-container {
+            justify-content: center !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        .sidebar-minimized .nav-link-item {
+            justify-content: center !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        .sidebar-minimized .profile-footer-container {
+            flex-direction: column !important;
+            gap: 12px !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
+        }
     </style>
     @stack('styles')
 </head>
@@ -84,6 +123,9 @@
             <div class="flex items-center gap-3">
                 <button class="md:hidden text-slate-500 dark:text-console-400 hover:text-slate-800 dark:hover:text-white" onclick="toggleSidebar()">
                     <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+                <button class="hidden md:block text-slate-500 hover:text-slate-800 transition p-1.5 hover:bg-slate-100 rounded-lg" onclick="toggleMinimizeSidebar()" title="Toggle Sidebar">
+                    <i class="fa-solid fa-bars text-base"></i>
                 </button>
                 <div class="flex items-center gap-2 font-mono text-[10px] text-slate-500 dark:text-console-400 uppercase tracking-wider">
                     <span>Console</span>
@@ -164,6 +206,17 @@
                 sidebar.classList.remove('hidden');
             } else {
                 sidebar.classList.add('hidden');
+            }
+        }
+
+        function toggleMinimizeSidebar() {
+            const html = document.documentElement;
+            if (html.classList.contains('sidebar-minimized')) {
+                html.classList.remove('sidebar-minimized');
+                localStorage.setItem('sidebar-minimized', 'false');
+            } else {
+                html.classList.add('sidebar-minimized');
+                localStorage.setItem('sidebar-minimized', 'true');
             }
         }
 
