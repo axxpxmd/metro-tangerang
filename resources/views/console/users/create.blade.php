@@ -153,7 +153,7 @@
                 <a href="{{ route('console.users.index') }}" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs px-5 py-2.5 rounded-lg transition">
                     Batalkan
                 </a>
-                <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs px-5 py-2.5 rounded-lg transition active:scale-[0.98]">
+                <button type="submit" class="bg-blue-500 text-white font-semibold text-xs px-5 py-2.5 rounded-lg transition active:scale-[0.98]">
                     Simpan Pengguna
                 </button>
             </div>

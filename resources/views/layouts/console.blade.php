@@ -1,22 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="light h-full">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'Console - Metro Tangerang')</title>
-
-    <!-- Theme initialization -->
-    <script>
-        if (localStorage.getItem('console-theme') === 'light' || (!('console-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-            document.documentElement.classList.add('light')
-            document.documentElement.classList.remove('dark')
-        } else {
-            document.documentElement.classList.add('dark')
-            document.documentElement.classList.remove('light')
-        }
-    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -155,13 +144,7 @@
 
             <!-- Right Header -->
             <div class="flex items-center gap-3">
-                <!-- Theme Switcher Button -->
-                <button onclick="toggleTheme()" class="w-8 h-8 flex items-center justify-center text-slate-500 dark:text-console-400 hover:text-slate-800 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-console-800 transition rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-console-900" title="Ubah Tema">
-                    <!-- Sun icon shown in Dark Mode (click to switch to light) -->
-                    <i class="fa-solid fa-sun hidden dark:block"></i>
-                    <!-- Moon icon shown in Light Mode (click to switch to dark) -->
-                    <i class="fa-solid fa-moon dark:hidden"></i>
-                </button>
+
 
                 <a href="{{ route('home') }}" target="_blank" class="text-xs text-slate-600 dark:text-console-400 hover:text-slate-800 dark:hover:text-white transition flex items-center gap-1.5 bg-slate-100 dark:bg-console-800 hover:bg-slate-200 dark:hover:bg-console-750 px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800">
                     <i class="fa-solid fa-globe"></i>
@@ -234,18 +217,7 @@
             }
         }
 
-        function toggleTheme() {
-            const html = document.documentElement;
-            if (html.classList.contains('light')) {
-                html.classList.remove('light');
-                html.classList.add('dark');
-                localStorage.setItem('console-theme', 'dark');
-            } else {
-                html.classList.remove('dark');
-                html.classList.add('light');
-                localStorage.setItem('console-theme', 'light');
-            }
-        }
+
     </script>
     @stack('scripts')
 </body>
