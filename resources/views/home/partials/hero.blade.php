@@ -10,7 +10,7 @@
                 <!-- Slide 1 -->
                 <div class="carousel-slide block transition-all duration-500 opacity-100" id="slide-1">
                     <a href="{{ route('news.detail') }}" wire:navigate class="group block relative">
-                        <div class="relative overflow-hidden -mx-4 -mt-4 sm:mx-0 sm:mt-0 rounded-t-xl rounded-b-none sm:rounded-lg border-b sm:border border-neutral-200 aspect-[4/3] sm:aspect-video bg-neutral-100">
+                        <div class="relative overflow-hidden -mx-4 -mt-4 rounded-t-xl border-b border-neutral-200 aspect-[4/3] sm:aspect-video bg-neutral-100">
                             <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                 PILHAN REDAKSI • 1 / 3
                             </div>
@@ -42,7 +42,7 @@
                 <!-- Slide 2 -->
                 <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-2">
                     <a href="{{ route('news.detail') }}" wire:navigate class="group block relative">
-                        <div class="relative overflow-hidden -mx-4 -mt-4 sm:mx-0 sm:mt-0 rounded-t-xl rounded-b-none sm:rounded-lg border-b sm:border border-neutral-200 aspect-[4/3] sm:aspect-video bg-neutral-100">
+                        <div class="relative overflow-hidden -mx-4 -mt-4 rounded-t-xl border-b border-neutral-200 aspect-[4/3] sm:aspect-video bg-neutral-100">
                             <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                 PILIHAN REDAKSI • 2 / 3
                             </div>
@@ -74,7 +74,7 @@
                 <!-- Slide 3 -->
                 <div class="carousel-slide hidden transition-all duration-500 opacity-0" id="slide-3">
                     <a href="{{ route('news.detail') }}" wire:navigate class="group block relative">
-                        <div class="relative overflow-hidden -mx-4 -mt-4 sm:mx-0 sm:mt-0 rounded-t-xl rounded-b-none sm:rounded-lg border-b sm:border border-neutral-200 aspect-[4/3] sm:aspect-video bg-neutral-100">
+                        <div class="relative overflow-hidden -mx-4 -mt-4 rounded-t-xl border-b border-neutral-200 aspect-[4/3] sm:aspect-video bg-neutral-100">
                             <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 font-mono text-[9px] font-bold bg-sky-50 text-sky-800 border border-sky-200/80 px-3 py-1 rounded-full uppercase tracking-wider">
                                 PILIHAN REDAKSI • 3 / 3
                             </div>
