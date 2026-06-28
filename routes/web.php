@@ -17,6 +17,7 @@ Route::view('/categories', 'categories')->name('categories');
 // CMS Console Routes
 use App\Http\Controllers\Console\ConsoleAuthController;
 use App\Http\Controllers\Console\ConsoleDashboardController;
+use App\Http\Controllers\Console\ConsoleContactController;
 
 Route::prefix('console')->name('console.')->group(function () {
     // Guest only routes
@@ -29,6 +30,7 @@ Route::prefix('console')->name('console.')->group(function () {
     Route::middleware('auth')->group(function () {
         Route::get('/dashboard', [ConsoleDashboardController::class, 'index'])->name('dashboard');
         Route::post('/logout', [ConsoleAuthController::class, 'logout'])->name('logout');
+        Route::resource('/contacts', ConsoleContactController::class)->only(['index', 'show', 'destroy']);
     });
 });
 

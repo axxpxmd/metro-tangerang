@@ -106,9 +106,9 @@
                 Berita <span class="text-[9px] bg-white/10 dark:bg-console-800 text-blue-200 dark:text-console-400 px-1.5 py-0.5 rounded">N/A</span>
             </a>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg text-blue-200 dark:text-console-500 cursor-not-allowed">
+            <a href="{{ route('console.contacts.index') }}" class="flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.contacts.*') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}">
                 <i class="fa-solid fa-envelope w-4 text-center"></i>
-                Pesan <span class="text-[9px] bg-white/10 dark:bg-console-800 text-blue-200 dark:text-console-400 px-1.5 py-0.5 rounded">N/A</span>
+                Pesan Kontak
             </a>
         </nav>
 
@@ -187,6 +187,10 @@
                     <a href="{{ route('console.dashboard') }}" class="flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.dashboard') ? 'bg-white/15 text-white' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}">
                         <i class="fa-solid fa-chart-line w-4 text-center"></i>
                         Dashboard
+                    </a>
+                    <a href="{{ route('console.contacts.index') }}" class="flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.contacts.*') ? 'bg-white/15 text-white' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}">
+                        <i class="fa-solid fa-envelope w-4 text-center"></i>
+                        Pesan Kontak
                     </a>
                 </nav>
             </div>
