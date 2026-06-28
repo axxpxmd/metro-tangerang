@@ -13,3 +13,22 @@ Route::get('/kontak', [ContactController::class, 'create'])->name('contact');
 Route::post('/kontak', [ContactController::class, 'store'])->middleware('throttle:5,1')->name('contact.store');
 Route::view('/pedoman', 'pedoman')->name('pedoman');
 Route::view('/categories', 'categories')->name('categories');
+
+// CMS Console Routes
+use App\Http\Controllers\Console\ConsoleAuthController;
+use App\Http\Controllers\Console\ConsoleDashboardController;
+
+Route::prefix('console')->name('console.')->group(function () {
+    // Guest only routes
+    Route::middleware('guest')->group(function () {
+        Route::get('/login', [ConsoleAuthController::class, 'showLogin'])->name('login');
+        Route::post('/login', [ConsoleAuthController::class, 'login']);
+    });
+
+    // Authenticated only routes
+    Route::middleware('auth')->group(function () {
+        Route::get('/dashboard', [ConsoleDashboardController::class, 'index'])->name('dashboard');
+        Route::post('/logout', [ConsoleAuthController::class, 'logout'])->name('logout');
+    });
+});
+
