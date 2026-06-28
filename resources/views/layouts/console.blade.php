@@ -82,7 +82,7 @@
     </style>
     @stack('styles')
 </head>
-<body class="h-full antialiased flex bg-slate-50 text-slate-800 dark:bg-console-950 dark:text-slate-100">
+<body class="h-full antialiased flex bg-[#F5F5F5] text-slate-800 dark:bg-console-950 dark:text-slate-100">
 
     <!-- Sidebar -->
     <aside class="hidden md:flex md:flex-col md:w-64 bg-[#0561c2] dark:bg-console-900 border-r border-[#0452a5] dark:border-console-800 shrink-0 transition-colors">
@@ -109,6 +109,11 @@
             <a href="{{ route('console.contacts.index') }}" class="flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.contacts.*') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}">
                 <i class="fa-solid fa-envelope w-4 text-center"></i>
                 Pesan Kontak
+            </a>
+
+            <a href="{{ route('console.users.index') }}" class="flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.users.*') ? 'bg-white/15 text-white shadow-sm' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}">
+                <i class="fa-solid fa-users w-4 text-center"></i>
+                Kelola Pengguna
             </a>
         </nav>
 
@@ -191,6 +196,10 @@
                     <a href="{{ route('console.contacts.index') }}" class="flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.contacts.*') ? 'bg-white/15 text-white' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}">
                         <i class="fa-solid fa-envelope w-4 text-center"></i>
                         Pesan Kontak
+                    </a>
+                    <a href="{{ route('console.users.index') }}" class="flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all {{ request()->routeIs('console.users.*') ? 'bg-white/15 text-white' : 'text-blue-100 dark:text-console-400 hover:bg-white/10 hover:text-white dark:hover:bg-console-800 dark:hover:text-white' }}">
+                        <i class="fa-solid fa-users w-4 text-center"></i>
+                        Kelola Pengguna
                     </a>
                 </nav>
             </div>
