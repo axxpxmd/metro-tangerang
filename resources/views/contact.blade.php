@@ -35,17 +35,30 @@
                 Kirim Pesan Langsung
             </h2>
 
-            <form class="space-y-4 font-sans text-xs">
+            @if(session('success'))
+                <div class="mb-6 p-4 text-xs font-mono text-emerald-800 bg-emerald-50 border border-emerald-200 rounded-lg">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            <form action="{{ route('contact.store') }}" method="POST" class="space-y-4 font-sans text-xs">
+                @csrf
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- Name Input -->
                     <div>
                         <label for="contact-name" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">NAMA LENGKAP *</label>
-                        <input type="text" id="contact-name" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs focus:ring-1 focus:ring-sky-500 focus:outline-none placeholder-slate-400 text-slate-800" placeholder="Masukkan nama lengkap Anda" required>
+                        <input type="text" id="contact-name" name="name" value="{{ old('name') }}" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs focus:ring-1 focus:ring-sky-500 focus:outline-none placeholder-slate-400 text-slate-800 @error('name') border-rose-500 @enderror" placeholder="Masukkan nama lengkap Anda" required>
+                        @error('name')
+                            <p class="text-rose-500 text-[10px] mt-1 font-mono uppercase">{{ $message }}</p>
+                        @enderror
                     </div>
                     <!-- Email Input -->
                     <div>
                         <label for="contact-email" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">EMAIL AKTIF *</label>
-                        <input type="email" id="contact-email" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs focus:ring-1 focus:ring-sky-500 focus:outline-none placeholder-slate-400 text-slate-800" placeholder="Masukkan email aktif Anda" required>
+                        <input type="email" id="contact-email" name="email" value="{{ old('email') }}" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs focus:ring-1 focus:ring-sky-500 focus:outline-none placeholder-slate-400 text-slate-800 @error('email') border-rose-500 @enderror" placeholder="Masukkan email aktif Anda" required>
+                        @error('email')
+                            <p class="text-rose-500 text-[10px] mt-1 font-mono uppercase">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
 
@@ -53,26 +66,44 @@
                     <!-- Telephone Input -->
                     <div>
                         <label for="contact-phone" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">NOMOR TELEPON / WA</label>
-                        <input type="tel" id="contact-phone" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs focus:ring-1 focus:ring-sky-500 focus:outline-none placeholder-slate-400 text-slate-800" placeholder="Contoh: 08123456789">
+                        <input type="tel" id="contact-phone" name="phone" value="{{ old('phone') }}" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs focus:ring-1 focus:ring-sky-500 focus:outline-none placeholder-slate-400 text-slate-800 @error('phone') border-rose-500 @enderror" placeholder="Contoh: 08123456789">
+                        @error('phone')
+                            <p class="text-rose-500 text-[10px] mt-1 font-mono uppercase">{{ $message }}</p>
+                        @enderror
                     </div>
                     <!-- Subject/Category Dropdown -->
                     <div>
                         <label for="contact-subject" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">TUJUAN HUBUNGAN *</label>
-                        <select id="contact-subject" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs focus:ring-1 focus:ring-sky-500 focus:outline-none text-slate-700" required>
+                        <select id="contact-subject" name="subject" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs focus:ring-1 focus:ring-sky-500 focus:outline-none text-slate-700 @error('subject') border-rose-500 @enderror" required>
                             <option value="">-- Pilih Kategori --</option>
-                            <option value="redaksi">Kirim Rilis Berita / Liputan</option>
-                            <option value="ads">Info Pasang Iklan / Sponsorship</option>
-                            <option value="partnership">Kerjasama Kemitraan (Partnership)</option>
-                            <option value="feedback">Kritik, Saran & Aduan Pembaca</option>
-                            <option value="other">Keperluan Lainnya</option>
+                            <option value="redaksi" {{ old('subject') === 'redaksi' ? 'selected' : '' }}>Kirim Rilis Berita / Liputan</option>
+                            <option value="ads" {{ old('subject') === 'ads' ? 'selected' : '' }}>Info Pasang Iklan / Sponsorship</option>
+                            <option value="partnership" {{ old('subject') === 'partnership' ? 'selected' : '' }}>Kerjasama Kemitraan (Partnership)</option>
+                            <option value="feedback" {{ old('subject') === 'feedback' ? 'selected' : '' }}>Kritik, Saran & Aduan Pembaca</option>
+                            <option value="other" {{ old('subject') === 'other' ? 'selected' : '' }}>Keperluan Lainnya</option>
                         </select>
+                        @error('subject')
+                            <p class="text-rose-500 text-[10px] mt-1 font-mono uppercase">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
 
                 <!-- Message Box -->
                 <div>
                     <label for="contact-message" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">ISI PESAN *</label>
-                    <textarea id="contact-message" rows="6" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs focus:ring-1 focus:ring-sky-500 focus:border-sky-500 focus:outline-none placeholder-slate-400 text-slate-800" placeholder="Tuliskan pesan lengkap Anda secara jelas di sini..." required></textarea>
+                    <textarea id="contact-message" name="message" rows="6" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs focus:ring-1 focus:ring-sky-500 focus:border-sky-500 focus:outline-none placeholder-slate-400 text-slate-800 @error('message') border-rose-500 @enderror" placeholder="Tuliskan pesan lengkap Anda secara jelas di sini..." required>{{ old('message') }}</textarea>
+                    @error('message')
+                        <p class="text-rose-500 text-[10px] mt-1 font-mono uppercase">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <!-- CAPTCHA -->
+                <div>
+                    <label for="contact-captcha" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">VERIFIKASI KEAMANAN: BERAPA {{ $num1 }} + {{ $num2 }}? *</label>
+                    <input type="number" id="contact-captcha" name="captcha" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs focus:ring-1 focus:ring-sky-500 focus:outline-none placeholder-slate-400 text-slate-800 @error('captcha') border-rose-500 @enderror" placeholder="Masukkan hasil penjumlahan" required>
+                    @error('captcha')
+                        <p class="text-rose-500 text-[10px] mt-1 font-mono uppercase">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <!-- Submit Button -->
