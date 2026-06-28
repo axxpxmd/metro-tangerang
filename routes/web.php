@@ -34,6 +34,7 @@ Route::prefix('console')->name('console.')->group(function () {
         Route::post('/logout', [ConsoleAuthController::class, 'logout'])->name('logout');
         Route::resource('/contacts', ConsoleContactController::class)->only(['index', 'show', 'destroy']);
         Route::resource('/users', ConsoleUserController::class);
+        Route::get('/tags/search', [ConsoleNewsController::class, 'searchTags'])->name('tags.search');
         Route::resource('/news', ConsoleNewsController::class)->except(['show']);
     });
 });

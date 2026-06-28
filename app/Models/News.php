@@ -111,4 +111,12 @@ class News extends Model
     {
         return $this->belongsTo(User::class, 'verifikator_id');
     }
+
+    /**
+     * Get the tags associated with the news post.
+     */
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'news_tag');
+    }
 }

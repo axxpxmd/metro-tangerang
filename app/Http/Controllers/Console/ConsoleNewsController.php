@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Console;
 use App\Http\Controllers\Controller;
 use App\Models\News;
 use App\Models\NewsImage;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -56,6 +57,8 @@ class ConsoleNewsController extends Controller
             'summary'          => ['nullable', 'string', 'max:500'],
             'content'          => ['required', 'string'],
             'category'         => ['required', 'string', 'max:100'],
+            'tags'             => ['nullable', 'array'],
+            'tags.*'           => ['string'],
             'status'           => ['required', Rule::in(['draft', 'published'])],
             'is_headline'      => ['nullable', 'boolean'],
             'is_laporan_utama' => ['nullable', 'boolean'],
@@ -114,6 +117,20 @@ class ConsoleNewsController extends Controller
             'published_at'     => $publishedAt,
         ]);
 
+        // Handle tags
+        if (!empty($validated['tags'])) {
+            $tagIds = [];
+            foreach ($validated['tags'] as $tagName) {
+                $tag = Tag::firstOrCreate([
+                    'name' => trim($tagName),
+                ], [
+                    'slug' => Str::slug($tagName),
+                ]);
+                $tagIds[] = $tag->id;
+            }
+            $news->tags()->sync($tagIds);
+        }
+
         // Handle gallery images
         if ($request->hasFile('gallery')) {
             foreach ($request->file('gallery') as $index => $file) {
@@ -135,7 +152,7 @@ class ConsoleNewsController extends Controller
      */
     public function edit(News $news)
     {
-        $news->load('images');
+        $news->load(['images', 'tags']);
         return view('console.news.edit', compact('news'));
     }
 
@@ -151,6 +168,8 @@ class ConsoleNewsController extends Controller
             'summary'          => ['nullable', 'string', 'max:500'],
             'content'          => ['required', 'string'],
             'category'         => ['required', 'string', 'max:100'],
+            'tags'             => ['nullable', 'array'],
+            'tags.*'           => ['string'],
             'status'           => ['required', Rule::in(['draft', 'published'])],
             'is_headline'      => ['nullable', 'boolean'],
             'is_laporan_utama' => ['nullable', 'boolean'],
@@ -215,6 +234,20 @@ class ConsoleNewsController extends Controller
             'published_at'     => $publishedAt,
         ]);
 
+        // Handle tags
+        $tagIds = [];
+        if (!empty($validated['tags'])) {
+            foreach ($validated['tags'] as $tagName) {
+                $tag = Tag::firstOrCreate([
+                    'name' => trim($tagName),
+                ], [
+                    'slug' => Str::slug($tagName),
+                ]);
+                $tagIds[] = $tag->id;
+            }
+        }
+        $news->tags()->sync($tagIds);
+
         // Delete selected gallery images
         if (! empty($validated['delete_images'])) {
             $toDelete = NewsImage::whereIn('id', $validated['delete_images'])
@@ -266,5 +299,22 @@ class ConsoleNewsController extends Controller
 
         return redirect()->route('console.news.index')
             ->with('success', 'Artikel berita berhasil dihapus.');
+    }
+
+    /**
+     * Search tags dynamically via JSON endpoint.
+     */
+    public function searchTags(Request $request)
+    {
+        $q = $request->input('q');
+        if (empty($q)) {
+            return response()->json([]);
+        }
+
+        $tags = Tag::where('name', 'like', "%{$q}%")
+            ->limit(10)
+            ->get(['id', 'name']);
+
+        return response()->json($tags);
     }
 }

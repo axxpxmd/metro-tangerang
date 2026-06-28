@@ -5,6 +5,45 @@
 
 @push('head')
     <script src="https://cdn.tiny.cloud/1/kmpjl2vq2hx8zh493a02m8sxahks3nt4inhuoqxbxn3i17bj/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <style>
+        .tag-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 4px 10px;
+            border-radius: 100px;
+            transition: all 0.15s ease;
+        }
+        .tag-pill-exist {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        .tag-pill-new {
+            background-color: #dcfce7;
+            color: #15803d;
+        }
+        .tag-suggestions-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-top: none;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .dark .tag-suggestions-list {
+            background: #1f2937;
+            border-color: #374151;
+        }
+    </style>
 @endpush
 
 @section('content')
@@ -85,6 +124,37 @@
                         @error('summary')
                             <p class="text-rose-600 text-[10px] mt-1 font-mono uppercase">{{ $message }}</p>
                         @enderror
+                    </div>
+                </div>
+
+                {{-- Custom Interactive Tag Widget --}}
+                <div class="bg-white dark:bg-console-900 border border-slate-200 dark:border-console-800 rounded-xl p-6 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-500 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-tag"></i>
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Tag Artikel</h3>
+                    </div>
+
+                    <div class="relative space-y-3">
+                        <label class="block font-mono text-[9px] font-bold text-slate-500 dark:text-console-400 uppercase tracking-widest">Cari atau Tambah Tag</label>
+                        
+                        <div class="relative">
+                            <input type="text" id="tag-input" 
+                                class="w-full bg-slate-50 dark:bg-console-800 border border-slate-200 dark:border-console-700 rounded-xl p-3 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                                placeholder="Ketik nama tag...">
+                            
+                            {{-- Autocomplete Dropdown List --}}
+                            <div id="tag-suggestions" class="tag-suggestions-list hidden"></div>
+                        </div>
+
+                        <p class="text-[10px] text-slate-400 flex items-center gap-1.5">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Ketik nama tag dan tekan Enter, atau pilih dari daftar
+                        </p>
+
+                        {{-- Selected Tags Container --}}
+                        <div id="selected-tags-container" class="flex flex-wrap gap-2 pt-1"></div>
                     </div>
                 </div>
 
@@ -280,6 +350,108 @@
 
 @push('scripts')
 <script>
+    /* Dynamic Tags autocomplete */
+    const tagInput = document.getElementById('tag-input');
+    const tagSuggestions = document.getElementById('tag-suggestions');
+    const selectedTagsContainer = document.getElementById('selected-tags-container');
+    let selectedTags = [];
+
+    // Render tag pills
+    function renderTags() {
+        selectedTagsContainer.innerHTML = '';
+        selectedTags.forEach((tag, idx) => {
+            const div = document.createElement('div');
+            const badgeClass = tag.isNew ? 'tag-pill-new' : 'tag-pill-exist';
+            const icon = tag.isNew ? '<i class="fa-solid fa-circle-plus text-[10px]"></i>' : '';
+            
+            div.className = `tag-pill ${badgeClass}`;
+            div.innerHTML = `<span>${tag.name}</span>
+                ${icon}
+                <button type="button" class="hover:text-slate-800 dark:hover:text-white focus:outline-none ml-1 text-slate-400" onclick="removeTag(${idx})">
+                    <i class="fa-solid fa-xmark text-[10px]"></i>
+                </button>
+                <input type="hidden" name="tags[]" value="${tag.name}">`;
+            selectedTagsContainer.appendChild(div);
+        });
+    }
+
+    // Add tag to list
+    function addTag(tagName, isNew = false) {
+        tagName = tagName.trim();
+        if (!tagName) return;
+        
+        if (selectedTags.some(t => t.name.toLowerCase() === tagName.toLowerCase())) {
+            tagInput.value = '';
+            tagSuggestions.classList.add('hidden');
+            return;
+        }
+
+        selectedTags.push({ name: tagName, isNew: isNew });
+        renderTags();
+        tagInput.value = '';
+        tagSuggestions.classList.add('hidden');
+    }
+
+    // Remove tag
+    function removeTag(idx) {
+        selectedTags.splice(idx, 1);
+        renderTags();
+    }
+
+    // Input handlers
+    tagInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const val = this.value.trim();
+            if (val) {
+                addTag(val, true);
+            }
+        }
+    });
+
+    let searchTimeout;
+    tagInput.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        const query = this.value.trim();
+        if (query.length < 1) {
+            tagSuggestions.classList.add('hidden');
+            return;
+        }
+
+        searchTimeout = setTimeout(() => {
+            fetch(`{{ route('console.tags.search') }}?q=${encodeURIComponent(query)}`)
+                .then(res => res.json())
+                .then(data => {
+                    tagSuggestions.innerHTML = '';
+                    if (data.length > 0) {
+                        tagSuggestions.classList.remove('hidden');
+                        data.forEach(tag => {
+                            const btn = document.createElement('button');
+                            btn.type = 'button';
+                            btn.className = 'w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs text-slate-800 dark:text-white transition focus:outline-none';
+                            btn.textContent = tag.name;
+                            btn.onclick = () => addTag(tag.name, false);
+                            tagSuggestions.appendChild(btn);
+                        });
+                    } else {
+                        tagSuggestions.classList.remove('hidden');
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.className = 'w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs text-emerald-600 font-semibold transition focus:outline-none flex items-center gap-1.5';
+                        btn.innerHTML = `<i class="fa-solid fa-circle-plus"></i> Buat tag baru: "${query}"`;
+                        btn.onclick = () => addTag(query, true);
+                        tagSuggestions.appendChild(btn);
+                    }
+                });
+        }, 150);
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!tagInput.contains(e.target) && !tagSuggestions.contains(e.target)) {
+            tagSuggestions.classList.add('hidden');
+        }
+    });
+
     /* TinyMCE */
     tinymce.init({
         selector: '#content',
