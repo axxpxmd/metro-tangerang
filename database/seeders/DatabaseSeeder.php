@@ -20,8 +20,14 @@ class DatabaseSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'admin@admin.com'],
             [
-                'name' => 'admin',
+                'name' => 'Administrator',
+                'username' => 'admin',
                 'password' => bcrypt('password123'),
+                'role' => 'admin',
+                'status' => 'active',
+                'phone' => '081234567890',
+                'bio' => 'Super Administrator for Metro Tangerang CMS.',
+                'birth_date' => '1990-01-01',
             ]
         );
     }

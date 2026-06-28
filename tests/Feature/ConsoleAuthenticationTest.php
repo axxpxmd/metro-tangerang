@@ -53,7 +53,7 @@ class ConsoleAuthenticationTest extends TestCase
         ]);
 
         $response = $this->post(route('console.login'), [
-            'email' => $user->email,
+            'username' => $user->username,
             'password' => $password,
         ]);
 
@@ -69,11 +69,11 @@ class ConsoleAuthenticationTest extends TestCase
         $user = User::factory()->create();
 
         $response = $this->post(route('console.login'), [
-            'email' => $user->email,
+            'username' => $user->username,
             'password' => 'wrong-password',
         ]);
 
-        $response->assertSessionHasErrors('email');
+        $response->assertSessionHasErrors('username');
         $this->assertGuest();
     }
 

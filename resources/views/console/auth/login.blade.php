@@ -54,18 +54,18 @@
             <form action="{{ route('console.login') }}" method="POST" class="space-y-5">
                 @csrf
 
-                <!-- Email / Username Input -->
+                <!-- Username Input -->
                 <div>
-                    <label for="email" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">USERNAME ATAU EMAIL</label>
+                    <label for="username" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">USERNAME</label>
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 text-xs">
                             <i class="fa-solid fa-user"></i>
                         </div>
-                        <input type="text" name="email" id="email" value="{{ old('email') }}" required autofocus
-                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pl-10 pr-4 text-xs text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition @error('email') border-rose-500 focus:ring-rose-500 @enderror"
-                            placeholder="Username atau Email">
+                        <input type="text" name="username" id="username" value="{{ old('username') }}" required autofocus
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pl-10 pr-4 text-xs text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition @error('username') border-rose-500 focus:ring-rose-500 @enderror"
+                            placeholder="Username">
                     </div>
-                    @error('email')
+                    @error('username')
                         <p class="text-rose-600 text-[10px] mt-1.5 font-mono uppercase tracking-wide flex items-center gap-1">
                             <i class="fa-solid fa-triangle-exclamation"></i>
                             {{ $message }}
