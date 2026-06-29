@@ -30,7 +30,7 @@
                 <select name="category" class="bg-slate-50 dark:bg-console-800 border border-slate-200 dark:border-console-700 rounded-lg px-2.5 py-2 text-xs text-slate-700 dark:text-white focus:outline-none focus:border-sky-500 transition">
                     <option value="">Semua Kategori</option>
                     @foreach($categories as $cat)
-                        <option value="{{ $cat }}" @selected($category === $cat)>{{ $cat }}</option>
+                        <option value="{{ $cat->id }}" @selected((string)$category === (string)$cat->id)>{{ $cat->name }}</option>
                     @endforeach
                 </select>
 
@@ -109,7 +109,7 @@
                                     <span class="font-mono text-[9px] text-slate-500 dark:text-console-400">{{ $article->slug }}</span>
                                 </div>
                                 <span class="inline-block mt-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 font-mono text-[9px] px-1.5 py-0.5 rounded uppercase tracking-wide">
-                                    {{ $article->category }}
+                                    {{ $article->category?->name }}
                                 </span>
                             </td>
 

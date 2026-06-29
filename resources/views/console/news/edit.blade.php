@@ -221,22 +221,17 @@
 
                     {{-- Category --}}
                     <div>
-                        <label for="category" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">Kategori *</label>
-                        <input type="text" name="category" id="category" value="{{ old('category', $news->category) }}" required
-                            list="category-suggestions"
-                            class="w-full bg-slate-50 dark:bg-console-800 border border-slate-200 dark:border-console-700 rounded-lg p-2.5 text-xs text-slate-900 dark:text-white focus:bg-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 @error('category') border-rose-500 @enderror">
-                        <datalist id="category-suggestions">
-                            <option value="Politik">
-                            <option value="Ekonomi">
-                            <option value="Olahraga">
-                            <option value="Hiburan">
-                            <option value="Pendidikan">
-                            <option value="Teknologi">
-                            <option value="Kesehatan">
-                            <option value="Sosial">
-                            <option value="Hukum & Kriminal">
-                        </datalist>
-                        @error('category')
+                        <label for="category_id" class="block font-mono text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-2">Kategori *</label>
+                        <select name="category_id" id="category_id" required
+                            class="w-full bg-slate-50 dark:bg-console-800 border border-slate-200 dark:border-console-700 rounded-lg p-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 @error('category_id') border-rose-500 @enderror">
+                            <option value="" disabled>Pilih Kategori...</option>
+                            @foreach($categories as $cat)
+                                <option value="{{ $cat->id }}" @selected(old('category_id', $news->category_id) == $cat->id)>
+                                    {{ $cat->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                        @error('category_id')
                             <p class="text-rose-600 text-[10px] mt-1 font-mono uppercase">{{ $message }}</p>
                         @enderror
                     </div>

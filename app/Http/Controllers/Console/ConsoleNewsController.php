@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\News;
 use App\Models\NewsImage;
 use App\Models\Tag;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -23,16 +24,16 @@ class ConsoleNewsController extends Controller
         $category = $request->input('category');
         $status   = $request->input('status');
 
-        $news = News::with('author')
+        $news = News::with(['author', 'category'])
             ->when($search, fn ($q) => $q->where('title', 'like', "%{$search}%")
                 ->orWhere('slug', 'like', "%{$search}%"))
-            ->when($category, fn ($q) => $q->where('category', $category))
+            ->when($category, fn ($q) => $q->where('category_id', $category))
             ->when($status, fn ($q) => $q->where('status', $status))
             ->latest()
             ->paginate(15)
             ->withQueryString();
 
-        $categories = News::select('category')->distinct()->orderBy('category')->pluck('category');
+        $categories = Category::orderBy('name')->get();
 
         return view('console.news.index', compact('news', 'search', 'category', 'status', 'categories'));
     }
@@ -42,7 +43,7 @@ class ConsoleNewsController extends Controller
      */
     public function show(News $news)
     {
-        $news->load(['author', 'tags', 'images']);
+        $news->load(['author', 'tags', 'images', 'category']);
         return view('console.news.show', compact('news'));
     }
 
@@ -51,7 +52,8 @@ class ConsoleNewsController extends Controller
      */
     public function create()
     {
-        return view('console.news.create');
+        $categories = Category::orderBy('name')->get();
+        return view('console.news.create', compact('categories'));
     }
 
     /**
@@ -65,7 +67,7 @@ class ConsoleNewsController extends Controller
             'slug'             => ['nullable', 'string', 'max:255', 'unique:news,slug'],
             'summary'          => ['nullable', 'string', 'max:500'],
             'content'          => ['required', 'string'],
-            'category'         => ['required', 'string', 'max:100'],
+            'category_id'      => ['required', 'exists:categories,id'],
             'tags'             => ['nullable', 'array'],
             'tags.*'           => ['string'],
             'status'           => ['required', Rule::in(['draft', 'published'])],
@@ -112,7 +114,7 @@ class ConsoleNewsController extends Controller
             'slug'             => $slug,
             'summary'          => $validated['summary'] ?? null,
             'content'          => $validated['content'],
-            'category'         => $validated['category'],
+            'category_id'      => $validated['category_id'],
             'user_id'          => Auth::id(),
             'is_headline'      => (bool) ($request->input('is_headline', false)),
             'is_laporan_utama' => (bool) ($request->input('is_laporan_utama', false)),
@@ -162,7 +164,8 @@ class ConsoleNewsController extends Controller
     public function edit(News $news)
     {
         $news->load(['images', 'tags']);
-        return view('console.news.edit', compact('news'));
+        $categories = Category::orderBy('name')->get();
+        return view('console.news.edit', compact('news', 'categories'));
     }
 
     /**
@@ -176,7 +179,7 @@ class ConsoleNewsController extends Controller
             'slug'             => ['nullable', 'string', 'max:255', Rule::unique('news', 'slug')->ignore($news->id)],
             'summary'          => ['nullable', 'string', 'max:500'],
             'content'          => ['required', 'string'],
-            'category'         => ['required', 'string', 'max:100'],
+            'category_id'      => ['required', 'exists:categories,id'],
             'tags'             => ['nullable', 'array'],
             'tags.*'           => ['string'],
             'status'           => ['required', Rule::in(['draft', 'published'])],
@@ -230,7 +233,7 @@ class ConsoleNewsController extends Controller
             'slug'             => $slug,
             'summary'          => $validated['summary'] ?? null,
             'content'          => $validated['content'],
-            'category'         => $validated['category'],
+            'category_id'      => $validated['category_id'],
             'is_headline'      => (bool) ($request->input('is_headline', false)),
             'is_laporan_utama' => (bool) ($request->input('is_laporan_utama', false)),
             'is_breaking'      => (bool) ($request->input('is_breaking', false)),

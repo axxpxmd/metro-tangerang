@@ -39,7 +39,7 @@
                 {{-- Category and Date --}}
                 <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 dark:border-console-800 pb-4">
                     <span class="bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 font-mono text-[10px] px-2.5 py-1 rounded uppercase tracking-wide">
-                        {{ $news->category }}
+                        {{ $news->category?->name }}
                     </span>
                     <div class="text-xs text-slate-500 dark:text-console-400 font-mono">
                         <i class="fa-regular fa-clock mr-1"></i>

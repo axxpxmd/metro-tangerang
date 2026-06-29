@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -30,5 +32,24 @@ class DatabaseSeeder extends Seeder
                 'birth_date' => '1990-01-01',
             ]
         );
+
+        $categories = [
+            'Politik',
+            'Ekonomi',
+            'Olahraga',
+            'Hiburan',
+            'Pendidikan',
+            'Teknologi',
+            'Kesehatan',
+            'Sosial',
+            'Hukum & Kriminal'
+        ];
+
+        foreach ($categories as $cat) {
+            Category::updateOrCreate(
+                ['slug' => Str::slug($cat)],
+                ['name' => $cat]
+            );
+        }
     }
 }

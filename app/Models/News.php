@@ -15,7 +15,7 @@ use Illuminate\Support\Carbon;
  * @property string $slug
  * @property string|null $summary
  * @property string $content
- * @property string $category
+ * @property int $category_id
  * @property int $user_id
  * @property int|null $verifikator_id
  * @property bool $is_headline
@@ -54,7 +54,7 @@ class News extends Model
         'slug',
         'summary',
         'content',
-        'category',
+        'category_id',
         'user_id',
         'verifikator_id',
         'is_headline',
@@ -110,6 +110,14 @@ class News extends Model
     public function verifikator(): BelongsTo
     {
         return $this->belongsTo(User::class, 'verifikator_id');
+    }
+
+    /**
+     * Get the category that this news post belongs to.
+     */
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     /**

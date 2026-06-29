@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('summary')->nullable();
             $table->mediumText('content');
-            $table->string('category');
+            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             
             // Relationships
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
