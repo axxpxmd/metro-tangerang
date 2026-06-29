@@ -38,6 +38,15 @@ class ConsoleNewsController extends Controller
     }
 
     /**
+     * Display the specified news article.
+     */
+    public function show(News $news)
+    {
+        $news->load(['author', 'tags', 'images']);
+        return view('console.news.show', compact('news'));
+    }
+
+    /**
      * Show the form for creating a new news article.
      */
     public function create()

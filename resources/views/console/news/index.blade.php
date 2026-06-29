@@ -154,7 +154,11 @@
 
                             {{-- Actions --}}
                             <td class="p-4 text-right">
-                                <div class="flex items-center justify-end gap-2">
+                                <div class="flex items-center justify-end gap-2 font-medium">
+                                    <a href="{{ route('console.news.show', $article) }}"
+                                        class="bg-blue-50 hover:bg-blue-100 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400 dark:hover:bg-blue-950/60 font-semibold px-2.5 py-1.5 rounded transition text-[10px]">
+                                        Lihat
+                                    </a>
                                     <a href="{{ route('console.news.edit', $article) }}"
                                         class="bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-console-800 dark:text-white dark:hover:bg-console-700 font-semibold px-2.5 py-1.5 rounded transition text-[10px]">
                                         Edit
