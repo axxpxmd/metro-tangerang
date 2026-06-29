@@ -73,8 +73,8 @@
             <table class="w-full text-left border-collapse text-xs">
                 <thead>
                     <tr class="bg-slate-100 dark:bg-console-950 border-b border-slate-200 dark:border-console-800 text-slate-700 dark:text-console-400 font-mono text-[10px] uppercase tracking-wider">
-                        <th class="p-4 w-16">Cover</th>
-                        <th class="p-4">Judul / Kategori</th>
+                        <th class="p-4 w-28">Cover</th>
+                        <th class="p-4 w-full">Judul / Kategori</th>
                         <th class="p-4">Penulis</th>
                         <th class="p-4">Status</th>
                         <th class="p-4">Flags</th>
@@ -88,20 +88,20 @@
                             {{-- Cover --}}
                             <td class="p-4">
                                 @if($article->image_source && !str_starts_with($article->image_source, 'http'))
-                                    <img src="{{ Storage::url($article->image_source) }}" alt="cover"
-                                        class="w-12 h-12 object-cover rounded-lg border border-slate-200 dark:border-console-700">
+                                    <img src="{{ Storage::disk('public')->url($article->image_source) }}" alt="cover"
+                                        class="w-20 h-20 object-cover rounded-lg border border-slate-200 dark:border-console-700 min-w-[80px] flex-shrink-0">
                                 @elseif($article->image_source)
                                     <img src="{{ $article->image_source }}" alt="cover"
-                                        class="w-12 h-12 object-cover rounded-lg border border-slate-200 dark:border-console-700">
+                                        class="w-20 h-20 object-cover rounded-lg border border-slate-200 dark:border-console-700 min-w-[80px] flex-shrink-0">
                                 @else
-                                    <div class="w-12 h-12 bg-slate-100 dark:bg-console-800 rounded-lg flex items-center justify-center text-slate-400">
+                                    <div class="w-20 h-20 bg-slate-100 dark:bg-console-800 rounded-lg flex items-center justify-center text-slate-400 min-w-[80px] flex-shrink-0">
                                         <i class="fa-solid fa-image text-sm"></i>
                                     </div>
                                 @endif
                             </td>
 
                             {{-- Title --}}
-                            <td class="p-4 max-w-xs">
+                            <td class="p-4">
                                 <div class="font-semibold text-slate-900 dark:text-white leading-snug line-clamp-2">
                                     {{ $article->title }}
                                 </div>
@@ -138,7 +138,7 @@
                                         <span class="bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-mono text-[8px] px-1.5 py-0.5 rounded uppercase">HL</span>
                                     @endif
                                     @if($article->is_breaking)
-                                        <span class="bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300 font-mono text-[8px] px-1.5 py-0.5 rounded uppercase">BRK</span>
+                                        <span class="bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300 font-mono text-[8px] px-1.5 py-0.5 rounded uppercase">BR</span>
                                     @endif
                                     @if($article->is_laporan_utama)
                                         <span class="bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 font-mono text-[8px] px-1.5 py-0.5 rounded uppercase">LU</span>
@@ -146,25 +146,25 @@
                                 </div>
                             </td>
 
-                            {{-- Created at --}}
-                            <td class="p-4 font-mono text-slate-500 dark:text-console-400 text-[10px] whitespace-nowrap">
-                                {{ $article->created_at->format('d M Y') }}<br>
-                                <span class="text-slate-400">{{ $article->created_at->format('H:i') }}</span>
+                            {{-- Created At --}}
+                            <td class="p-4 text-slate-500 dark:text-console-400 font-mono text-[10px]">
+                                {{ $article->created_at->format('d M Y') }}
+                                <div class="text-[9px] text-slate-400">{{ $article->created_at->format('H:i') }}</div>
                             </td>
 
                             {{-- Actions --}}
-                            <td class="p-4 text-right whitespace-nowrap">
-                                <div class="inline-flex gap-2">
+                            <td class="p-4 text-right">
+                                <div class="flex items-center justify-end gap-2">
                                     <a href="{{ route('console.news.edit', $article) }}"
-                                        class="bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-console-800 dark:text-white dark:hover:bg-console-700 font-semibold text-[10px] px-3 py-1.5 rounded transition">
+                                        class="bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-console-800 dark:text-white dark:hover:bg-console-700 font-semibold px-2.5 py-1.5 rounded transition text-[10px]">
                                         Edit
                                     </a>
                                     <form action="{{ route('console.news.destroy', $article) }}" method="POST"
-                                        onsubmit="return confirm('Apakah Anda yakin ingin menghapus artikel ini? Tindakan ini tidak dapat dibatalkan.')">
+                                        onsubmit="return confirm('Apakah Anda yakin ingin menghapus artikel ini?')">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit"
-                                            class="bg-red-100 hover:bg-red-200 text-red-700 dark:bg-red-950/80 dark:text-red-400 dark:hover:bg-red-900 font-semibold text-[10px] px-3 py-1.5 rounded transition">
+                                            class="bg-rose-50 hover:bg-rose-100 text-rose-600 dark:bg-rose-950/20 dark:text-rose-400 dark:hover:bg-rose-950/40 font-semibold px-2.5 py-1.5 rounded transition text-[10px]">
                                             Hapus
                                         </button>
                                     </form>
@@ -173,12 +173,9 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="7" class="p-10 text-center">
-                                <div class="flex flex-col items-center gap-3 text-slate-400 dark:text-console-500">
-                                    <i class="fa-solid fa-newspaper text-3xl"></i>
-                                    <p class="font-mono text-xs">Belum ada artikel berita.</p>
-                                    <a href="{{ route('console.news.create') }}" class="text-blue-600 font-semibold text-xs hover:underline">Tulis artikel pertama &rarr;</a>
-                                </div>
+                            <td colspan="7" class="p-8 text-center text-slate-400 dark:text-console-500 font-medium">
+                                <i class="fa-regular fa-folder-open text-2xl block mb-2"></i>
+                                Belum ada artikel berita.
                             </td>
                         </tr>
                     @endforelse
@@ -188,10 +185,11 @@
 
         {{-- Pagination --}}
         @if($news->hasPages())
-            <div class="p-4 border-t border-slate-200 dark:border-console-800">
+            <div class="bg-slate-50 dark:bg-console-950 p-4 border-t border-slate-200 dark:border-console-800">
                 {{ $news->links() }}
             </div>
         @endif
     </div>
+
 </div>
 @endsection

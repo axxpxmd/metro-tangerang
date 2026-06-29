@@ -150,7 +150,7 @@
                                 <label class="relative group cursor-pointer" title="Centang untuk hapus">
                                     <input type="checkbox" name="delete_images[]" value="{{ $img->id }}"
                                         class="absolute top-2 left-2 z-10 w-4 h-4 accent-red-500">
-                                    <img src="{{ Storage::url($img->image_path) }}" alt="gallery"
+                                    <img src="{{ Storage::disk('public')->url($img->image_path) }}" alt="gallery"
                                         class="w-full h-24 object-cover rounded-lg border border-slate-200 dark:border-console-700 group-hover:opacity-80 transition">
                                     <div class="absolute bottom-1 right-1 bg-black/60 text-white text-[8px] font-mono px-1.5 py-0.5 rounded">
                                         #{{ $img->order + 1 }}
@@ -334,7 +334,7 @@
                                 <img src="{{ $news->image_source }}" alt="Cover saat ini"
                                     class="w-full rounded-xl object-cover" style="max-height:160px">
                             @else
-                                <img src="{{ Storage::url($news->image_source) }}" alt="Cover saat ini"
+                                <img src="{{ Storage::disk('public')->url($news->image_source) }}" alt="Cover saat ini"
                                     class="w-full rounded-xl object-cover" style="max-height:160px">
                             @endif
                             <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[9px] font-mono px-2 py-0.5 rounded">
