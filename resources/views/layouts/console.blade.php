@@ -7,6 +7,9 @@
 
     <title>@yield('title', 'Console - Metro Tangerang')</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/logo-metrotangerang-logo.png') }}">
+
     <!-- Sidebar initialization -->
     <script>
         if (localStorage.getItem('sidebar-minimized') === 'true') {
@@ -157,9 +160,10 @@
         <div class="w-64 bg-[#0561c2] dark:bg-console-900 h-full border-r border-[#0452a5] dark:border-console-800 flex flex-col justify-between">
             <div>
                 <div class="h-16 flex items-center justify-between px-6 border-b border-[#0452a5] dark:border-console-800">
-                    <span class="font-mono text-xs font-bold text-white tracking-widest bg-white/20 px-2.5 py-1 rounded">
-                        METRO TANGERANG
-                    </span>
+                    <div class="flex items-center gap-2">
+                        <img src="{{ asset('images/logo-metrotangerang-logo.png') }}" alt="Logo" class="h-8 w-auto object-contain">
+                        <span class="font-bold text-xs text-white">CMS</span>
+                    </div>
                     <button onclick="toggleSidebar()" class="text-slate-200 dark:text-console-400 hover:text-white">
                         <i class="fa-solid fa-xmark text-lg"></i>
                     </button>

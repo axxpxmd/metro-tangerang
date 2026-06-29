@@ -1,11 +1,12 @@
 <!-- Sidebar -->
 <aside class="hidden md:flex md:flex-col md:w-64 bg-[#0561c2] dark:bg-console-900 border-r border-[#0452a5] dark:border-console-800 shrink-0 transition-all duration-300">
     <!-- Logo -->
-    <div class="h-16 flex items-center px-6 border-b border-[#0452a5] dark:border-console-800 aside-logo-container transition-all duration-300">
-        <span class="font-mono text-xs font-bold text-white tracking-widest bg-white/20 px-2.5 py-1 rounded shrink-0">
-            MT
-        </span>
-        <span class="font-bold text-xs ml-2 text-blue-100 dark:text-console-400 sidebar-expanded-only">CMS</span>
+    <div class="flex flex-col items-center justify-center px-6 py-5 border-b border-white/10 dark:border-console-800 aside-logo-container transition-all duration-300 gap-2">
+        <img src="{{ asset('images/logo-metrotangerang-logo.png') }}" alt="Logo" class="h-12 w-auto object-contain shrink-0">
+        <div class="text-center sidebar-expanded-only mt-1">
+            <span class="block text-xs font-black tracking-widest text-white uppercase">METRO TANGERANG</span>
+            <span class="block text-[10px] font-mono font-bold text-blue-200 dark:text-console-400 uppercase tracking-widest">Console CMS</span>
+        </div>
     </div>
 
     <!-- Navigation Links -->
