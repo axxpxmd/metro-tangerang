@@ -10,6 +10,9 @@
     <meta name="description" content="@yield('meta_description', 'Portal berita Metro Tangerang menyajikan berita terbaru, terpopuler, dan terpercaya seputar Tangerang Raya, politik, ekonomi, olahraga, dan gaya hidup.')">
     <meta name="robots" content="index, follow">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/logo-metrotangerang-logo.png') }}">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
