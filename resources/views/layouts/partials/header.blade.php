@@ -2,8 +2,9 @@
 <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <!-- Logo -->
-        <a href="{{ route('home') }}" wire:navigate id="header-logo-link" class="text-xl font-black tracking-tighter text-black flex items-center gap-2">
-            METRO<span class="text-sky-700">TANGERANG</span>
+        <a href="{{ route('home') }}" wire:navigate id="header-logo-link" class="flex items-center gap-2">
+            <img src="{{ asset('images/logo-metrotangerang-logo.png') }}" alt="Metro Tangerang Logo" class="h-10 w-auto object-contain">
+            <span class="text-lg font-black tracking-tighter mt-2 text-black">METRO<span class="text-[#0886B1]">TANGERANG</span></span>
         </a>
         
         <!-- Navigation Menu -->
